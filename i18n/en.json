@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "architecture": "Architecture",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "skipNav": "Skip to main content",
+  "hero": {
+    "badge": "Available for new opportunities",
+    "titleLine1": "Building",
+    "titleGradient": "software",
+    "titleLine2": "that scales.",
+    "subtitle": "Software Engineer specializing in enterprise platforms, modern web applications, automation systems, and AI-assisted software engineering.",
+    "ctaGitHub": "GitHub",
+    "ctaContact": "Contact",
+    "ctaResume": "Resume"
+  },
+  "projects": {
+    "label": "Featured Work",
+    "title": "Selected Projects",
+    "description": "A curated collection of projects showcasing enterprise architecture, scalable systems, and modern product engineering.",
+    "items": [
+      {
+        "title": "CloudSync Platform",
+        "description": "Enterprise-grade cloud synchronization platform handling 10M+ daily transactions with real-time data replication across regions.",
+        "status": "Production",
+        "statusType": "active"
+      },
+      {
+        "title": "ArchFlow Engine",
+        "description": "Metadata-driven workflow engine powering multi-tenant SaaS applications with RBAC, event sourcing, and audit trails.",
+        "status": "Production",
+        "statusType": "active"
+      },
+      {
+        "title": "NeuralAPI",
+        "description": "AI-powered API gateway with intelligent rate limiting, automatic documentation generation, and anomaly detection.",
+        "status": "In Development",
+        "statusType": "warning"
+      }
+    ],
+    "github": "GitHub",
+    "learnMore": "Learn More"
+  },
+  "skills": {
+    "label": "Technical Expertise",
+    "title": "Skills & Technologies",
+    "description": "A comprehensive toolkit built over years of designing and shipping production software.",
+    "categories": [
+      {
+        "name": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "Web Components"]
+      },
+      {
+        "name": "Backend",
+        "items": ["Node.js", "Python", "Go", "Rust", "GraphQL", "REST APIs"]
+      },
+      {
+        "name": "Cloud",
+        "items": ["AWS", "GCP", "Azure", "Terraform", "CloudFormation"]
+      },
+      {
+        "name": "Database",
+        "items": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "DynamoDB"]
+      },
+      {
+        "name": "DevOps",
+        "items": ["Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Prometheus"]
+      },
+      {
+        "name": "Architecture",
+        "items": ["Microservices", "Event-Driven", "Domain-Driven Design", "CQRS", "Hexagonal"]
+      },
+      {
+        "name": "AI",
+        "items": ["OpenAI API", "LangChain", "Vector DBs", "RAG", "MLOps"]
+      }
+    ]
+  },
+  "architecture": {
+    "label": "Engineering Philosophy",
+    "title": "Architecture Principles",
+    "description": "The core principles that guide every system I design and build.",
+    "items": [
+      {
+        "title": "Domain-Driven Design",
+        "description": "Modeling software around business domains with bounded contexts and ubiquitous language."
+      },
+      {
+        "title": "SOLID Principles",
+        "description": "Single responsibility, open-closed, Liskov substitution, interface segregation, dependency inversion."
+      },
+      {
+        "title": "Clean Architecture",
+        "description": "Separation of concerns with independent layers and dependency rule enforcement."
+      },
+      {
+        "title": "RBAC & Security",
+        "description": "Role-based access control with security-first design and zero-trust principles."
+      },
+      {
+        "title": "Metadata Driven",
+        "description": "Configuration-as-data patterns enabling dynamic behavior without code changes."
+      },
+      {
+        "title": "Workflow Engine",
+        "description": "Orchestrating complex business processes with state machines and event-driven choreography."
+      },
+      {
+        "title": "Multi-Tenant",
+        "description": "Isolated tenant architectures with shared infrastructure and data partitioning strategies."
+      },
+      {
+        "title": "API First",
+        "description": "Contract-first development with OpenAPI specs, versioning, and backward compatibility."
+      },
+      {
+        "title": "Security by Design",
+        "description": "Threat modeling, encryption at rest and transit, and comprehensive audit logging."
+      },
+      {
+        "title": "AI Integration",
+        "description": "Embedding intelligence into products with LLM orchestration, RAG, and agentic workflows."
+      }
+    ]
+  },
+  "about": {
+    "label": "About Me",
+    "title": "Engineering Excellence",
+    "paragraph1": "I'm a <strong>Software Engineer</strong> with a passion for building systems that are not only functional but elegantly architected. My work spans the full spectrum \u2014 from crafting pixel-perfect interfaces to designing distributed systems that handle millions of requests.",
+    "paragraph2": "I believe that <strong>great software is built on solid principles</strong>. Every line of code should serve a purpose, every architecture decision should be deliberate, and every product should delight its users.",
+    "paragraph3": "Focused on <strong>enterprise SaaS platforms</strong>, <strong>AI-powered products</strong>, and <strong>cloud-native architectures</strong>. Always learning, always building, always shipping."
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "title": "Let\u2019s Build Something",
+    "description": "I\u2019m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "emailLabel": "Send email",
+    "githubLabel": "GitHub profile",
+    "copyEmail": "Copy Email",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "description": "Software Engineer building scalable systems and elegant products. Focused on enterprise architecture, SaaS, and modern web technologies.",
+    "nav": "Navigation",
+    "social": "Social",
+    "copyright": "All rights reserved."
+  },
+  "toast": {
+    "emailCopied": "Email copied to clipboard",
+    "emailFailed": "Failed to copy email"
+  }
+}

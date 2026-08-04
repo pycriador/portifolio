@@ -1,0 +1,24 @@
+{
+  "id": "metadata-platform",
+  "slug": "metadata-platform",
+  "title": "Metadata Platform",
+  "subtitle": "Data Catalog and Governance",
+  "category": "Metadata",
+  "status": "Production",
+  "year": 2023,
+  "description": "Metadata management and data catalog platform for enterprise data governance.",
+  "technologies": ["Python", "FastAPI", "React", "PostgreSQL", "Elasticsearch", "Docker"],
+  "tags": ["Metadata", "Enterprise", "Data Governance", "API", "Catalog", "Cloud"],
+  "github": "https://github.com/pycriador/metadata-platform",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}

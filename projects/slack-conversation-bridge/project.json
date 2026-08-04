@@ -1,0 +1,24 @@
+{
+  "id": "slack-conversation-bridge",
+  "slug": "slack-conversation-bridge",
+  "title": "Slack Conversation Bridge",
+  "subtitle": "Multi-Workspace Integration",
+  "category": "Integration",
+  "status": "Production",
+  "year": 2024,
+  "description": "Integration tool that bridges conversations across multiple Slack workspaces.",
+  "technologies": ["TypeScript", "Node.js", "Slack API", "Redis", "Docker"],
+  "tags": ["Integration", "Slack", "API", "Automation", "Workflow", "SaaS"],
+  "github": "https://github.com/pycriador/slack-conversation-bridge",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}

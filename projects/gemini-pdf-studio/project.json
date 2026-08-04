@@ -1,0 +1,24 @@
+{
+  "id": "gemini-pdf-studio",
+  "slug": "gemini-pdf-studio",
+  "title": "Gemini PDF Studio",
+  "subtitle": "AI-Powered PDF Analysis",
+  "category": "AI",
+  "status": "In Development",
+  "year": 2025,
+  "description": "AI-powered PDF analysis and generation studio using Google Gemini.",
+  "technologies": ["TypeScript", "Python", "Google Gemini API", "React", "FastAPI", "Docker"],
+  "tags": ["AI", "Document Management", "PDF", "API", "Automation", "Cloud"],
+  "github": "https://github.com/pycriador/gemini-pdf-studio",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+/* ============================================
+   TYPOGRAPHY.CSS — Type Scale & Font Loading
+   ============================================ */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/jetbrainsmono/v21/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.woff2') format('woff2');
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+}
+
+/* ── Display ── */
+.text-display {
+  font-size: var(--text-display);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* ── Headings ── */
+.text-h1 {
+  font-size: var(--text-h1);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.text-h2 {
+  font-size: var(--text-h2);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.text-h3 {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+.text-h4 {
+  font-size: var(--text-h4);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+/* ── Body ── */
+.text-body-lg {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-normal);
+}
+
+.text-body {
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+}
+
+.text-body-sm {
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-normal);
+}
+
+.text-caption {
+  font-size: var(--text-caption);
+  line-height: var(--leading-normal);
+}
+
+/* ── Utilities ── */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+}

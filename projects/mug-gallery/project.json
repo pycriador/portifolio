@@ -1,0 +1,24 @@
+{
+  "id": "mug-gallery",
+  "slug": "mug-gallery",
+  "title": "Mug Gallery",
+  "subtitle": "Desktop Artwork Browser",
+  "category": "Desktop",
+  "status": "Production",
+  "year": 2023,
+  "description": "Desktop application for browsing and organizing mug artwork collections.",
+  "technologies": ["Electron", "TypeScript", "React", "SQLite"],
+  "tags": ["Desktop", "Gallery", "Electron", "UI", "Collection"],
+  "github": "https://github.com/pycriador/mug-gallery",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "architecture": "Arquitetura",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "skipNav": "Pular para o conte\u00fado principal",
+  "hero": {
+    "badge": "Dispon\u00edvel para novas oportunidades",
+    "titleLine1": "Construindo",
+    "titleGradient": "software",
+    "titleLine2": "que escala.",
+    "subtitle": "Software Engineer especializado em plataformas corporativas, aplica\u00e7\u00f5es web modernas, sistemas de automa\u00e7\u00e3o e engenharia de software assistida por Intelig\u00eancia Artificial.",
+    "ctaGitHub": "GitHub",
+    "ctaContact": "Contato",
+    "ctaResume": "Curr\u00edculo"
+  },
+  "projects": {
+    "label": "Trabalhos em Destaque",
+    "title": "Projetos Selecionados",
+    "description": "Uma cole\u00e7\u00e3o de projetos que demonstram arquitetura de software, sistemas escal\u00e1veis e engenharia moderna de produtos.",
+    "items": [
+      {
+        "title": "CloudSync Platform",
+        "description": "Plataforma corporativa de sincroniza\u00e7\u00e3o em nuvem processando mais de 10 milh\u00f5es de transa\u00e7\u00f5es di\u00e1rias com replica\u00e7\u00e3o de dados em tempo real.",
+        "status": "Produ\u00e7\u00e3o",
+        "statusType": "active"
+      },
+      {
+        "title": "ArchFlow Engine",
+        "description": "Motor de workflow baseado em metadados para aplica\u00e7\u00f5es SaaS multi-tenant com RBAC, event sourcing e trilhas de auditoria.",
+        "status": "Produ\u00e7\u00e3o",
+        "statusType": "active"
+      },
+      {
+        "title": "NeuralAPI",
+        "description": "Gateway de API com IA para rate limiting inteligente, gera\u00e7\u00e3o autom\u00e1tica de documenta\u00e7\u00e3o e detec\u00e7\u00e3o de anomalias.",
+        "status": "Em Desenvolvimento",
+        "statusType": "warning"
+      }
+    ],
+    "github": "GitHub",
+    "learnMore": "Saiba Mais"
+  },
+  "skills": {
+    "label": "Expertise T\u00e9cnica",
+    "title": "Habilidades & Tecnologias",
+    "description": "Um conjunto completo de ferramentas constru\u00eddo ao longo de anos projetando e entregue em produ\u00e7\u00e3o.",
+    "categories": [
+      {
+        "name": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "Web Components"]
+      },
+      {
+        "name": "Backend",
+        "items": ["Node.js", "Python", "Go", "Rust", "GraphQL", "REST APIs"]
+      },
+      {
+        "name": "Cloud",
+        "items": ["AWS", "GCP", "Azure", "Terraform", "CloudFormation"]
+      },
+      {
+        "name": "Database",
+        "items": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "DynamoDB"]
+      },
+      {
+        "name": "DevOps",
+        "items": ["Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Prometheus"]
+      },
+      {
+        "name": "Arquitetura",
+        "items": ["Microservices", "Event-Driven", "Domain-Driven Design", "CQRS", "Hexagonal"]
+      },
+      {
+        "name": "IA",
+        "items": ["OpenAI API", "LangChain", "Vector DBs", "RAG", "MLOps"]
+      }
+    ]
+  },
+  "architecture": {
+    "label": "Filosofia de Engenharia",
+    "title": "Princ\u00edpios de Arquitetura",
+    "description": "Os princ\u00edpios fundamentais que guiam cada sistema que eu projeto e construo.",
+    "items": [
+      {
+        "title": "Domain-Driven Design",
+        "description": "Modelagem de software ao redor de dom\u00ednios de neg\u00f3cio com bounded contexts e linguagem ub\u00edqua."
+      },
+      {
+        "title": "SOLID",
+        "description": "Responsabilidade \u00fanica, aberto-fechado, substitui\u00e7\u00e3o de Liskov, segrega\u00e7\u00e3o de interfaces e invers\u00e3o de depend\u00eancia."
+      },
+      {
+        "title": "Clean Architecture",
+        "description": "Separa\u00e7\u00e3o de responsabilidades com camadas independentes e aplica\u00e7\u00e3o da regra de depend\u00eancia."
+      },
+      {
+        "title": "RBAC & Seguran\u00e7a",
+        "description": "Controle de acesso baseado em fun\u00e7\u00f5es com design orientado a seguran\u00e7a e princ\u00edpios zero-trust."
+      },
+      {
+        "title": "Metadata Driven",
+        "description": "Padr\u00f5es de configura\u00e7\u00e3o-como-dados permitindo comportamento din\u00e2mico sem altera\u00e7\u00f5es de c\u00f3digo."
+      },
+      {
+        "title": "Workflow Engine",
+        "description": "Orquestra\u00e7\u00e3o de processos de neg\u00f3cio complexos com m\u00e1quinas de estado e coreografia event-driven."
+      },
+      {
+        "title": "Multi-Tenant",
+        "description": "Arquiteturas de tenant isoladas com infraestrutura compartilhada e estrat\u00e9gias de particionamento de dados."
+      },
+      {
+        "title": "API First",
+        "description": "Desenvolvimento contract-first com especifica\u00e7\u00f5es OpenAPI, versionamento e compatibilidade retroativa."
+      },
+      {
+        "title": "Security by Design",
+        "description": "Modelagem de amea\u00e7as, criptografia em tr\u00e2nsito e em repouso, e logging completo de auditoria."
+      },
+      {
+        "title": "Integra\u00e7\u00e3o com IA",
+        "description": "Incorporando intelig\u00eancia em produtos com orquestra\u00e7\u00e3o de LLMs, RAG e fluxos de trabalho ag\u00eanticos."
+      }
+    ]
+  },
+  "about": {
+    "label": "Sobre Mim",
+    "title": "Excel\u00eancia em Engenharia",
+    "paragraph1": "Sou um <strong>Software Engineer</strong> com paix\u00e3o por construir sistemas que n\u00e3o s\u00f3 s\u00e3o funcionais, mas elegantemente arquitetados. Meu trabalho abrange todo o espectro \u2014 desde interfaces pixel-perfect at\u00e9 sistemas distribu\u00eddos que processam milh\u00f5es de requisi\u00e7\u00f5es.",
+    "paragraph2": "Acredito que <strong>software excelente \u00e9 constru\u00eddo sobre princ\u00edpios s\u00f3lidos</strong>. Cada linha de c\u00f3digo deve servir a um prop\u00f3sito, cada decis\u00e3o de arquitetura deve ser deliberada, e cada produto deve encantar seus usu\u00e1rios.",
+    "paragraph3": "Focado em <strong>plataformas SaaS corporativas</strong>, <strong>produtos com IA</strong> e <strong>arquiteturas cloud-native</strong>. Sempre aprendendo, sempre construindo, sempre entregando."
+  },
+  "contact": {
+    "label": "Entre em Contato",
+    "title": "Vamos Construir Algo",
+    "description": "Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua vis\u00e3o.",
+    "emailLabel": "Enviar email",
+    "githubLabel": "Perfil no GitHub",
+    "copyEmail": "Copiar Email",
+    "copied": "Copiado!"
+  },
+  "footer": {
+    "description": "Software Engineer construindo sistemas escal\u00e1veis e produtos elegantes. Focado em arquitetura corporativa, SaaS e tecnologias web modernas.",
+    "nav": "Navega\u00e7\u00e3o",
+    "social": "Social",
+    "copyright": "Todos os direitos reservados."
+  },
+  "toast": {
+    "emailCopied": "Email copiado para a \u00e1rea de transfer\u00eancia",
+    "emailFailed": "Falha ao copiar email"
+  }
+}

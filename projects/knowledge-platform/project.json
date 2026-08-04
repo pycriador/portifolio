@@ -1,0 +1,24 @@
+{
+  "id": "knowledge-platform",
+  "slug": "knowledge-platform",
+  "title": "Knowledge Platform",
+  "subtitle": "Intelligent Knowledge Base",
+  "category": "Knowledge Base",
+  "status": "In Development",
+  "year": 2024,
+  "description": "AI-powered knowledge management platform with semantic search and automatic tagging.",
+  "technologies": ["Python", "FastAPI", "React", "PostgreSQL", "OpenAI", "Vector DB", "Docker"],
+  "tags": ["AI", "Knowledge Base", "Search", "Automation", "Enterprise"],
+  "github": "https://github.com/pycriador/knowledge-platform",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "clauseforge",
+  "slug": "clauseforge",
+  "title": "ClauseForge",
+  "subtitle": "Legal Document Automation",
+  "category": "Document Management",
+  "status": "Beta",
+  "year": 2024,
+  "description": "Legal clause management and document automation platform.",
+  "technologies": ["TypeScript", "Python", "PostgreSQL", "OpenAI", "React", "Docker"],
+  "tags": ["Document Management", "AI", "Enterprise", "Legal", "Automation", "API"],
+  "github": "https://github.com/pycriador/clauseforge",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}

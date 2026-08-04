@@ -1,0 +1,24 @@
+{
+  "id": "dataforge",
+  "slug": "dataforge",
+  "title": "DataForge",
+  "subtitle": "Governed Spreadsheet & Data Integration Platform",
+  "category": "Enterprise Data Platform",
+  "status": "In Development",
+  "year": 2026,
+  "description": "Enterprise data governance and integration platform that transforms spreadsheets, files, and multiple data sources into governed corporate assets with standardized flows for import, validation, transformation, audit, and secure sharing.",
+  "technologies": ["React", "TypeScript", "Supabase", "PostgreSQL", "REST APIs", "Workflow", "Business Rules", "CSV", "Excel", "JSON", "XML"],
+  "tags": ["Enterprise", "Data", "Governance", "Integration", "Automation", "Analytics"],
+  "github": "https://github.com/pycriador/dataforge",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}

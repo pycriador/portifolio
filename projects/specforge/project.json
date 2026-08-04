@@ -1,0 +1,24 @@
+{
+  "id": "specforge",
+  "slug": "specforge",
+  "title": "SpecForge",
+  "subtitle": "Automated Specification Generator",
+  "category": "Developer Tool",
+  "status": "Production",
+  "year": 2024,
+  "description": "Automated API specification and documentation generator with type-safe SDK output.",
+  "technologies": ["TypeScript", "Go", "OpenAPI", "AST Parsing", "Docker", "GitHub Actions"],
+  "tags": ["Developer Tool", "API", "Automation", "Documentation", "CI/CD"],
+  "github": "https://github.com/pycriador/specforge",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}

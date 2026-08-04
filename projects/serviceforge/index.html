@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>ServiceForge — Enterprise Service Management Platform | Willian Rosa</title>
+  <meta name="description" content="ServiceForge é uma plataforma corporativa para gestão de serviços, assistência técnica, manutenção e field service. Arquitetura modular, multiempresa, workflow engine e integrações em um ambiente unificado.">
+  <meta name="keywords" content="ServiceForge, enterprise service management, field service, ordem de serviço, manutenção, multi-tenant, RBAC, workflow, SaaS, plataforma corporativa">
+  <meta name="author" content="Willian Rosa">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pycriador.github.io/portfolio/projects/serviceforge/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pycriador.github.io/portfolio/projects/serviceforge/">
+  <meta property="og:title" content="ServiceForge — Enterprise Service Management Platform">
+  <meta property="og:description" content="Plataforma corporativa para gestão de serviços, manutenção e field service. Modular, multiempresa e pronta para escala.">
+  <meta property="og:image" content="https://pycriador.github.io/portfolio/projects/serviceforge/assets/og/serviceforge-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Willian Rosa Portfolio">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ServiceForge — Enterprise Service Management Platform">
+  <meta name="twitter:description" content="Plataforma corporativa para gestão de serviços, manutenção e field service.">
+  <meta name="twitter:image" content="https://pycriador.github.io/portfolio/projects/serviceforge/assets/og/serviceforge-og.png">
+
+  <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/logos/favicon.svg">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.json">
+
+  <script>(function(){var t=localStorage.getItem('portfolio-theme');if(t){document.documentElement.setAttribute('data-theme',t);}})();</script>
+
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/typography.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/projects.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../serviceforge/css/serviceforge.css">
+  <link rel="stylesheet" href="../serviceforge/css/gallery.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ServiceForge",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://pycriador.github.io/portfolio/projects/serviceforge/",
+    "author": {"@type": "Person", "name": "Willian Rosa", "url": "https://pycriador.github.io/portfolio/"},
+    "description": "Plataforma corporativa para gestão de serviços, assistência técnica, manutenção e field service. Arquitetura modular, multiempresa, workflow engine e integrações em um ambiente unificado.",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+    "featureList": [
+      "Multiempresa com isolamento multi-tenant",
+      "RBAC com permissões granulares",
+      "Workflow engine visual",
+      "Metadata driven",
+      "Gestão de documentos",
+      "API First com REST APIs",
+      "Audit logs",
+      "Theme engine",
+      "Internationalização"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Portfólio", "item": "https://pycriador.github.io/portfolio/"},
+      {"@type": "ListItem", "position": 2, "name": "Projetos", "item": "https://pycriador.github.io/portfolio/#projects"},
+      {"@type": "ListItem", "position": 3, "name": "ServiceForge", "item": "https://pycriador.github.io/portfolio/projects/serviceforge/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Pular para o conteúdo principal</a>
+
+  <div class="nav__backdrop" aria-hidden="true"></div>
+
+  <header class="nav" role="banner">
+    <nav class="container nav__inner" aria-label="Navegação principal">
+      <a href="../../index.html" class="nav__logo" aria-label="Willian Rosa - Início">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="url(#wr-grad-p)"/>
+            <text x="16" y="21.5" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-weight="700" font-size="14">WR</text>
+            <defs><linearGradient id="wr-grad-p" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="nav__logo-text">Willian Rosa</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li class="nav__item nav__item--dropdown">
+          <a href="../../index.html#projects" class="nav__link nav__link--dropdown active">
+            <span>Projects</span>
+            <svg class="nav__caret" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <ul class="nav__dropdown" data-nav-dropdown aria-label="Todos os projetos"></ul>
+        </li>
+        <li><a href="../../index.html#skills" class="nav__link">Skills</a></li>
+        <li><a href="../../index.html#architecture" class="nav__link">Architecture</a></li>
+        <li><a href="../../index.html#about" class="nav__link">About</a></li>
+        <li><a href="../../index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <div class="lang-selector" role="group" aria-label="Seletor de idioma">
+          <button class="lang-current" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag-current"></span> PT
+          </button>
+          <ul class="lang-dropdown" role="listbox" aria-label="Select language">
+            <li role="option" class="lang-option active" data-lang="pt" aria-selected="true">
+              <span class="lang-flag">&#x1F1E7;&#x1F1F7;</span><span>Portugues</span>
+            </li>
+            <li role="option" class="lang-option" data-lang="en" aria-selected="false">
+              <span class="lang-flag">&#x1F1FA;&#x1F1F8;</span><span>English</span>
+            </li>
+            <li role="option" class="lang-option" data-lang="es" aria-selected="false">
+              <span class="lang-flag">&#x1F1EA;&#x1F1F8;</span><span>Espanol</span>
+            </li>
+          </ul>
+        </div>
+
+        <button class="btn btn--icon btn--ghost theme-toggle" aria-label="Alternar tema" type="button">
+          <svg class="icon--sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon--moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="sf-main">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="sf-hero" aria-labelledby="sf-hero-title">
+      <div class="container">
+        <div class="sf-hero__grid">
+          <div class="sf-hero__content">
+            <span class="sf-hero__badge" data-reveal>
+              <span class="sf-hero__badge-dot" aria-hidden="true"></span>
+              Enterprise Service Management
+            </span>
+            <h1 id="sf-hero-title" class="sf-hero__title" data-reveal data-delay="1">
+              <span class="sf-brand">ServiceForge</span>
+            </h1>
+            <p class="sf-hero__subtitle" data-reveal data-delay="2">
+              Enterprise Service Management Platform
+            </p>
+            <p class="sf-hero__summary" data-reveal data-delay="3">
+              O ServiceForge unifica a gestão de serviços corporativos em uma plataforma modular:
+              assistência técnica, manutenção, field service e serviços especializados em um único
+              ambiente operacional. Orquestre equipes, ativos e ordens de serviço, automatize processos
+              com um workflow engine visual e integre-se a qualquer stack — com arquitetura multiempresa,
+              segurança em camadas e produtividade do time ao enterprise.
+            </p>
+            <div class="sf-hero__actions" data-reveal data-delay="4">
+              <a href="#sf-architecture" class="btn btn--primary btn--lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                View Architecture
+              </a>
+              <a href="#sf-features" class="btn btn--secondary btn--lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Explore Features
+              </a>
+              <a href="https://github.com/pycriador/serviceforge" class="btn btn--ghost btn--lg" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="sf-hero__meta" data-reveal data-delay="5">
+              <span class="sf-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Modular
+              </span>
+              <span class="sf-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Multiempresa
+              </span>
+              <span class="sf-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                API First
+              </span>
+              <span class="sf-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                Cloud Ready
+              </span>
+            </div>
+          </div>
+
+          <div class="sf-hero__visual" data-reveal data-delay="3">
+            <div class="sf-mockup" role="img" aria-label="Mockup do dashboard do ServiceForge com métricas operacionais, estatísticas e tabela de ordens de serviço.">
+              <div class="sf-mockup__chrome" aria-hidden="true">
+                <span class="sf-mockup__dot"></span>
+                <span class="sf-mockup__dot"></span>
+                <span class="sf-mockup__dot"></span>
+                <span class="sf-mockup__url">app.serviceforge.io/dashboard</span>
+              </div>
+              <div class="sf-mockup__body">
+                <div class="sf-mockup__sidebar" aria-hidden="true">
+                  <div class="sf-mockup__logo">
+                    <span class="sf-mockup__logo-mark"></span>
+                    <span class="sf-mockup__logo-line"></span>
+                  </div>
+                  <span class="sf-mockup__nav-item sf-mockup__nav-item--active"></span>
+                  <span class="sf-mockup__nav-item"></span>
+                  <span class="sf-mockup__nav-item"></span>
+                  <span class="sf-mockup__nav-item"></span>
+                  <span class="sf-mockup__nav-item"></span>
+                </div>
+                <div class="sf-mockup__main" aria-hidden="true">
+                  <div class="sf-mockup__topbar">
+                    <span class="sf-mockup__title-bar"></span>
+                    <span class="sf-mockup__avatar"></span>
+                  </div>
+                  <div class="sf-mockup__stats">
+                    <div class="sf-mockup__stat">
+                      <span class="sf-mockup__stat-label"></span>
+                      <span class="sf-mockup__stat-value"></span>
+                      <span class="sf-mockup__stat-bar"></span>
+                    </div>
+                    <div class="sf-mockup__stat">
+                      <span class="sf-mockup__stat-label"></span>
+                      <span class="sf-mockup__stat-value"></span>
+                      <span class="sf-mockup__stat-bar"></span>
+                    </div>
+                    <div class="sf-mockup__stat">
+                      <span class="sf-mockup__stat-label"></span>
+                      <span class="sf-mockup__stat-value"></span>
+                      <span class="sf-mockup__stat-bar"></span>
+                    </div>
+                  </div>
+                  <div class="sf-mockup__table">
+                    <span class="sf-mockup__row sf-mockup__row--wide sf-mockup__row--accent"></span>
+                    <span class="sf-mockup__row sf-mockup__row--mid"></span>
+                    <span class="sf-mockup__row sf-mockup__row--short"></span>
+                    <span class="sf-mockup__row sf-mockup__row--wide"></span>
+                    <span class="sf-mockup__row sf-mockup__row--mid"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sf-float-card sf-float-card--tl" aria-hidden="true">
+              <span class="sf-float-card__icon sf-float-card__icon--green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>
+                <span class="sf-float-card__label">OS #1245 concluída</span>
+                <span class="sf-float-card__value">Antes do prazo de SLA</span>
+              </span>
+            </div>
+
+            <div class="sf-float-card sf-float-card--bl" aria-hidden="true">
+              <span class="sf-float-card__icon sf-float-card__icon--indigo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+              </span>
+              <span>
+                <span class="sf-float-card__label">Workflow automático</span>
+                <span class="sf-float-card__value">Regra de escalonamento ativa</span>
+              </span>
+            </div>
+
+            <div class="sf-float-card sf-float-card--br" aria-hidden="true">
+              <span class="sf-float-card__icon sf-float-card__icon--cyan">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </span>
+              <span>
+                <span class="sf-float-card__label">99,99% disponibilidade</span>
+                <span class="sf-float-card__value">Monitoramento contínuo</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-hero__scroll-cue" aria-hidden="true">Rolar</div>
+    </section>
+
+    <!-- ═══════════ KEY NUMBERS ═══════════ -->
+    <section class="sf-numbers" aria-label="Números da plataforma">
+      <div class="container">
+        <div id="sf-numbers-grid" class="sf-numbers__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT VISION ═══════════ -->
+    <section class="sf-section sf-section--alt" aria-labelledby="sf-vision-title">
+      <div class="container">
+        <div class="sf-section-head sf-section-head--center">
+          <span class="sf-eyebrow" data-reveal>Product Vision</span>
+          <h2 id="sf-vision-title" class="sf-title" data-reveal data-delay="1">
+            Uma plataforma, <span class="text-gradient">todas as operações de serviço</span>
+          </h2>
+          <p class="sf-lead" data-reveal data-delay="2">
+            O ServiceForge nasceu para resolver o maior desafio de empresas de serviço:
+            operar com múltiplas ferramentas desconectadas, sem visibilidade e sem padrão.
+          </p>
+        </div>
+
+        <div class="sf-vision__grid">
+          <article class="sf-vision__card sf-card" data-reveal>
+            <span class="sf-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <span class="sf-vision__tag">O Problema</span>
+            <h3 class="sf-vision__title">Operações fragmentadas custam caro</h3>
+            <p class="sf-vision__text">
+              Empresas de serviço gerenciam clientes em um CRM, ordens em uma planilha, equipes em um
+              aplicativo de mensagens e documentos em pastas soltas. O resultado: retrabalho, perda de
+              SLA, ausência de rastreabilidade e decisões baseadas em informação defasada.
+            </p>
+          </article>
+
+          <article class="sf-vision__card sf-card" data-reveal data-delay="1">
+            <span class="sf-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span class="sf-vision__tag">A Solução</span>
+            <h3 class="sf-vision__title">Um ambiente unificado e modular</h3>
+            <p class="sf-vision__text">
+              O ServiceForge centraliza clientes, ativos, ordens de serviço, documentos e workflows em uma
+              única plataforma. Cada domínio é um módulo independente — você adota o que precisa e evolui
+              conforme a operação cresce, sem migração de plataforma.
+            </p>
+          </article>
+
+          <article class="sf-vision__card sf-card" data-reveal data-delay="2">
+            <span class="sf-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <span class="sf-vision__tag">Diferenciais</span>
+            <h3 class="sf-vision__title">O que nos diferencia</h3>
+            <ul class="sf-vision__list">
+              <li>Isolamento multiempresa por padrão, do banco à interface</li>
+              <li>Workflow engine visual que automatiza sem código</li>
+              <li>Modelos de dados dinâmicos dirigidos por metadados</li>
+              <li>API first: tudo o que a tela faz, a API faz</li>
+              <li>Auditoria completa para conformidade e governança</li>
+            </ul>
+          </article>
+
+          <article class="sf-vision__card sf-card" data-reveal data-delay="3">
+            <span class="sf-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <span class="sf-vision__tag">A Visão</span>
+            <h3 class="sf-vision__title">Ser o sistema operacional das operações de serviço</h3>
+            <p class="sf-vision__text">
+              Nossa visão é que qualquer empresa — de uma assistência técnica local a uma rede global de
+              field service — opere toda a sua cadeia de serviços em um único lugar, com dados confiáveis,
+              processos automatizados e a liberdade de crescer sem trocar de plataforma.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CORE MODULES ═══════════ -->
+    <section class="sf-section" id="sf-modules" aria-labelledby="sf-modules-title">
+      <div class="container">
+        <div class="sf-section-head sf-section-head--center">
+          <span class="sf-eyebrow" data-reveal>Core Modules</span>
+          <h2 id="sf-modules-title" class="sf-title" data-reveal data-delay="1">
+            Módulos de negócio, <span class="text-gradient">prontos e extensíveis</span>
+          </h2>
+          <p class="sf-lead" data-reveal data-delay="2">
+            A plataforma é composta por módulos independentes que compartilham a mesma fundação.
+            Cada módulo evolui sozinho e entrega valor isolado — ou em conjunto.
+          </p>
+        </div>
+        <div id="sf-modules-grid" class="sf-modules__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FEATURE HIGHLIGHTS ═══════════ -->
+    <section class="sf-section sf-section--alt" id="sf-features" aria-labelledby="sf-features-title">
+      <div class="container">
+        <div class="sf-section-head sf-section-head--center">
+          <span class="sf-eyebrow" data-reveal>Feature Highlights</span>
+          <h2 id="sf-features-title" class="sf-title" data-reveal data-delay="1">
+            Recursos pensados para <span class="text-gradient">escala e governança</span>
+          </h2>
+          <p class="sf-lead" data-reveal data-delay="2">
+            Cada recurso entrega um benefício direto à operação: mais controle, menos retrabalho
+            e uma plataforma que cresce junto com a empresa.
+          </p>
+        </div>
+        <div id="sf-features-grid" class="sf-features__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT GALLERY ═══════════ -->
+    <section class="sf-section sf-gallery" id="sf-gallery" aria-labelledby="sf-gallery-title">
+      <div class="container">
+        <div class="sf-section-head sf-section-head--center">
+          <span class="sf-eyebrow" data-reveal>Product Gallery</span>
+          <h2 id="sf-gallery-title" class="sf-title" data-reveal data-delay="1">
+            Uma olhada na <span class="text-gradient">plataforma</span>
+          </h2>
+          <p class="sf-lead" data-reveal data-delay="2">
+            Visões-chave do produto, preparadas para receber capturas reais.
+            Clique em qualquer card para ampliar.
+          </p>
+        </div>
+        <div id="sf-gallery-root"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ARCHITECTURE ═══════════ -->
+    <section class="sf-section sf-section--alt" id="sf-architecture" aria-labelledby="sf-architecture-title">
+      <div class="container">
+        <div class="sf-section-head sf-section-head--center">
+          <span class="sf-eyebrow" data-reveal>Architecture Overview</span>
+          <h2 id="sf-architecture-title" class="sf-title" data-reveal data-delay="1">
+            Arquitetura em camadas, <span class="text-gradient">modular por projeto</span>
+          </h2>
+          <p class="sf-lead" data-reveal data-delay="2">
+            Cada camada tem responsabilidade única e se comunica por contratos estáveis.
+            Isso permite escalar, substituir e evoluir qualquer parte sem afetar o todo.
+          </p>
+        </div>
+        <div class="sf-arch">
+          <ul id="sf-arch-layers" class="sf-arch__layers"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ TECHNICAL HIGHLIGHTS ═══════════ -->
+    <section class="sf-section" id="sf-tech" aria-labelledby="sf-tech-title">
+      <div class="container">
+        <div class="sf-section-head sf-section-head--center">
+          <span class="sf-eyebrow" data-reveal>Technical Highlights</span>
+          <h2 id="sf-tech-title" class="sf-title" data-reveal data-delay="1">
+            Stack moderna, <span class="text-gradient">foco em produtividade</span>
+          </h2>
+          <p class="sf-lead" data-reveal data-delay="2">
+            Tecnologias escolhidas pelo equilíbrio entre maturidade, produtividade e capacidade
+            de escala — cada uma com um papel claro na arquitetura.
+          </p>
+        </div>
+        <div id="sf-tech-grid" class="sf-tech__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ROADMAP ═══════════ -->
+    <section class="sf-section sf-section--alt" id="sf-roadmap" aria-labelledby="sf-roadmap-title">
+      <div class="container">
+        <div class="sf-section-head sf-section-head--center">
+          <span class="sf-eyebrow" data-reveal>Roadmap</span>
+          <h2 id="sf-roadmap-title" class="sf-title" data-reveal data-delay="1">
+            Jornada de <span class="text-gradient">evolução contínua</span>
+          </h2>
+          <p class="sf-lead" data-reveal data-delay="2">
+            Cinco fases que levam a plataforma da fundação ao enterprise, sempre preservando
+            compatibilidade e padrões.
+          </p>
+        </div>
+        <div class="sf-roadmap__wrap">
+          <ol id="sf-roadmap-timeline" class="sf-roadmap__timeline"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREENSHOTS ═══════════ -->
+    <section class="sf-section sf-gallery" id="sf-shots" aria-labelledby="sf-shots-title">
+      <div class="container">
+        <div class="sf-section-head sf-section-head--center">
+          <span class="sf-eyebrow" data-reveal>Screenshots</span>
+          <h2 id="sf-shots-title" class="sf-title" data-reveal data-delay="1">
+            Capturas por <span class="text-gradient">dispositivo e contexto</span>
+          </h2>
+          <p class="sf-lead" data-reveal data-delay="2">
+            Espaços reservados para capturas de desktop, tablet, mobile, temas claro e escuro,
+            fluxogramas e diagramas — com SEO e carregamento otimizado.
+          </p>
+        </div>
+        <div id="sf-shots-filters" class="sf-shots__filters" role="group" aria-label="Filtrar capturas"></div>
+        <div id="sf-shots-grid" class="sf-shots__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT NAVIGATION ═══════════ -->
+    <section class="sf-pagenav" aria-label="Navegação do produto">
+      <div class="container">
+        <div class="sf-pagenav__grid">
+          <a href="../../index.html#projects" class="sf-pagenav__back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Voltar ao Portfólio
+          </a>
+
+          <div class="sf-pagenav__share">
+            <button id="sf-share" class="sf-pagenav__link" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Compartilhar
+            </button>
+            <button id="sf-copy" class="sf-pagenav__link sf-pagenav__link--primary" type="button" style="position:relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copiar Link
+              <span id="sf-copied" class="sf-pagenav__copied" role="status">Link copiado!</span>
+            </button>
+          </div>
+
+          <div class="sf-pagenav__pair">
+            <a id="sf-prev" class="sf-pagenav__link" href="../../index.html#projects">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              <span data-role="title">Anterior</span>
+            </a>
+            <a id="sf-next" class="sf-pagenav__link" href="../../index.html#projects">
+              <span data-role="title">Próximo</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="sf-footer" role="contentinfo">
+    <div class="container sf-footer__inner">
+      <span class="sf-footer__brand">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="url(#wr-grad-f)"/>
+          <text x="16" y="21.5" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-weight="700" font-size="14">WR</text>
+          <defs><linearGradient id="wr-grad-f" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+        </svg>
+        Willian Rosa
+      </span>
+      <span class="sf-footer__copy">© <span id="sf-year">2026</span> ServiceForge · Portfólio demonstrativo</span>
+    </div>
+  </footer>
+
+  <!-- ═══════════ LIGHTBOX ═══════════ -->
+  <div id="sf-lightbox" class="sf-lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada" aria-hidden="true">
+    <div class="sf-lightbox__card">
+      <div class="sf-lightbox__chrome" aria-hidden="true">
+        <span class="sf-mockup__dot"></span>
+        <span class="sf-mockup__dot"></span>
+        <span class="sf-mockup__dot"></span>
+      </div>
+      <button class="btn btn--icon btn--ghost sf-lightbox__close" type="button" data-lb-close aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="sf-lightbox__nav sf-lightbox__nav--prev" type="button" data-lb-prev aria-label="Anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="sf-lightbox__screen" data-lb-screen></div>
+      <button class="sf-lightbox__nav sf-lightbox__nav--next" type="button" data-lb-next aria-label="Próximo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="sf-lightbox__caption-wrap">
+        <p class="sf-lightbox__label" data-lb-label></p>
+        <p class="sf-lightbox__caption" data-lb-caption></p>
+      </div>
+      <span class="sf-lightbox__count" data-lb-count></span>
+    </div>
+  </div>
+
+  <script src="../../config/profile.js"></script>
+  <script src="../../config/social.js"></script>
+  <script src="../../config/settings.js"></script>
+  <script src="../../config/projects.js"></script>
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="../../js/scroll.js"></script>
+  <script src="../../js/animation.js"></script>
+  <script src="../serviceforge/js/serviceforge.js"></script>
+  <script src="../serviceforge/js/gallery.js"></script>
+  <script src="../serviceforge/js/roadmap.js"></script>
+
+</body>
+</html>
