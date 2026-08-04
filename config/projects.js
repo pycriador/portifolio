@@ -130,63 +130,65 @@ const PROJECTS = Object.freeze([
     id: 'knowledge-platform',
     slug: 'knowledge-platform',
     title: 'Knowledge Platform',
-    subtitle: 'AI-powered knowledge base with semantic search',
-    category: 'Knowledge Base',
+    subtitle: 'Centralized technical knowledge base',
+    category: 'Enterprise Knowledge Management',
     status: 'In Development',
     statusType: 'warning',
     featured: false,
-    year: 2024,
-    description: 'Knowledge Platform is an AI-powered knowledge base that provides semantic search capabilities and automatic content organization. Leveraging vector embeddings and large language models, it transforms unstructured documents into a searchable, interconnected knowledge graph that surfaces relevant information contextually. The platform supports automatic tagging, relationship discovery, and conversational querying over enterprise knowledge repositories.',
-    shortDescription: 'AI-powered knowledge base with semantic search and automatic content organization.',
-    technologies: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'OpenAI', 'Vector DB', 'Docker'],
+    year: 2026,
+    description: 'Knowledge Platform is an enterprise knowledge management platform that centralizes technical knowledge — documentation, procedures, manuals, equipment catalogs, and solution articles — into a connected relational network. It combines versioned content with semantic search, an AI assistant grounded in approved sources (RAG), and complete catalog governance for equipment, models, firmware, and drivers, so every answer is traceable and always up to date.',
+    shortDescription: 'Centralized technical knowledge base with semantic search, AI assistant, and relational catalogs.',
+    technologies: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'REST APIs', 'Workflow', 'RLS', 'RBAC', 'Versioning', 'Webhooks', 'I18n', 'Realtime'],
     architecture: {
-      Frontend: 'React application with a rich text editor built on TipTap, real-time search with debounced semantic queries, and a knowledge graph visualization using D3.js force-directed layouts.',
-      Backend: 'FastAPI service handling document ingestion, embedding generation via OpenAI API, vector similarity search, and a knowledge graph construction engine with automatic relationship inference.',
-      Database: 'PostgreSQL for document metadata and user data, Pinecone vector database for embedding storage and similarity search, and Redis for search result caching.',
-      Cloud: 'Docker Compose for local development, with production deployment on AWS ECS, S3 for document storage, and OpenAI API for embedding and completion endpoints.',
-      Security: 'JWT-based authentication, document-level access controls, encrypted document storage, and API rate limiting with tenant-aware quotas.',
-      Integrations: 'File upload support for PDF, DOCX, and Markdown, Slack bot for conversational knowledge queries, and webhook-based document ingestion from external CMS platforms.',
-      Scalability: 'Async document processing with Celery workers, vector index sharding for large document collections, and pagination with cursor-based search result streaming.'
+      Frontend: 'React interface with a Markdown editor and live preview, semantic search bar, AI assistant panel, equipment catalog views, and an admin console for governance and approval flows.',
+      Backend: 'TypeScript services orchestrating content versioning, a relational knowledge engine that links documents, assets, and procedures, and an AI layer for semantic search and RAG-based Q&A.',
+      Database: 'PostgreSQL with row-level security for multi-tenant isolation, versioned tables for documents and revisions, and an immutable audit trail for approvals and content changes.',
+      Cloud: 'Supabase for managed authentication, database, storage, and realtime updates, with webhook delivery for external systems and scheduled review reminders.',
+      Security: 'RBAC with granular permissions per module and content type, role-based approval gates before publication, and complete audit trails for every revision.',
+      Integrations: 'REST API for external systems, webhook notifications for content lifecycle events, i18n-ready content model, and realtime updates across sessions.',
+      Scalability: 'Structured relational data with indexed catalog lookups, full-text and vector search across large document collections, and paginated list views for catalogs and search results.'
     },
-    tags: ['AI', 'Knowledge Base', 'Search', 'Automation', 'Enterprise'],
+    tags: ['Enterprise', 'Knowledge Base', 'Documentation', 'AI', 'Search', 'Governance', 'RAG'],
     coverImage: 'projects/knowledge-platform/images/cover.webp',
     heroImage: 'projects/knowledge-platform/images/hero.webp',
     gallery: [
-      { src: 'projects/knowledge-platform/images/gallery-01.webp', alt: 'Knowledge base search interface with semantic results', type: 'Desktop' },
-      { src: 'projects/knowledge-platform/images/gallery-02.webp', alt: 'Knowledge graph visualization showing document relationships', type: 'Diagram' },
-      { src: 'projects/knowledge-platform/images/gallery-03.webp', alt: 'Document ingestion pipeline with automatic tagging', type: 'Screenshot' }
+      { src: 'projects/knowledge-platform/images/gallery-01.webp', alt: 'Knowledge base dashboard with document and activity overview', type: 'Desktop' },
+      { src: 'projects/knowledge-platform/images/gallery-02.webp', alt: 'Semantic search and AI assistant returning answers with cited sources', type: 'Screenshot' },
+      { src: 'projects/knowledge-platform/images/gallery-03.webp', alt: 'Knowledge relationships flow from equipment to solution articles', type: 'Diagram' }
     ],
     github: 'https://github.com/pycriador/knowledge-platform',
     demo: '',
     documentation: '',
     overview: {
-      objective: 'Create an intelligent knowledge management system that understands document content semantically and enables natural language querying over enterprise knowledge bases.',
-      problem: 'Enterprise knowledge is scattered across documents, wikis, and chat histories. Traditional keyword search fails to surface contextually relevant information, and manual categorization is inconsistent and labor-intensive.',
-      solution: 'Built a pipeline that ingests documents, generates vector embeddings via OpenAI, stores them in a vector database for similarity search, and constructs a knowledge graph that captures relationships between concepts and documents.',
-      results: 'Prototype demonstrates 85% improvement in information retrieval relevance compared to keyword search, with automatic tagging achieving 92% accuracy on enterprise document collections.'
+      objective: 'Centralize technical knowledge into a connected relational network where documents, equipment, procedures, and solutions are versioned, governed, and findable through semantic search and an AI assistant.',
+      problem: 'Technical knowledge is scattered across network folders, spreadsheets, and chat messages. Manuals and procedures become outdated, and locating the right, approved answer takes time across multiple systems.',
+      solution: 'Built a unified platform with versioned content, an equipment and model catalog, a relational knowledge engine linking every item, and a semantic search plus RAG assistant that answers citing approved sources.',
+      results: 'Connects 500+ documents, 100+ procedures, and 1000+ related items in one network, with traceable versions, role-based approval, and answers grounded in audited content.'
     },
     timeline: [
-      { date: 'Q1 2024', title: 'Foundation', description: 'Set up FastAPI backend, document ingestion pipeline, and OpenAI embedding integration.' },
-      { date: 'Q2 2024', title: 'Search & Retrieval', description: 'Implemented vector database integration, semantic search API, and relevance tuning.' },
-      { date: 'Q3 2024', title: 'Knowledge Graph', description: 'Built automatic relationship discovery and knowledge graph visualization.' },
-      { date: 'Q4 2024', title: 'UI & Conversational Interface', description: 'Developed React frontend with search, graph view, and conversational query interface.' }
+      { date: 'P1 2026', title: 'Knowledge Core', description: 'Documentation module with Markdown editor, versioning, and the equipment and model catalog foundation.' },
+      { date: 'P2 2026', title: 'Procedures & Catalog', description: 'Procedures with checklists and responsible parties, plus firmware, driver, manual, and electrical diagram modules.' },
+      { date: 'P3 2026', title: 'Relationships & Governance', description: 'Relational engine linking assets to documents, approval workflows, RBAC, RLS, and the audit trail.' },
+      { date: 'P4 2026', title: 'AI Intelligence', description: 'Semantic search and the RAG assistant answering with cited, approved sources.' },
+      { date: 'P5 2027', title: 'Enterprise Collaboration', description: 'Realtime collaboration, i18n, webhooks, API-first distribution, and ecosystem integrations.' }
     ],
     roadmap: [
-      { title: 'Document ingestion pipeline', status: 'completed' },
-      { title: 'Semantic search with vector embeddings', status: 'completed' },
-      { title: 'Knowledge graph visualization', status: 'in-progress' },
-      { title: 'Conversational Q&A interface', status: 'in-progress' },
-      { title: 'Multi-tenant document isolation', status: 'planned' }
+      { title: 'Documentation and versioning', status: 'completed' },
+      { title: 'Equipment and model catalog', status: 'completed' },
+      { title: 'Knowledge relationships engine', status: 'completed' },
+      { title: 'Semantic search and AI assistant', status: 'in-progress' },
+      { title: 'Approval workflows and RBAC', status: 'in-progress' },
+      { title: 'Enterprise collaboration and i18n', status: 'planned' }
     ],
     challenges: [
-      'Maintaining embedding freshness as documents are updated without regenerating the entire vector index',
-      'Building accurate relationship extraction between documents without relying solely on explicit links',
-      'Handling large document collections while keeping semantic search latency under acceptable thresholds'
+      'Keeping technical content versioned and approved without creating a slow, bureaucratic publishing flow',
+      'Ensuring the AI assistant only answers from approved, current sources so responses stay compliant',
+      'Modeling the many relationships between equipment, firmware, drivers, manuals, and procedures without duplicating content'
     ],
     solutions: [
-      'Implemented incremental embedding updates with document fingerprinting, only regenerating vectors for changed content sections',
-      'Combined TF-IDF co-occurrence analysis with LLM-based entity extraction to infer document relationships automatically',
-      'Designed a two-stage retrieval pipeline with fast approximate nearest neighbor search followed by a cross-encoder reranking step for precision'
+      'Designed a lightweight revision and approval flow with role-based gates, draft states, and a full audit trail for every change',
+      'Implemented RAG grounded exclusively on published documents with citation links and automatic invalidations when sources change',
+      'Built a relational knowledge model where each item references the others, keeping a single source of truth with many connections'
     ]
   },
   {

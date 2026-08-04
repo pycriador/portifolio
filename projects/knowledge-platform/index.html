@@ -5,24 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Knowledge Platform - Willian Rosa Portfolio</title>
-  <meta name="description" content="Knowledge Platform project by Willian Rosa. Software Engineer specializing in enterprise platforms, architecture, and AI.">
+  <title>Knowledge Platform — Enterprise Knowledge Management Platform | Willian Rosa</title>
+  <meta name="description" content="A Knowledge Platform centraliza o conhecimento técnico da organização: documentos, procedimentos, manuais, catálogos de equipamentos e artigos de solução, conectados em uma rede relacional com busca semântica e assistente IA.">
+  <meta name="keywords" content="Knowledge Platform, gestão de conhecimento, base de conhecimento, documentação técnica, procedimentos, manuais, catálogo de equipamentos, busca semântica, assistente IA, RAG, Supabase, PostgreSQL, React, TypeScript, enterprise knowledge management">
   <meta name="author" content="Willian Rosa">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pycriador.github.io/portfolio/projects/knowledge-platform/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pycriador.github.io/portfolio/projects/knowledge-platform/">
-  <meta property="og:title" content="Knowledge Platform - Willian Rosa Portfolio">
-  <meta property="og:description" content="Knowledge Platform project by Willian Rosa.">
-  <meta property="og:image" content="https://pycriador.github.io/portfolio/projects/knowledge-platform/images/og-image.png">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Knowledge Platform — Enterprise Knowledge Management Platform">
+  <meta property="og:description" content="Centralize documentação técnica, procedimentos e manuais em uma rede relacional com busca semântica e assistente IA.">
+  <meta property="og:image" content="https://pycriador.github.io/portfolio/projects/knowledge-platform/assets/og/knowledge-platform-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Willian Rosa Portfolio">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Knowledge Platform - Willian Rosa Portfolio">
-  <meta name="twitter:description" content="Knowledge Platform project by Willian Rosa.">
-  <meta name="twitter:image" content="https://pycriador.github.io/portfolio/projects/knowledge-platform/images/og-image.png">
+  <meta name="twitter:title" content="Knowledge Platform — Enterprise Knowledge Management Platform">
+  <meta name="twitter:description" content="Documentação, procedimentos e conhecimento técnico conectados, com busca semântica e assistente IA.">
+  <meta name="twitter:image" content="https://pycriador.github.io/portfolio/projects/knowledge-platform/assets/og/knowledge-platform-og.png">
 
   <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
@@ -44,27 +47,54 @@
   <link rel="stylesheet" href="../../css/responsive.css">
   <link rel="stylesheet" href="../../css/projects.css">
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../knowledge-platform/css/knowledge-platform.css">
+  <link rel="stylesheet" href="../knowledge-platform/css/gallery.css">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Knowledge Platform",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
     "url": "https://pycriador.github.io/portfolio/projects/knowledge-platform/",
-    "author": {"@type": "Person", "name": "Willian Rosa"},
-    "description": "Knowledge Platform project by Willian Rosa."
+    "author": {"@type": "Person", "name": "Willian Rosa", "url": "https://pycriador.github.io/portfolio/"},
+    "description": "Plataforma enterprise de gestão do conhecimento que centraliza documentação técnica, procedimentos, manuais, catálogos de equipamentos e artigos de solução em uma rede relacional, com busca semântica, assistente IA e controle de versões.",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+    "featureList": [
+      "Documentação técnica versionada com revisão e aprovação",
+      "Catálogo de equipamentos, modelos, firmwares e drivers",
+      "Procedimentos técnicos com checklist e responsáveis",
+      "Busca semântica por intenção com RAG",
+      "Assistente IA que responde citando fontes aprovadas",
+      "Rede de relacionamento entre documentos e ativos",
+      "Controle de acesso por perfil (RLS + RBAC)",
+      "Temas claro e escuro, experiência responsiva"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Portfólio", "item": "https://pycriador.github.io/portfolio/"},
+      {"@type": "ListItem", "position": 2, "name": "Projetos", "item": "https://pycriador.github.io/portfolio/#projects"},
+      {"@type": "ListItem", "position": 3, "name": "Knowledge Platform", "item": "https://pycriador.github.io/portfolio/projects/knowledge-platform/"}
+    ]
   }
   </script>
 </head>
 <body>
 
-  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <a href="#main-content" class="skip-nav">Pular para o conteúdo principal</a>
 
   <div class="nav__backdrop" aria-hidden="true"></div>
 
   <header class="nav" role="banner">
-    <nav class="container nav__inner" aria-label="Main navigation">
-      <a href="../../index.html" class="nav__logo" aria-label="Willian Rosa - Home">
+    <nav class="container nav__inner" aria-label="Navegação principal">
+      <a href="../../index.html" class="nav__logo" aria-label="Willian Rosa - Início">
         <span class="nav__logo-mark" aria-hidden="true">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="32" height="32" rx="8" fill="url(#wr-grad-p)"/>
@@ -81,7 +111,7 @@
             <span>Projects</span>
             <svg class="nav__caret" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
-          <ul class="nav__dropdown" data-nav-dropdown aria-label="All projects"></ul>
+          <ul class="nav__dropdown" data-nav-dropdown aria-label="Todos os projetos"></ul>
         </li>
         <li><a href="../../index.html#skills" class="nav__link">Skills</a></li>
         <li><a href="../../index.html#architecture" class="nav__link">Architecture</a></li>
@@ -90,7 +120,7 @@
       </ul>
 
       <div class="nav__actions">
-        <div class="lang-selector" role="group" aria-label="Language selector">
+        <div class="lang-selector" role="group" aria-label="Seletor de idioma">
           <button class="lang-current" type="button" aria-haspopup="listbox" aria-expanded="false">
             <span class="lang-flag-current"></span> PT
           </button>
@@ -107,21 +137,522 @@
           </ul>
         </div>
 
-        <button class="btn btn--icon btn--ghost theme-toggle" aria-label="Toggle theme" type="button">
+        <button class="btn btn--icon btn--ghost theme-toggle" aria-label="Alternar tema" type="button">
           <svg class="icon--sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon--moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
 
-        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button">
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" type="button">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
   </header>
 
-  <main id="main-content">
-    <div id="project-root"></div>
+  <main id="main-content" class="kp-main">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="kp-hero" aria-labelledby="kp-hero-title">
+      <div class="container">
+        <div class="kp-hero__grid">
+          <div class="kp-hero__content">
+            <span class="kp-hero__badge" data-reveal>
+              <span class="kp-hero__badge-dot" aria-hidden="true"></span>
+              Enterprise Knowledge Management
+            </span>
+            <h1 id="kp-hero-title" class="kp-hero__title" data-reveal data-delay="1">
+              <span class="kp-brand">Knowledge Platform</span>
+            </h1>
+            <p class="kp-hero__subtitle" data-reveal data-delay="2">
+              Enterprise Knowledge Management Platform
+            </p>
+            <p class="kp-hero__summary" data-reveal data-delay="3">
+              A Knowledge Platform centraliza o conhecimento técnico da organização:
+              documentos, procedimentos, manuais, catálogos de equipamentos e artigos de
+              solução — tudo conectado em uma rede relacional, com busca semântica,
+              assistente IA e controle de versões.
+            </p>
+            <div class="kp-hero__actions" data-reveal data-delay="4">
+              <a href="#kp-modules" class="btn btn--primary btn--lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Explore Platform
+              </a>
+              <a href="#kp-architecture" class="btn btn--secondary btn--lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                View Architecture
+              </a>
+              <a href="https://github.com/pycriador/knowledge-platform" class="btn btn--ghost btn--lg" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="kp-hero__meta" data-reveal data-delay="5">
+              <span class="kp-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                Documentos Técnicos
+              </span>
+              <span class="kp-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Busca Semântica
+              </span>
+              <span class="kp-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Versionamento
+              </span>
+              <span class="kp-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5z"/><path d="M8.5 8.5a7 7 0 0 0 7 7"/></svg>
+                Assistente IA
+              </span>
+            </div>
+          </div>
+
+          <div class="kp-hero__visual" data-reveal data-delay="3">
+            <div class="kp-mockup" role="img" aria-label="Mockup da interface da Knowledge Platform com navegação, busca semântica e respostas do assistente IA.">
+              <div class="kp-mockup__chrome" aria-hidden="true">
+                <span class="kp-mockup__dot"></span>
+                <span class="kp-mockup__dot"></span>
+                <span class="kp-mockup__dot"></span>
+                <span class="kp-mockup__url">knowledge.dev/assistente</span>
+              </div>
+              <div class="kp-mockup__body">
+                <div class="kp-mockup__nav" aria-hidden="true">
+                  <div class="kp-mockup__nav-item is-active">
+                    <span class="kp-mockup__nav-icon"></span>
+                    <span class="kp-mockup__nav-line"></span>
+                  </div>
+                  <div class="kp-mockup__nav-item">
+                    <span class="kp-mockup__nav-icon"></span>
+                    <span class="kp-mockup__nav-line"></span>
+                  </div>
+                  <div class="kp-mockup__nav-item">
+                    <span class="kp-mockup__nav-icon"></span>
+                    <span class="kp-mockup__nav-line"></span>
+                  </div>
+                  <div class="kp-mockup__nav-item">
+                    <span class="kp-mockup__nav-icon"></span>
+                    <span class="kp-mockup__nav-line"></span>
+                  </div>
+                </div>
+                <div class="kp-mockup__content">
+                  <div class="kp-mockup__search" aria-hidden="true">
+                    <span class="kp-mockup__search-icon"></span>
+                    <span class="kp-mockup__search-line"></span>
+                  </div>
+                  <div class="kp-mockup__cards">
+                    <div class="kp-mockup__card">
+                      <span class="kp-mockup__tag"></span>
+                      <span class="kp-mockup__line kp-mockup__line--w80"></span>
+                      <span class="kp-mockup__line kp-mockup__line--w60"></span>
+                      <span class="kp-mockup__line kp-mockup__line--w70"></span>
+                    </div>
+                    <div class="kp-mockup__card is-ai">
+                      <span class="kp-mockup__tag"></span>
+                      <span class="kp-mockup__line kp-mockup__line--w100"></span>
+                      <span class="kp-mockup__line kp-mockup__line--w80"></span>
+                      <span class="kp-mockup__line kp-mockup__line--w45"></span>
+                    </div>
+                  </div>
+                  <div class="kp-mockup__answers" aria-hidden="true">
+                    <div class="kp-mockup__answer">
+                      <span class="kp-mockup__answer-value"></span>
+                      <span class="kp-mockup__answer-label"></span>
+                    </div>
+                    <div class="kp-mockup__answer">
+                      <span class="kp-mockup__answer-value"></span>
+                      <span class="kp-mockup__answer-label"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="kp-float-card kp-float-card--tl" aria-hidden="true">
+              <span class="kp-float-card__icon kp-float-card__icon--sky">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <span>
+                <span class="kp-float-card__label">Busca semântica</span>
+                <span class="kp-float-card__value">Resultado relevante</span>
+              </span>
+            </div>
+
+            <div class="kp-float-card kp-float-card--bl" aria-hidden="true">
+              <span class="kp-float-card__icon kp-float-card__icon--violet">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <span>
+                <span class="kp-float-card__label">Revisão aprovada</span>
+                <span class="kp-float-card__value">Versão 2.4</span>
+              </span>
+            </div>
+
+            <div class="kp-float-card kp-float-card--br" aria-hidden="true">
+              <span class="kp-float-card__icon kp-float-card__icon--cyan">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5z"/><path d="M8.5 8.5a7 7 0 0 0 7 7"/></svg>
+              </span>
+              <span>
+                <span class="kp-float-card__label">Assistente IA</span>
+                <span class="kp-float-card__value">Resposta com fontes</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kp-hero__scroll-cue" aria-hidden="true">Rolar</div>
+    </section>
+
+    <!-- ═══════════ KEY NUMBERS ═══════════ -->
+    <section class="kp-numbers" aria-label="Números da plataforma">
+      <div class="container">
+        <div id="kp-numbers-grid" class="kp-numbers__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT VISION ═══════════ -->
+    <section class="kp-section kp-section--alt" aria-labelledby="kp-vision-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Product Vision</span>
+          <h2 id="kp-vision-title" class="kp-title" data-reveal data-delay="1">
+            Conhecimento técnico <span class="text-gradient">conectado e vivo</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            A Knowledge Platform nasceu para acabar com o conhecimento espalhado em planilhas,
+            pastas de rede e chats — criando uma rede única onde cada documento, ativo e
+            procedimento está relacionado, versionado e acessível.
+          </p>
+        </div>
+
+        <div class="kp-vision__grid">
+          <article class="kp-vision__card kp-card" data-reveal>
+            <span class="kp-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <span class="kp-vision__tag">O Problema</span>
+            <h3 class="kp-vision__title">Conhecimento espalhado e desatualizado</h3>
+            <p class="kp-vision__text">
+              Manuais em pastas de rede, procedimentos em planilhas e soluções presas em
+              conversas. Quando alguém precisa de uma resposta técnica, percorre múltiplos
+              sistemas e ainda fica na dúvida se a informação está atualizada.
+            </p>
+          </article>
+
+          <article class="kp-vision__card kp-card" data-reveal data-delay="1">
+            <span class="kp-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span class="kp-vision__tag">A Solução</span>
+            <h3 class="kp-vision__title">Uma rede de conhecimento centralizada</h3>
+            <p class="kp-vision__text">
+              A plataforma conecta documentos, equipamentos, procedimentos e soluções em uma
+              rede relacional. Cada item aponta para os demais, cada versão é rastreável e
+              cada resposta vem com fonte auditada.
+            </p>
+          </article>
+
+          <article class="kp-vision__card kp-card" data-reveal data-delay="2">
+            <span class="kp-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <span class="kp-vision__tag">Diferenciais</span>
+            <h3 class="kp-vision__title">O que diferencia a plataforma</h3>
+            <ul class="kp-vision__list">
+              <li>Busca semântica por intenção, não só palavra</li>
+              <li>Assistente IA que responde citando fontes</li>
+              <li>Rede relacional entre documentos e ativos</li>
+              <li>Controle de versões com revisão e aprovação</li>
+              <li>Catálogo completo de equipamentos e modelos</li>
+            </ul>
+          </article>
+
+          <article class="kp-vision__card kp-card" data-reveal data-delay="3">
+            <span class="kp-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <span class="kp-vision__tag">A Visão</span>
+            <h3 class="kp-vision__title">O conhecimento como ativo corporativo</h3>
+            <p class="kp-vision__text">
+              Nossa visão é que toda resposta técnica da empresa esteja a poucos cliques de
+              distância, sempre atualizada, sempre atribuída e sempre alinhada aos
+              procedimentos oficiais — independente de quem perguntar.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CORE MODULES ═══════════ -->
+    <section class="kp-section" id="kp-modules" aria-labelledby="kp-modules-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Core Modules</span>
+          <h2 id="kp-modules-title" class="kp-title" data-reveal data-delay="1">
+            Dezessete módulos, <span class="text-gradient">uma base de conhecimento</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Cada módulo cobre uma parte do ciclo do conhecimento — conteúdo, catálogo de
+            ativos, inteligência artificial, governança e plataforma — em um só ambiente.
+          </p>
+        </div>
+        <div id="kp-modules-grid" class="kp-modules__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FEATURE HIGHLIGHTS ═══════════ -->
+    <section class="kp-section kp-section--alt" id="kp-features" aria-labelledby="kp-features-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Feature Highlights</span>
+          <h2 id="kp-features-title" class="kp-title" data-reveal data-delay="1">
+            Recursos que transformam <span class="text-gradient">informação em resposta</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Cada recurso elimina um ponto de fricção: menos busca manual, menos documentos
+            desatualizados e mais confiança nas respostas.
+          </p>
+        </div>
+        <div id="kp-features-grid" class="kp-features__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ AI INTELLIGENCE ═══════════ -->
+    <section class="kp-section" id="kp-ai" aria-labelledby="kp-ai-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>AI Intelligence</span>
+          <h2 id="kp-ai-title" class="kp-title" data-reveal data-delay="1">
+            Inteligência que entende <span class="text-gradient">o contexto técnico</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            A camada de IA traduz perguntas em respostas com fonte: busca semântica,
+            geração aumentada por recuperação (RAG) e automação de rotinas de conteúdo.
+          </p>
+        </div>
+        <div id="kp-ai-grid" class="kp-ai__grid"></div>
+        <div id="kp-ai-providers" class="kp-ai__providers"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ KNOWLEDGE RELATIONSHIPS ═══════════ -->
+    <section class="kp-section kp-section--alt" id="kp-relationships" aria-labelledby="kp-relationships-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Knowledge Relationships</span>
+          <h2 id="kp-relationships-title" class="kp-title" data-reveal data-delay="1">
+            Tudo conectado, <span class="text-gradient">nada perdido</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Do equipamento ao artigo de solução, o conhecimento segue um fluxo relacional:
+            cada item aponta para o próximo, criando uma trilha navegável do problema à resposta.
+          </p>
+        </div>
+        <div class="kp-rel">
+          <ul id="kp-rel-list" class="kp-rel__list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT GALLERY ═══════════ -->
+    <section class="kp-section kp-gallery" id="kp-gallery" aria-labelledby="kp-gallery-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Product Gallery</span>
+          <h2 id="kp-gallery-title" class="kp-title" data-reveal data-delay="1">
+            Uma olhada na <span class="text-gradient">Knowledge Platform</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Treze visões-chave do produto em seis coleções, preparadas para receber capturas
+            reais. Clique em qualquer card para ampliar.
+          </p>
+        </div>
+        <div id="kp-gallery-root"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ARCHITECTURE ═══════════ -->
+    <section class="kp-section kp-section--alt" id="kp-architecture" aria-labelledby="kp-architecture-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Architecture Overview</span>
+          <h2 id="kp-architecture-title" class="kp-title" data-reveal data-delay="1">
+            Camadas claras, <span class="text-gradient">conhecimento confiável</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Cada camada tem responsabilidade única: da interface ao motor de busca semântica,
+            passando por governança, catálogo e integrações — sempre com auditoria.
+          </p>
+        </div>
+        <div class="kp-arch">
+          <ul id="kp-arch-layers" class="kp-arch__layers"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ TECHNICAL HIGHLIGHTS ═══════════ -->
+    <section class="kp-section" id="kp-tech" aria-labelledby="kp-tech-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Technical Highlights</span>
+          <h2 id="kp-tech-title" class="kp-title" data-reveal data-delay="1">
+            Stack moderna, <span class="text-gradient">dados seguros</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            React e TypeScript na interface, Supabase e PostgreSQL no núcleo, com busca
+            vetorial, versionamento e controle de acesso por perfil.
+          </p>
+        </div>
+        <div id="kp-tech-grid" class="kp-tech__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ USE CASES ═══════════ -->
+    <section class="kp-section kp-section--alt" id="kp-cases" aria-labelledby="kp-cases-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Use Cases</span>
+          <h2 id="kp-cases-title" class="kp-title" data-reveal data-delay="1">
+            Oito cenários de <span class="text-gradient">aplicação real</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Do time técnico ao compliance: como a plataforma resolve problemas concretos de
+            conhecimento em empresas de todos os portes.
+          </p>
+        </div>
+        <div id="kp-cases-grid" class="kp-cases__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ROADMAP ═══════════ -->
+    <section class="kp-section" id="kp-timeline" aria-labelledby="kp-timeline-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Roadmap</span>
+          <h2 id="kp-timeline-title" class="kp-title" data-reveal data-delay="1">
+            Jornada de <span class="text-gradient">evolução contínua</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Cinco fases levam a plataforma do núcleo de conteúdo à colaboração enterprise,
+            sempre com governança e padrões de qualidade.
+          </p>
+        </div>
+        <div class="kp-timeline__wrap">
+          <ol id="kp-timeline-list" class="kp-timeline__list"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREENSHOTS ═══════════ -->
+    <section class="kp-section kp-section--alt kp-gallery" id="kp-shots" aria-labelledby="kp-shots-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Screenshots</span>
+          <h2 id="kp-shots-title" class="kp-title" data-reveal data-delay="1">
+            Capturas por <span class="text-gradient">contexto</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Espaços reservados para capturas de dashboard, documentos, catálogo, IA, temas
+            claro e escuro e dispositivos — com SEO e carregamento otimizado.
+          </p>
+        </div>
+        <div id="kp-shots-filters" class="kp-shots__filters" role="group" aria-label="Filtrar capturas"></div>
+        <div id="kp-shots-grid" class="kp-shots__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FUTURE VISION ═══════════ -->
+    <section class="kp-section" id="kp-future" aria-labelledby="kp-future-title">
+      <div class="container">
+        <div class="kp-section-head kp-section-head--center">
+          <span class="kp-eyebrow" data-reveal>Future Vision</span>
+          <h2 id="kp-future-title" class="kp-title" data-reveal data-delay="1">
+            Para onde a plataforma <span class="text-gradient">caminha</span>
+          </h2>
+          <p class="kp-lead" data-reveal data-delay="2">
+            Próximos passos: aprofundar a inteligência artificial, ampliar as integrações
+            com o ecossistema e levar o conhecimento para o ponto de uso.
+          </p>
+        </div>
+        <div id="kp-future-grid" class="kp-future__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT NAVIGATION ═══════════ -->
+    <section class="kp-pagenav" aria-label="Navegação do produto">
+      <div class="container">
+        <div class="kp-pagenav__grid">
+          <a href="../../index.html#projects" class="kp-pagenav__back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Voltar ao Portfólio
+          </a>
+
+          <div class="kp-pagenav__share">
+            <button id="kp-share" class="kp-pagenav__link" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Compartilhar
+            </button>
+            <button id="kp-copy" class="kp-pagenav__link kp-pagenav__link--primary" type="button" style="position:relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copiar Link
+              <span id="kp-copied" class="kp-pagenav__copied" role="status">Link copiado!</span>
+            </button>
+          </div>
+
+          <div class="kp-pagenav__pair">
+            <a id="kp-prev" class="kp-pagenav__link" href="../../index.html#projects">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              <span data-role="title">Anterior</span>
+            </a>
+            <a id="kp-next" class="kp-pagenav__link" href="../../index.html#projects">
+              <span data-role="title">Próximo</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="kp-footer" role="contentinfo">
+    <div class="container kp-footer__inner">
+      <span class="kp-footer__brand">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="url(#wr-grad-f)"/>
+          <text x="16" y="21.5" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-weight="700" font-size="14">WR</text>
+          <defs><linearGradient id="wr-grad-f" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+        </svg>
+        Willian Rosa
+      </span>
+      <span class="kp-footer__copy">© <span id="kp-year">2026</span> Knowledge Platform · Portfólio demonstrativo</span>
+    </div>
+  </footer>
+
+  <!-- ═══════════ LIGHTBOX ═══════════ -->
+  <div id="kp-lightbox" class="kp-lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada" aria-hidden="true">
+    <div class="kp-lightbox__card">
+      <div class="kp-lightbox__chrome" aria-hidden="true">
+        <span class="kp-mockup__dot"></span>
+        <span class="kp-mockup__dot"></span>
+        <span class="kp-mockup__dot"></span>
+      </div>
+      <button class="btn btn--icon btn--ghost kp-lightbox__close" type="button" data-lb-close aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="kp-lightbox__nav kp-lightbox__nav--prev" type="button" data-lb-prev aria-label="Anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="kp-lightbox__screen" data-lb-screen></div>
+      <button class="kp-lightbox__nav kp-lightbox__nav--next" type="button" data-lb-next aria-label="Próximo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="kp-lightbox__caption-wrap">
+        <p class="kp-lightbox__label" data-lb-label></p>
+        <p class="kp-lightbox__caption" data-lb-caption></p>
+      </div>
+      <span class="kp-lightbox__count" data-lb-count></span>
+    </div>
+  </div>
 
   <script src="../../config/profile.js"></script>
   <script src="../../config/social.js"></script>
@@ -132,7 +663,9 @@
   <script src="../../js/navigation.js"></script>
   <script src="../../js/scroll.js"></script>
   <script src="../../js/animation.js"></script>
-  <script src="../../js/project-page.js"></script>
+  <script src="../knowledge-platform/js/knowledge-platform.js"></script>
+  <script src="../knowledge-platform/js/relationships.js"></script>
+  <script src="../knowledge-platform/js/gallery.js"></script>
 
 </body>
 </html>
