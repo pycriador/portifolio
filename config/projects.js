@@ -388,64 +388,65 @@ const PROJECTS = Object.freeze([
     id: 'metadata-platform',
     slug: 'metadata-platform',
     title: 'Metadata Platform',
-    subtitle: 'Metadata management and data catalog for governance',
-    category: 'Metadata',
-    status: 'Production',
-    statusType: 'active',
+    subtitle: 'Enterprise Low-Code Metadata Engine',
+    category: 'Enterprise Low-Code Platform',
+    status: 'Em Desenvolvimento',
+    statusType: 'warning',
     featured: false,
-    year: 2023,
-    description: 'Metadata Platform is a metadata management and data catalog platform for enterprise data governance. It provides automated metadata discovery, data lineage tracking, quality scoring, and a searchable catalog that helps data teams understand, trust, and comply with data governance policies across the organization.',
-    shortDescription: 'Metadata management and data catalog platform for enterprise data governance.',
-    technologies: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'Elasticsearch', 'Docker'],
+    year: 2026,
+    description: 'Metadata Platform is an enterprise low-code application platform where every screen is defined by metadata. Dynamic forms, CRUDs, tables, validations, permissions, approval flows, and reports are declared once as configuration and rendered on demand, eliminating repetitive code. The engine is shared across the ecosystem, so products like ServiceForge, DataForge, and People Identity Hub reuse the same core instead of duplicating form and rule logic.',
+    shortDescription: 'Enterprise low-code metadata engine that renders forms, CRUDs, tables, rules, and workflows from declarative configuration.',
+    technologies: ['React', 'TypeScript', 'Metadata', 'JSON', 'REST APIs', 'Workflow', 'RBAC', 'Supabase', 'PostgreSQL', 'Versionamento', 'Storage', 'Renderização Dinâmica'],
     architecture: {
-      Frontend: 'React catalog interface with faceted search, data lineage visualization using D3.js, quality score dashboards, and a metadata editor with schema comparison views.',
-      Backend: 'FastAPI services for metadata CRUD, automated discovery connectors, Elasticsearch indexing for search, and a lineage computation engine that processes metadata change events.',
-      Database: 'PostgreSQL for metadata storage with JSONB for flexible attribute schemas, Elasticsearch for full-text search and faceted queries, and Redis for search result caching.',
-      Cloud: 'Docker deployment with Elasticsearch cluster, PostgreSQL primary-replica setup, and scheduled discovery jobs running as containerized workers.',
-      Security: 'SSO integration for authentication, column-level access controls for sensitive metadata, audit logging of all catalog changes, and API token management for programmatic access.',
-      Integrations: 'Database introspection connectors for PostgreSQL, MySQL, and Snowflake, Airflow integration for pipeline lineage, and Slack notifications for metadata change alerts.',
-      Scalability: 'Elasticsearch sharding for catalog search at scale, incremental metadata discovery with change detection, and background lineage computation with configurable processing windows.'
+      Frontend: 'React consumers that render the engine dynamically: the Metadata Registry editor, dynamic forms and tables, theme and translation controls, and consoles for the ecosystem products reusing the engine.',
+      Backend: 'TypeScript services orchestrating the metadata engine, a rendering engine that converts definitions into forms, tables, and layouts in real time, and a validation engine that applies declarative rules to every field.',
+      Database: 'PostgreSQL storing structured and versioned metadata, with an append-only audit trail of every change and execution.',
+      Cloud: 'Supabase for managed authentication, database, and storage, with versioned metadata promoted between dev, staging, and production environments.',
+      Security: 'Permissions declared alongside each resource and enforced automatically by the engine, with RBAC roles and scopes defined once and applied to forms, tables, and APIs.',
+      Integrations: 'REST contracts generated from metadata, plus the workflow engine executing approval flows and business rules defined as executable metadata.',
+      Scalability: 'One shared engine across 20+ ecosystem platforms, versioned definitions with diff and rollback, and adaptive rendering for desktop, tablet, and mobile.'
     },
-    tags: ['Metadata', 'Enterprise', 'Data Governance', 'API', 'Catalog', 'Cloud'],
+    tags: ['Enterprise', 'Low-Code', 'Metadata', 'Dynamic Forms', 'Dynamic CRUD', 'Workflow', 'RBAC', 'Audit'],
     coverImage: 'projects/metadata-platform/images/cover.webp',
     heroImage: 'projects/metadata-platform/images/hero.webp',
     gallery: [
-      { src: 'projects/metadata-platform/images/gallery-01.webp', alt: 'Data catalog search with faceted filtering', type: 'Desktop' },
-      { src: 'projects/metadata-platform/images/gallery-02.webp', alt: 'Data lineage visualization showing upstream and downstream dependencies', type: 'Diagram' },
-      { src: 'projects/metadata-platform/images/gallery-03.webp', alt: 'Quality score dashboard with trend analysis', type: 'Screenshot' }
+      { src: 'projects/metadata-platform/images/gallery-01.webp', alt: 'Dynamic form builder rendered from metadata definitions', type: 'Desktop' },
+      { src: 'projects/metadata-platform/images/gallery-02.webp', alt: 'Metadata editor with version history and diff', type: 'Screenshot' },
+      { src: 'projects/metadata-platform/images/gallery-03.webp', alt: 'Metadata lifecycle from definition to audit', type: 'Diagram' }
     ],
     github: 'https://github.com/pycriador/metadata-platform',
     demo: '',
     documentation: '',
     overview: {
-      objective: 'Provide a single source of truth for organizational metadata that enables data discovery, lineage tracking, and governance compliance across all data assets.',
-      problem: 'Organizations lack visibility into their data assets, have no centralized catalog for discovery, cannot trace data lineage for compliance, and suffer from data quality issues that erode trust in analytics.',
-      solution: 'Built automated metadata discovery connectors, implemented a lineage computation engine, designed a quality scoring framework, and created a searchable catalog with faceted navigation and visualization.',
-      results: 'Catalogs over 10,000 data assets across 50 databases, tracks lineage for 200+ data pipelines, and provides quality scores that have helped teams identify and fix 300+ data quality issues.'
+      objective: 'Become the shared metadata engine of the ecosystem: every screen, rule, permission, and flow defined once as configuration and rendered on demand, eliminating repetitive code across platforms.',
+      problem: 'Each platform duplicates form, table, and validation logic by hand. Screens require code changes for small adjustments, releases are slow, and business teams depend on development to evolve screens.',
+      solution: 'Built a canonical metadata model with registry and versioning, a rendering engine that turns definitions into forms, CRUDs, tables, and layouts, declarative validations, permissions by metadata, and executable workflows.',
+      results: '100+ dynamic component types, 50+ dynamic configurations, and 20+ ecosystem platforms planned to reuse the same engine, enabling screen changes without code deploys.'
     },
     timeline: [
-      { date: 'Q3 2023', title: 'Discovery Engine', description: 'Built automated metadata discovery connectors for PostgreSQL and MySQL databases.' },
-      { date: 'Q4 2023', title: 'Catalog & Search', description: 'Implemented Elasticsearch-backed catalog with faceted search and metadata management UI.' },
-      { date: 'Q1 2024', title: 'Lineage & Quality', description: 'Added data lineage computation and quality scoring framework.' },
-      { date: 'Q2 2024', title: 'Production Deployment', description: 'Deployed to production with SSO, access controls, and Airflow integration.' }
+      { date: 'P1 2026', title: 'Metadata Core', description: 'Metadata Registry and Version Control, Dynamic Forms and Dynamic CRUD, and the Validation Engine with declarative rules.' },
+      { date: 'P2 2026', title: 'Rendering Engine', description: 'Dynamic Tables and layouts, Theme Engine and Translation Engine, and adaptive rendering for desktop, tablet, and mobile.' },
+      { date: 'P3 2026', title: 'Workflow Platform', description: 'Workflow Metadata with approval stages, Business Rules on data events, and permissions by metadata.' },
+      { date: 'P4 2027', title: 'Low-Code Studio', description: 'Visual designer for modeling forms and tables, a component marketplace, and reusable templates.' },
+      { date: 'P5 2027', title: 'AI Assisted Modeling', description: 'AI converting natural language requirements into complete metadata definitions and intelligent validation suggestions.' }
     ],
     roadmap: [
-      { title: 'Database introspection connectors', status: 'completed' },
-      { title: 'Full-text catalog search', status: 'completed' },
-      { title: 'Data lineage computation', status: 'completed' },
-      { title: 'Quality scoring framework', status: 'completed' },
-      { title: 'Snowflake connector', status: 'in-progress' },
-      { title: 'Automated governance policy enforcement', status: 'planned' }
+      { title: 'Metadata registry and version control', status: 'completed' },
+      { title: 'Dynamic forms and dynamic CRUD', status: 'completed' },
+      { title: 'Validation engine with declarative rules', status: 'completed' },
+      { title: 'Dynamic tables and adaptive rendering', status: 'in-progress' },
+      { title: 'Workflow metadata and business rules', status: 'planned' },
+      { title: 'Low-code studio and AI assisted modeling', status: 'planned' }
     ],
     challenges: [
-      'Keeping metadata synchronized across rapidly changing database schemas without overwhelming the discovery system',
-      'Computing accurate data lineage across complex ETL pipelines that span multiple tools and technologies',
-      'Designing quality metrics that are meaningful and actionable for different types of data assets'
+      'Defining a canonical metadata model expressive enough to render forms, tables, layouts, rules, and workflows without falling back to custom code',
+      'Applying declarative validation and permission rules consistently across every consumer of the engine, including generated APIs',
+      'Versioning metadata safely so changes can be rolled back without breaking screens already in production'
     ],
     solutions: [
-      'Implemented schema fingerprinting with hash comparison to detect changes efficiently, using incremental discovery that only re-processes modified objects',
-      'Built a lineage collector framework that integrates with Airflow, dbt, and Spark to capture pipeline metadata from execution logs and DAG definitions',
-      'Created a configurable quality rule engine with domain-specific scoring profiles that combine completeness, freshness, uniqueness, and consistency metrics'
+      'Built a canonical JSON schema for metadata with component types, validation descriptors, and permission declarations that the rendering engine consumes uniformly',
+      'Centralized rule enforcement in the engine layer, so fields declared once behave identically in every form, table, and REST contract generated from the metadata',
+      'Introduced Git-like versioning with history, diff, and rollback plus an immutable audit trail, letting teams promote metadata between environments safely'
     ]
   },
   {
