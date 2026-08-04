@@ -324,64 +324,65 @@ const PROJECTS = Object.freeze([
     id: 'clauseforge',
     slug: 'clauseforge',
     title: 'ClauseForge',
-    subtitle: 'Legal clause management and document automation',
-    category: 'Document Management',
-    status: 'Beta',
-    statusType: 'info',
+    subtitle: 'Enterprise Document Automation Platform',
+    category: 'Enterprise Document Automation Platform',
+    status: 'Em Desenvolvimento',
+    statusType: 'warning',
     featured: false,
-    year: 2024,
-    description: 'ClauseForge is a legal clause management and document automation platform that helps legal teams create, manage, and assemble contract clauses with AI-powered suggestions. It provides a clause library with version control, conditional logic for dynamic document generation, and integration with legal review workflows to streamline contract creation and reduce turnaround time.',
-    shortDescription: 'Legal clause management and document automation platform.',
-    technologies: ['TypeScript', 'Python', 'PostgreSQL', 'OpenAI', 'React', 'Docker'],
+    year: 2026,
+    description: 'ClauseForge is an enterprise document automation platform that generates documents from templates and dynamic variables, runs every document through approval workflows, keeps complete version control with an immutable audit trail, and prepares integrated digital signature. It standardizes contracts, proposals, reports, and declarations across the ecosystem, reusing forms, identity, and workflows from the other platforms.',
+    shortDescription: 'Enterprise document automation platform for generation, approval, versioning, and auditing of business documents.',
+    technologies: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Storage', 'REST APIs', 'Workflow', 'Metadata', 'RBAC', 'Versionamento', 'PDF', 'DOCX', 'Auditoria'],
     architecture: {
-      Frontend: 'React rich text editor with legal-specific formatting, clause insertion sidebar with drag-and-drop, real-time collaboration with operational transforms, and a document preview panel with PDF rendering.',
-      Backend: 'TypeScript NestJS API handling clause CRUD, document assembly engine, and Python microservice for AI-powered clause analysis and suggestion generation using OpenAI.',
-      Database: 'PostgreSQL with full-text search for clause retrieval, JSONB for flexible clause metadata and conditional logic definitions, and Redis for collaboration session state.',
-      Cloud: 'Docker Compose deployment with Nginx reverse proxy, S3 for generated document storage, and background job processing for PDF generation and AI analysis.',
-      Security: 'Role-based access with legal team hierarchies, clause-level permissions, encrypted document storage, and comprehensive audit trails for compliance.',
-      Integrations: 'DOCX and PDF generation via LibreOffice, email notifications for review workflows, webhook integration with legal management systems, and OpenAI API for clause risk analysis.',
-      Scalability: 'Background document assembly queue with priority levels, clause library caching for frequent access patterns, and connection pooling for concurrent editing sessions.'
+      Frontend: 'React studios for template editing, the approval center, and document consultation, with preview and version comparison of generated documents.',
+      Backend: 'TypeScript services orchestrating the template engine, the variable engine that resolves dynamic fields, the workflow engine running approval flows, and the document generator producing the final output.',
+      Database: 'PostgreSQL storing documents, templates, and metadata with full versioning, plus an append-only audit service recording every action and decision.',
+      Cloud: 'Supabase for managed authentication, database, and storage, with generated PDF and DOCX files stored and distributed from the document repository.',
+      Security: 'RBAC permissions by role and scope control editing, approval, and access, with an audit platform providing an immutable trail and digital signature prepared for integrity and authenticity.',
+      Integrations: 'Metadata Platform feeds forms and variables, People Identity Hub provides users, roles, and permissions, and ServiceForge generates service orders, contracts, and reports from the same data.',
+      Scalability: '500+ corporate templates, 100+ dynamic variables, and 50+ configurable flows scale document generation from a single repository across the whole business.'
     },
-    tags: ['Document Management', 'AI', 'Enterprise', 'Legal', 'Automation', 'API'],
+    tags: ['Enterprise', 'Document Automation', 'Templates', 'Workflow', 'Versioning', 'Audit', 'PDF', 'DOCX'],
     coverImage: 'projects/clauseforge/images/cover.webp',
     heroImage: 'projects/clauseforge/images/hero.webp',
     gallery: [
-      { src: 'projects/clauseforge/images/gallery-01.webp', alt: 'Clause library with version history and metadata', type: 'Desktop' },
-      { src: 'projects/clauseforge/images/gallery-02.webp', alt: 'Document assembly interface with conditional clauses', type: 'Screenshot' },
-      { src: 'projects/clauseforge/images/gallery-03.webp', alt: 'AI clause analysis showing risk assessment results', type: 'UI' }
+      { src: 'projects/clauseforge/images/gallery-01.webp', alt: 'Document generator with templates and dynamic variables', type: 'Desktop' },
+      { src: 'projects/clauseforge/images/gallery-02.webp', alt: 'Approval workflow with version history and audit trail', type: 'Screenshot' },
+      { src: 'projects/clauseforge/images/gallery-03.webp', alt: 'Document lifecycle from model to audit', type: 'Diagram' }
     ],
     github: 'https://github.com/pycriador/clauseforge',
     demo: '',
     documentation: '',
     overview: {
-      objective: 'Streamline legal document creation by providing a structured clause management system with AI-powered analysis and automated assembly capabilities.',
-      problem: 'Legal teams spend excessive time searching for approved clauses, manually assembling contracts, and reviewing documents for risk and compliance issues, leading to slow turnaround and inconsistent language.',
-      solution: 'Built a clause library with full-text search and version control, implemented a document assembly engine with conditional logic and variable substitution, and integrated OpenAI for clause risk analysis and alternative suggestions.',
-      results: 'Beta users report 60% reduction in contract assembly time, 40% fewer review cycles due to pre-approved clause content, and improved consistency across contract portfolios.'
+      objective: 'Automate the document lifecycle end to end: generate documents from approved templates, run them through approval workflows, and keep every version and action audited in a single platform.',
+      problem: 'Contracts, proposals, and reports are assembled manually in generic editors, one at a time, with risk of error, divergent versions, slow legal review, and no governance or audit trail.',
+      solution: 'Built a template engine with a variable engine and business rules, an approval center with configurable workflows, complete version control with diff and rollback, and an audit platform with an immutable trail.',
+      results: '500+ corporate templates and 100+ dynamic variables standardized across the business, 50+ configurable approval flows, and 100% versioning of every document from model to audit.'
     },
     timeline: [
-      { date: 'Q1 2024', title: 'Clause Engine', description: 'Built clause library with version control, full-text search, and metadata management.' },
-      { date: 'Q2 2024', title: 'Document Assembly', description: 'Implemented template-based document assembly with conditional logic and variable substitution.' },
-      { date: 'Q3 2024', title: 'AI Integration', description: 'Integrated OpenAI for clause risk analysis, alternative suggestions, and plain-language summaries.' },
-      { date: 'Q4 2024', title: 'Beta Release', description: 'Launched beta with collaborative editing, review workflows, and PDF generation.' }
+      { date: 'P1 2026', title: 'Template Engine', description: 'Template Manager and Document Builder, Variable Engine with dynamic fields, and PDF Generator with high fidelity.' },
+      { date: 'P2 2026', title: 'Workflow Platform', description: 'Workflow Engine with approval stages, Approval Center and Business Rules, and lifecycle notifications.' },
+      { date: 'P3 2027', title: 'Version Control', description: 'Version Control with diff and rollback, centralized Document Repository, and immutable Audit Platform.' },
+      { date: 'P4 2027', title: 'Digital Signature & Integrations', description: 'Integrated digital signature, multi-format Export Center, and Metadata Integration with the ecosystem.' },
+      { date: 'P5 2027', title: 'AI Document Intelligence', description: 'AI-generated documents, intelligent data extraction, and automatic clause suggestions.' }
     ],
     roadmap: [
-      { title: 'Clause library with version control', status: 'completed' },
-      { title: 'Document assembly engine', status: 'completed' },
-      { title: 'AI-powered clause analysis', status: 'completed' },
-      { title: 'Real-time collaborative editing', status: 'in-progress' },
-      { title: 'E-signature integration', status: 'planned' },
-      { title: 'Multi-language clause support', status: 'planned' }
+      { title: 'Template manager and document builder', status: 'completed' },
+      { title: 'Variable engine with dynamic fields', status: 'completed' },
+      { title: 'PDF generator with high fidelity', status: 'completed' },
+      { title: 'Workflow engine with approval stages', status: 'in-progress' },
+      { title: 'Version control and audit platform', status: 'planned' },
+      { title: 'Digital signature and AI document intelligence', status: 'planned' }
     ],
     challenges: [
-      'Handling complex conditional clause logic that must resolve correctly across nested document templates',
-      'Ensuring AI-generated clause suggestions maintain legal accuracy and do not introduce compliance risks',
-      'Supporting real-time collaborative editing on legal documents where precision of changes is critical'
+      'Modeling templates and conditional rules that resolve variable values correctly across nested document sections',
+      'Keeping every document versioned and audited consistently while approval flows run in parallel across the organization',
+      'Guaranteeing PDF and DOCX output fidelity to the original template, including clauses, tables, and corporate identity'
     ],
     solutions: [
-      'Built a custom expression evaluator with a sandboxed execution context that resolves conditional logic deterministically and validates all variable references before assembly',
-      'Implemented a two-layer AI analysis where OpenAI generates suggestions and a rule-based validator checks them against a configurable compliance policy before presenting to users',
-      'Used operational transforms with change attribution tracking so each edit in a collaborative session is attributed to a specific user with full revision history'
+      'Built a template engine with a declarative variable and rule model that resolves all references deterministically before generation, with validation at each stage',
+      'Introduced Git-like versioning with history, diff, and rollback plus an append-only audit service, so every action in the lifecycle is tracked from model to archive',
+      'Centralized generation in the document generator with template-driven layout, producing high-fidelity PDF and editable DOCX from a single definition'
     ]
   },
   {

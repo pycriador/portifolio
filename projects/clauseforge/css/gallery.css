@@ -1,0 +1,386 @@
+/* ============================================
+   GALLERY.CSS — ClauseForge Gallery & Screenshots
+   ============================================ */
+
+/* ── Gallery Tabs ── */
+.cf-gallery {
+  position: relative;
+}
+
+.cf-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-bottom: var(--space-10);
+}
+
+.cf-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-elevated);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cf-tab:hover {
+  border-color: var(--cf-accent);
+  color: var(--color-text);
+}
+
+.cf-tab[aria-selected="true"],
+.cf-tab.is-active {
+  background: var(--cf-accent);
+  border-color: var(--cf-accent);
+  color: var(--color-text-inverted);
+}
+
+.cf-tabs__panel {
+  display: none;
+}
+
+.cf-tabs__panel.is-active {
+  display: block;
+}
+
+/* ── Gallery Grid ── */
+.cf-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.cf-gallery__item {
+  cursor: zoom-in;
+  transition: transform var(--transition-base);
+}
+
+.cf-gallery__item:hover {
+  transform: translateY(-4px);
+}
+
+/* ── Mock Placeholder (browser frame) ── */
+.cf-mock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  background: var(--color-surface-elevated);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.cf-gallery__item:hover .cf-mock,
+.cf-mock:hover {
+  box-shadow: var(--shadow-xl), var(--cf-glow);
+}
+
+.cf-mock__chrome {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.cf-mock__chrome span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+.cf-mock__chrome span:nth-child(1) { background: #f87171; }
+.cf-mock__chrome span:nth-child(2) { background: #fbbf24; }
+.cf-mock__chrome span:nth-child(3) { background: #34d399; }
+
+.cf-mock__screen {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  padding: var(--space-6);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, var(--cf-grid-line) 0%, transparent 70%),
+    var(--cf-gradient-soft);
+  overflow: hidden;
+}
+
+.cf-mock__screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--cf-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cf-grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.6;
+}
+
+.cf-mock__screen-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.cf-mock__icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-xl);
+  background: var(--cf-gradient-soft);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  color: var(--cf-accent);
+}
+
+.cf-mock__label {
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+}
+
+.cf-mock__meta {
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+}
+
+.cf-mock__figcaption {
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cf-mock__figcaption-title {
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+}
+
+.cf-mock__figcaption-desc {
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+}
+
+/* Device variations */
+.cf-mock--tablet .cf-mock__screen { aspect-ratio: 4 / 3; }
+.cf-mock--mobile .cf-mock__screen { aspect-ratio: 3 / 4; }
+.cf-mock--wide .cf-mock__screen { aspect-ratio: 21 / 9; }
+
+/* Real image swap target */
+.cf-mock img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* ── Screenshots Section ── */
+.cf-shots__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-bottom: var(--space-10);
+}
+
+.cf-shots__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+.cf-shots__item {
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.cf-shots__item.is-hidden {
+  display: none;
+}
+
+.cf-shots__item .cf-mock__screen {
+  aspect-ratio: 16 / 10;
+}
+
+/* ── Lightbox ── */
+.cf-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-toast);
+  display: grid;
+  place-items: center;
+  padding: var(--space-6);
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.cf-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cf-lightbox__card {
+  position: relative;
+  width: min(960px, 100%);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--glass-border);
+  background: var(--color-surface-elevated);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  transform: scale(0.96);
+  transition: transform var(--transition-base);
+}
+
+.cf-lightbox.is-open .cf-lightbox__card {
+  transform: scale(1);
+}
+
+.cf-lightbox__chrome {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.cf-lightbox__screen {
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  padding: var(--space-8);
+  background: var(--cf-gradient-soft);
+  text-align: center;
+}
+
+.cf-lightbox__label {
+  font-size: var(--text-h4);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+}
+
+.cf-lightbox__caption {
+  margin-top: var(--space-2);
+  font-size: var(--text-body-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-normal);
+}
+
+.cf-lightbox__caption-wrap {
+  padding: var(--space-5) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.cf-lightbox__screen > .cf-mock__screen {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  padding: var(--space-6);
+}
+
+.cf-lightbox__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+}
+
+.cf-lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-elevated);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cf-lightbox__nav:hover {
+  border-color: var(--cf-accent);
+  color: var(--cf-accent);
+}
+
+.cf-lightbox__nav--prev { left: var(--space-4); }
+.cf-lightbox__nav--next { right: var(--space-4); }
+
+.cf-lightbox__count {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+}
+
+body.cf-lightbox-locked {
+  overflow: hidden;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .cf-shots__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cf-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cf-shots__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cf-lightbox__screen {
+    aspect-ratio: 4 / 3;
+  }
+
+  .cf-lightbox__nav {
+    top: auto;
+    bottom: var(--space-16);
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cf-gallery__grid,
+  .cf-shots__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cf-mock--mobile .cf-mock__screen {
+    aspect-ratio: 4 / 3;
+  }
+}
