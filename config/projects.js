@@ -259,63 +259,65 @@ const PROJECTS = Object.freeze([
     id: 'people-identity-hub',
     slug: 'people-identity-hub',
     title: 'People Identity Hub',
-    subtitle: 'Identity and access management with SSO and MFA',
-    category: 'Identity',
-    status: 'Concept',
-    statusType: 'info',
+    subtitle: 'Centralized workforce identity and HR integration platform',
+    category: 'Enterprise Identity Platform',
+    status: 'In Development',
+    statusType: 'warning',
     featured: false,
-    year: 2025,
-    description: 'People Identity Hub is a modern identity and access management platform that provides single sign-on, multi-factor authentication, and comprehensive identity lifecycle management. Designed for organizations managing thousands of users across multiple applications, it centralizes authentication policies, enforces security compliance, and automates provisioning and deprovisioning workflows tied to HR events.',
-    shortDescription: 'Identity and access management platform with SSO, MFA, and lifecycle management.',
-    technologies: ['Go', 'React', 'PostgreSQL', 'Redis', 'OAuth 2.0', 'SAML', 'LDAP'],
+    year: 2026,
+    description: 'People Identity Hub is an enterprise workforce identity platform that centralizes employees, organizations, departments, and groups into a single canonical registry. It synchronizes HR systems, directories, and applications with bidirectional field mapping, automates provisioning and deprovisioning of access, enforces role-based access control, and keeps an immutable audit trail for every identity change.',
+    shortDescription: 'Centralized workforce identity platform with HR integration, provisioning, RBAC, and audit.',
+    technologies: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'REST APIs', 'RBAC', 'JWT', 'OAuth', 'RBS', 'Workflow', 'Auditoria', 'Google Workspace', 'APIs Corporativas'],
     architecture: {
-      Frontend: 'React admin console with user management dashboards, self-service password reset and MFA enrollment flows, and a branding engine for customizable login pages per application.',
-      Backend: 'Go high-performance authentication service handling OAuth 2.0 and SAML flows, a policy engine for access decisions, and a workflow engine for identity lifecycle automation.',
-      Database: 'PostgreSQL for identity store and audit logs, Redis for session management and token caching, and LDAP connector for syncing with existing directory services.',
-      Cloud: 'Kubernetes deployment with Helm charts, PostgreSQL and Redis managed services, and cloud HSM integration for cryptographic key management.',
-      Security: 'FIDO2/WebAuthn passwordless authentication, hardware token MFA support, encrypted audit logs, and compliance with SOC 2 and GDPR requirements.',
-      Integrations: 'SCIM 2.0 for automated provisioning, SAML 2.0 and OIDC for SSO, LDAP and Active Directory sync, and webhook-based lifecycle event notifications.',
-      Scalability: 'Stateless authentication nodes behind a load balancer, distributed session storage in Redis Cluster, and batch identity sync processing with configurable concurrency limits.'
+      Frontend: 'React interface with an employee directory, identity registry, organization and group management, permission consoles, and integration dashboards.',
+      Backend: 'TypeScript services orchestrating the identity engine, a bidirectional synchronization engine with field mapping, and a provisioning engine that reacts to HR lifecycle events.',
+      Database: 'PostgreSQL with row-level security for multi-tenant isolation, canonical identity records with versioned history, and an immutable audit trail built on append-only event records.',
+      Cloud: 'Supabase for managed authentication, database, and storage, with scheduled synchronization jobs and webhook delivery for downstream applications.',
+      Security: 'RBAC with granular permissions per module and field, encrypted storage for sensitive data, and complete audit trails for every identity operation.',
+      Integrations: 'REST API for identity queries, writes, and events, webhook delivery, connectors for HR systems (BambooHR, APDATA, Senior, TOTVS RM), directories (Google Workspace, Microsoft Entra ID, LDAP), and internal applications.',
+      Scalability: 'Segmented synchronization processing for large employee bases, queue-based provisioning for lifecycle events, and indexed read-optimized views over consolidated identity data.'
     },
-    tags: ['Identity', 'Security', 'Enterprise', 'RBAC', 'Authentication', 'SSO'],
+    tags: ['Enterprise', 'Identity', 'HR Integration', 'Provisioning', 'RBAC', 'Audit', 'Workforce', 'Synchronization'],
     coverImage: 'projects/people-identity-hub/images/cover.webp',
     heroImage: 'projects/people-identity-hub/images/hero.webp',
     gallery: [
-      { src: 'projects/people-identity-hub/images/gallery-01.webp', alt: 'Identity management console with user overview', type: 'Desktop' },
-      { src: 'projects/people-identity-hub/images/gallery-02.webp', alt: 'SSO configuration wizard with protocol selection', type: 'Screenshot' },
-      { src: 'projects/people-identity-hub/images/gallery-03.webp', alt: 'Identity lifecycle automation flow diagram', type: 'Diagram' }
+      { src: 'projects/people-identity-hub/images/gallery-01.webp', alt: 'Employee directory with canonical identity records', type: 'Desktop' },
+      { src: 'projects/people-identity-hub/images/gallery-02.webp', alt: 'Field mapping between HR systems and internal applications', type: 'Screenshot' },
+      { src: 'projects/people-identity-hub/images/gallery-03.webp', alt: 'Identity lifecycle flow from recruitment to audit', type: 'Diagram' }
     ],
     github: 'https://github.com/pycriador/people-identity-hub',
     demo: '',
     documentation: '',
     overview: {
-      objective: 'Create a centralized identity platform that simplifies authentication, enforces security policies, and automates identity lifecycle management across enterprise application ecosystems.',
-      problem: 'Organizations manage identities across dozens of applications with inconsistent authentication policies, manual provisioning processes, and no unified view of user access across the organization.',
-      solution: 'Designed a Go-based authentication service supporting OAuth 2.0, SAML, and OIDC, with a policy engine for access decisions and SCIM-based automated provisioning tied to HR system events.',
-      results: 'Concept architecture achieves sub-5ms authentication latency at scale, supports integration with 50+ application types, and reduces manual provisioning time from hours to seconds.'
+      objective: 'Centralize workforce identity into a single canonical registry that keeps HR, directories, and applications synchronized, automating access provisioning and governance.',
+      problem: 'The same person exists differently in each system. Admissions demand hours of manual provisioning, departures leave residual access, and there is no single view of who accesses what.',
+      solution: 'Built a platform with a canonical identity registry, a bidirectional synchronization engine with field mapping, automated provisioning and deprovisioning tied to HR events, RBAC, and an immutable audit trail.',
+      results: 'Supports 500K+ employees and 100+ synchronized fields across 20+ planned integrations, eliminating duplicate records and reducing provisioning time from hours to minutes.'
     },
     timeline: [
-      { date: 'Q1 2025', title: 'Concept & Design', description: 'Defined architecture, threat model, and protocol support matrix for the identity platform.' },
-      { date: 'Q2 2025', title: 'Auth Core', description: 'Implement core OAuth 2.0 and OIDC provider with token management and session handling.' },
-      { date: 'Q3 2025', title: 'SSO & MFA', description: 'Build SAML SSO integration, FIDO2/WebAuthn MFA, and self-service enrollment flows.' },
-      { date: 'Q4 2025', title: 'Lifecycle & Launch', description: 'Implement SCIM provisioning, HR event integration, and complete compliance documentation.' }
+      { date: 'P1 2026', title: 'Identity Core', description: 'Identity Registry, Employee Directory, Organizations, Departments, Groups, and the canonical identity model.' },
+      { date: 'P2 2026', title: 'HR Integrations', description: 'Synchronization Engine with field mapping, BambooHR connector, and the Payroll Integration foundation.' },
+      { date: 'P3 2026', title: 'Provisioning Platform', description: 'Automatic provisioning and deprovisioning of access, Roles, RBAC, and the Configuration Center.' },
+      { date: 'P4 2026', title: 'Identity Governance', description: 'Audit Platform with history and diff, group rules, Google Workspace, Entra ID, and LDAP connectors.' },
+      { date: 'P5 2027', title: 'AI Workforce Insights', description: 'Intelligence over the workforce: anomaly detection, access reviews, and organizational analytics.' }
     ],
     roadmap: [
-      { title: 'OAuth 2.0 and OIDC provider', status: 'planned' },
-      { title: 'SAML 2.0 SSO integration', status: 'planned' },
-      { title: 'FIDO2/WebAuthn MFA', status: 'planned' },
-      { title: 'SCIM 2.0 provisioning', status: 'planned' },
-      { title: 'LDAP and AD sync connector', status: 'planned' }
+      { title: 'Identity registry and directory', status: 'completed' },
+      { title: 'Synchronization engine and field mapping', status: 'completed' },
+      { title: 'BambooHR integration', status: 'completed' },
+      { title: 'Provisioning and deprovisioning automation', status: 'in-progress' },
+      { title: 'RBAC and access governance', status: 'in-progress' },
+      { title: 'Google Workspace, Entra ID and LDAP connectors', status: 'planned' }
     ],
     challenges: [
-      'Implementing a protocol-agnostic authentication core that handles OAuth 2.0, SAML, and OIDC without duplicating security-critical logic',
-      'Ensuring FIDO2/WebAuthn compatibility across the wide variety of browsers and authenticator devices in enterprise environments',
-      'Designing lifecycle automation that correctly handles complex HR events like transfers, leaves, and contractor transitions'
+      'Keeping identity data consistent across HR systems, directories, and applications that use different identifiers and field names',
+      'Automating access provisioning and deprovisioning without creating security gaps or blocking legitimate business processes',
+      'Modeling complex organizational structures — multi-company groups, transfers, and temporary assignments — in a single identity graph'
     ],
     solutions: [
-      'Built a plugin-based protocol handler architecture where each protocol implements a common interface, sharing token management and session infrastructure',
-      'Implemented a device capability detection layer with progressive enhancement, falling back to supported authentication methods per device profile',
-      'Created a state machine-based lifecycle engine with configurable transition rules, approval workflows, and rollback capabilities for complex identity events'
+      'Introduced a canonical identity record with a corporate registration key, plus a mapping engine that normalizes any source into the corporate model',
+      'Designed a lifecycle-driven provisioning engine that creates access on admission, adjusts it on role changes, and revokes it on departure with an immutable audit trail',
+      'Built a multi-company identity model with organizations, departments, cost centers, and dynamic groups filled by rules to mirror real business structure'
     ]
   },
   {
