@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Integration Hub — Enterprise Integration Platform | Willian Rosa</title>
+  <meta name="description" content="O Integration Hub é uma plataforma enterprise de integração: um barramento que conecta APIs REST, webhooks e eventos por meio de conectores reutilizáveis, filas, transformação de dados e arquitetura orientada a eventos — com monitoramento, segurança, auditoria e escalabilidade.">
+  <meta name="keywords" content="Integration Hub, enterprise integration platform, barramento de integração, integration bus, API Gateway, REST APIs, webhooks, event-driven architecture, arquitetura orientada a eventos, conectores, connectors, message queue, filas de mensagens, transformation engine, transformação de dados, OAuth2, JWT, RBAC, monitoramento, auditoria, Supabase, PostgreSQL, enterprise, plataforma de integração, Willian Rosa">
+  <meta name="author" content="Willian Rosa">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pycriador.github.io/portfolio/projects/integration-hub/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pycriador.github.io/portfolio/projects/integration-hub/">
+  <meta property="og:title" content="Integration Hub — Enterprise Integration Platform">
+  <meta property="og:description" content="O barramento de integração que conecta APIs, eventos e sistemas: conectores reutilizáveis, filas, transformação e arquitetura orientada a eventos.">
+  <meta property="og:image" content="https://pycriador.github.io/portfolio/projects/integration-hub/assets/og/integration-hub-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Willian Rosa Portfolio">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Integration Hub — Enterprise Integration Platform">
+  <meta name="twitter:description" content="APIs, eventos e sistemas conectados por um único barramento: conectores, filas, transformação e observabilidade.">
+  <meta name="twitter:image" content="https://pycriador.github.io/portfolio/projects/integration-hub/assets/og/integration-hub-og.png">
+
+  <meta name="theme-color" content="#0f0716" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/logos/favicon.svg">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.json">
+
+  <script>(function(){var t=localStorage.getItem('portfolio-theme');if(t){document.documentElement.setAttribute('data-theme',t);}})();</script>
+
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/typography.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/projects.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../integration-hub/css/integration-hub.css">
+  <link rel="stylesheet" href="../integration-hub/css/gallery.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Integration Hub",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://pycriador.github.io/portfolio/projects/integration-hub/",
+    "author": {"@type": "Person", "name": "Willian Rosa", "url": "https://pycriador.github.io/portfolio/"},
+    "description": "Plataforma enterprise de integração que conecta APIs REST, webhooks e eventos por meio de conectores reutilizáveis, filas de mensagens, transformação de dados e arquitetura orientada a eventos, com monitoramento, segurança, auditoria e escalabilidade.",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+    "featureList": [
+      "API Gateway com contratos REST e webhooks",
+      "Integration Engine com execução de fluxos",
+      "Message Queue Adapter para processamento assíncrono",
+      "Event Router com regras de roteamento",
+      "Transformation Engine para conversão de payloads",
+      "Retry Manager com backoff exponencial",
+      "Monitoramento, logs e auditoria de integrações",
+      "Autenticação OAuth2, JWT, API Keys e RBAC",
+      "Conectores reutilizáveis e arquitetura modular"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Portfólio", "item": "https://pycriador.github.io/portfolio/"},
+      {"@type": "ListItem", "position": 2, "name": "Projetos", "item": "https://pycriador.github.io/portfolio/#projects"},
+      {"@type": "ListItem", "position": 3, "name": "Integration Hub", "item": "https://pycriador.github.io/portfolio/projects/integration-hub/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Pular para o conteúdo principal</a>
+
+  <div class="nav__backdrop" aria-hidden="true"></div>
+
+  <header class="nav" role="banner">
+    <nav class="container nav__inner" aria-label="Navegação principal">
+      <a href="../../index.html" class="nav__logo" aria-label="Willian Rosa - Início">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="url(#wr-grad-p)"/>
+            <text x="16" y="21.5" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-weight="700" font-size="14">WR</text>
+            <defs><linearGradient id="wr-grad-p" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="nav__logo-text">Willian Rosa</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li class="nav__item nav__item--dropdown">
+          <a href="../../index.html#projects" class="nav__link nav__link--dropdown active">
+            <span>Projects</span>
+            <svg class="nav__caret" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <ul class="nav__dropdown" data-nav-dropdown aria-label="Todos os projetos"></ul>
+        </li>
+        <li><a href="../../index.html#skills" class="nav__link">Skills</a></li>
+        <li><a href="../../index.html#architecture" class="nav__link">Architecture</a></li>
+        <li><a href="../../index.html#about" class="nav__link">About</a></li>
+        <li><a href="../../index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <div class="lang-selector" role="group" aria-label="Seletor de idioma">
+          <button class="lang-current" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-flag-current"></span> PT
+          </button>
+          <ul class="lang-dropdown" role="listbox" aria-label="Select language">
+            <li role="option" class="lang-option active" data-lang="pt" aria-selected="true">
+              <span class="lang-flag">&#x1F1E7;&#x1F1F7;</span><span>Portugues</span>
+            </li>
+            <li role="option" class="lang-option" data-lang="en" aria-selected="false">
+              <span class="lang-flag">&#x1F1FA;&#x1F1F8;</span><span>English</span>
+            </li>
+            <li role="option" class="lang-option" data-lang="es" aria-selected="false">
+              <span class="lang-flag">&#x1F1EA;&#x1F1F8;</span><span>Espanol</span>
+            </li>
+          </ul>
+        </div>
+
+        <button class="btn btn--icon btn--ghost theme-toggle" aria-label="Alternar tema" type="button">
+          <svg class="icon--sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon--moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="ih-main">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="ih-hero" aria-labelledby="ih-hero-title">
+      <div class="container">
+        <div class="ih-hero__grid">
+          <div class="ih-hero__content">
+            <span class="ih-hero__badge" data-reveal>
+              <span class="ih-hero__badge-dot" aria-hidden="true"></span>
+              Enterprise Integration Platform
+            </span>
+            <h1 id="ih-hero-title" class="ih-hero__title" data-reveal data-delay="1">
+              <span class="ih-brand">Integration Hub</span>
+            </h1>
+            <p class="ih-hero__subtitle" data-reveal data-delay="2">
+              Enterprise Integration Platform
+            </p>
+            <p class="ih-hero__summary" data-reveal data-delay="3">
+              O Integration Hub é o barramento de integração que conecta APIs REST, webhooks
+              e eventos por meio de conectores reutilizáveis, filas de mensagens e transformação
+              de dados — arquitetura orientada a eventos para automação, escalabilidade,
+              segurança e observabilidade em todo o ecossistema.
+            </p>
+            <div class="ih-hero__actions" data-reveal data-delay="4">
+              <a href="#ih-modules" class="btn btn--primary btn--lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Explore Platform
+              </a>
+              <a href="#ih-architecture" class="btn btn--secondary btn--lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                View Architecture
+              </a>
+              <a href="https://github.com/pycriador/integration-hub" class="btn btn--ghost btn--lg" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="ih-hero__meta" data-reveal data-delay="5">
+              <span class="ih-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/><path d="M2 12h20"/></svg>
+                API Gateway
+              </span>
+              <span class="ih-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                Arquitetura Orientada a Eventos
+              </span>
+              <span class="ih-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+                Filas de Mensagens
+              </span>
+              <span class="ih-hero__meta-chip">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                100% Observabilidade
+              </span>
+            </div>
+          </div>
+
+          <div class="ih-hero__visual" data-reveal data-delay="3">
+            <div class="ih-bus" role="img" aria-label="Mockup do Integration Hub com o barramento conectando aplicações, APIs e conectores ao núcleo e a bancos, cloud e filas de mensagens.">
+              <div class="ih-bus__chrome" aria-hidden="true">
+                <span class="ih-bus__dot"></span>
+                <span class="ih-bus__dot"></span>
+                <span class="ih-bus__dot"></span>
+                <span class="ih-bus__url">hub.integration.lab/overview</span>
+              </div>
+              <div class="ih-bus__body">
+                <div class="ih-bus__topbar" aria-hidden="true">
+                  <span class="ih-bus__logo">
+                    <span class="ih-bus__logo-mark">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="12" x2="5" y2="5"/><circle cx="5" cy="5" r="1.5"/><line x1="12" y1="12" x2="19" y2="5"/><circle cx="19" cy="5" r="1.5"/><line x1="12" y1="12" x2="5" y2="19"/><circle cx="5" cy="19" r="1.5"/><line x1="12" y1="12" x2="19" y2="19"/><circle cx="19" cy="19" r="1.5"/></svg>
+                    </span>
+                    Integration Hub
+                  </span>
+                  <span class="ih-bus__tabs">
+                    <span class="ih-bus__tab is-active">Fluxos</span>
+                    <span class="ih-bus__tab">Conectores</span>
+                    <span class="ih-bus__tab">Monitor</span>
+                  </span>
+                </div>
+                <div class="ih-bus__main">
+                  <div class="ih-bus__lane" aria-hidden="true">
+                    <span class="ih-bus__lane-label">Origem</span>
+                    <span class="ih-bus__node ih-bus__node--source"><span class="ih-bus__node-dot"></span>Aplicações</span>
+                    <span class="ih-bus__node ih-bus__node--source"><span class="ih-bus__node-dot"></span>APIs</span>
+                    <span class="ih-bus__node ih-bus__node--source"><span class="ih-bus__node-dot"></span>Conectores</span>
+                  </div>
+                  <div class="ih-bus__connector ih-bus__connector--in" aria-hidden="true">
+                    <span class="ih-bus__link"></span>
+                    <span class="ih-bus__link"></span>
+                    <span class="ih-bus__link"></span>
+                  </div>
+                  <div class="ih-bus__core" aria-hidden="true">
+                    <div class="ih-bus__core-inner">
+                      <span class="ih-bus__core-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="12" x2="5" y2="5"/><circle cx="5" cy="5" r="1.5"/><line x1="12" y1="12" x2="19" y2="5"/><circle cx="19" cy="5" r="1.5"/><line x1="12" y1="12" x2="5" y2="19"/><circle cx="5" cy="19" r="1.5"/><line x1="12" y1="12" x2="19" y2="19"/><circle cx="19" cy="19" r="1.5"/></svg>
+                      </span>
+                      <span class="ih-bus__core-label">Integration Hub</span>
+                    </div>
+                  </div>
+                  <div class="ih-bus__connector ih-bus__connector--out" aria-hidden="true">
+                    <span class="ih-bus__link"></span>
+                    <span class="ih-bus__link"></span>
+                    <span class="ih-bus__link"></span>
+                  </div>
+                  <div class="ih-bus__lane" aria-hidden="true">
+                    <span class="ih-bus__lane-label">Destino</span>
+                    <span class="ih-bus__node ih-bus__node--target"><span class="ih-bus__node-dot"></span>Bancos</span>
+                    <span class="ih-bus__node ih-bus__node--target"><span class="ih-bus__node-dot"></span>Cloud</span>
+                    <span class="ih-bus__node ih-bus__node--target"><span class="ih-bus__node-dot"></span>Filas</span>
+                  </div>
+                </div>
+                <div class="ih-bus__queue" aria-hidden="true">
+                  <span class="ih-bus__queue-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+                    Fila de mensagens
+                  </span>
+                  <span class="ih-bus__dataflow"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ih-float-card ih-float-card--tl" aria-hidden="true">
+              <span class="ih-float-card__icon ih-float-card__icon--fuchsia">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </span>
+              <span>
+                <span class="ih-float-card__label">Conectores</span>
+                <span class="ih-float-card__value">40+ planejados</span>
+              </span>
+            </div>
+
+            <div class="ih-float-card ih-float-card--bl" aria-hidden="true">
+              <span class="ih-float-card__icon ih-float-card__icon--fuchsia-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/><path d="M2 12h20"/></svg>
+              </span>
+              <span>
+                <span class="ih-float-card__label">APIs</span>
+                <span class="ih-float-card__value">100+ integráveis</span>
+              </span>
+            </div>
+
+            <div class="ih-float-card ih-float-card--br" aria-hidden="true">
+              <span class="ih-float-card__icon ih-float-card__icon--fuchsia-bright">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </span>
+              <span>
+                <span class="ih-float-card__label">Eventos</span>
+                <span class="ih-float-card__value">Tempo real</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ih-hero__scroll-cue" aria-hidden="true">Rolar</div>
+    </section>
+
+    <!-- ═══════════ KEY NUMBERS ═══════════ -->
+    <section class="ih-numbers" aria-label="Números da plataforma">
+      <div class="container">
+        <div id="ih-numbers-grid" class="ih-numbers__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT VISION ═══════════ -->
+    <section class="ih-section ih-section--alt" aria-labelledby="ih-vision-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Product Vision</span>
+          <h2 id="ih-vision-title" class="ih-title" data-reveal data-delay="1">
+            Sistemas conectados por <span class="text-gradient">projeto, não improviso</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            O Integration Hub nasceu para substituir integrações pontuais e frágeis por um
+            barramento único — conectores reutilizáveis, eventos, filas e transformação
+            em uma arquitetura orientada a eventos para todo o ecossistema.
+          </p>
+        </div>
+
+        <div class="ih-vision__grid">
+          <article class="ih-vision__card ih-card" data-reveal>
+            <span class="ih-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <span class="ih-vision__tag">O Problema</span>
+            <h3 class="ih-vision__title">Integrações espalhadas e frágeis</h3>
+            <p class="ih-vision__text">
+              Sistemas conectados por pontos e ferramentas isoladas criam acoplamento,
+              retrabalho e uma teia impossível de auditar, escalar e operar.
+            </p>
+          </article>
+
+          <article class="ih-vision__card ih-card" data-reveal data-delay="1">
+            <span class="ih-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span class="ih-vision__tag">A Solução</span>
+            <h3 class="ih-vision__title">Um barramento para tudo</h3>
+            <p class="ih-vision__text">
+              APIs, eventos e mensagens fluem por um único barramento com conectores
+              reutilizáveis, transformação de dados, filas e roteamento — com observabilidade
+              e governança de ponta a ponta.
+            </p>
+          </article>
+
+          <article class="ih-vision__card ih-card" data-reveal data-delay="2">
+            <span class="ih-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <span class="ih-vision__tag">Diferenciais</span>
+            <h3 class="ih-vision__title">O que diferencia a plataforma</h3>
+            <ul class="ih-vision__list">
+              <li>API Gateway, REST e webhooks padronizados em um único ponto</li>
+              <li>Arquitetura orientada a eventos com filas e roteamento</li>
+              <li>Conectores reutilizáveis e transformação de dados</li>
+              <li>Monitoramento, logs e auditoria de toda a integração</li>
+              <li>Segurança com OAuth2, JWT, API Keys e RBAC</li>
+            </ul>
+          </article>
+
+          <article class="ih-vision__card ih-card" data-reveal data-delay="3">
+            <span class="ih-vision__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="12" x2="5" y2="5"/><circle cx="5" cy="5" r="1.5"/><line x1="12" y1="12" x2="19" y2="5"/><circle cx="19" cy="5" r="1.5"/><line x1="12" y1="12" x2="5" y2="19"/><circle cx="5" cy="19" r="1.5"/><line x1="12" y1="12" x2="19" y2="19"/><circle cx="19" cy="19" r="1.5"/></svg>
+            </span>
+            <span class="ih-vision__tag">A Visão</span>
+            <h3 class="ih-vision__title">Integração que escala a operação</h3>
+            <p class="ih-vision__text">
+              Nossa visão é que qualquer sistema novo se conecte ao barramento em minutos,
+              com conectores prontos, eventos em tempo real e total visibilidade —
+              escalando automação e governança por toda a organização.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CORE MODULES ═══════════ -->
+    <section class="ih-section" id="ih-modules" aria-labelledby="ih-modules-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Core Modules</span>
+          <h2 id="ih-modules-title" class="ih-title" data-reveal data-delay="1">
+            Quinze módulos, <span class="text-gradient">um barramento</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Cada módulo cobre uma parte da integração — núcleo, comunicação, eventos,
+            mensageria, dados, confiabilidade, segurança, governança e plataforma —
+            em um só ambiente.
+          </p>
+        </div>
+        <div id="ih-modules-grid" class="ih-modules__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FEATURE HIGHLIGHTS ═══════════ -->
+    <section class="ih-section ih-section--alt" id="ih-features" aria-labelledby="ih-features-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Feature Highlights</span>
+          <h2 id="ih-features-title" class="ih-title" data-reveal data-delay="1">
+            Recursos para <span class="text-gradient">arquiteturas distribuídas</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Cada recurso resolve um problema real de integração: menos acoplamento,
+            mais resiliência, mais segurança e mais visibilidade em cada fluxo.
+          </p>
+        </div>
+        <div id="ih-features-grid" class="ih-features__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SUPPORTED INTEGRATIONS ═══════════ -->
+    <section class="ih-section" id="ih-integrations" aria-labelledby="ih-integrations-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Supported Integrations</span>
+          <h2 id="ih-integrations-title" class="ih-title" data-reveal data-delay="1">
+            Conectores para <span class="text-gradient">tudo que importa</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Serviços cloud, bancos de dados, comunicação, armazenamento, formatos de dados
+            e protocolos de API — conectores reutilizáveis prontos para cada necessidade.
+          </p>
+        </div>
+        <div id="ih-integrations-grid" class="ih-integrations__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ INTEGRATION FLOW ═══════════ -->
+    <section class="ih-section ih-section--alt" id="ih-flow" aria-labelledby="ih-flow-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Integration Flow</span>
+          <h2 id="ih-flow-title" class="ih-title" data-reveal data-delay="1">
+            Nove etapas de <span class="text-gradient">um fluxo confiável</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Da origem ao monitoramento, cada mensagem passa por transformação, validação,
+            fila, roteamento e entrega — com auditoria e retry em todo o caminho.
+          </p>
+        </div>
+        <div class="ih-flow">
+          <ul id="ih-flow-list" class="ih-flow__list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT GALLERY ═══════════ -->
+    <section class="ih-section ih-gallery" id="ih-gallery" aria-labelledby="ih-gallery-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Product Gallery</span>
+          <h2 id="ih-gallery-title" class="ih-title" data-reveal data-delay="1">
+            Uma olhada no <span class="text-gradient">Integration Hub</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Doze visões-chave do produto em seis coleções, preparadas para receber capturas
+            reais. Clique em qualquer card para ampliar.
+          </p>
+        </div>
+        <div id="ih-gallery-root"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ARCHITECTURE ═══════════ -->
+    <section class="ih-section ih-section--alt" id="ih-architecture" aria-labelledby="ih-architecture-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Architecture Overview</span>
+          <h2 id="ih-architecture-title" class="ih-title" data-reveal data-delay="1">
+            Camadas claras, <span class="text-gradient">integrações confiáveis</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Cada camada tem responsabilidade única: da interface ao gateway, passando pelo
+            engine, transformação, filas, monitoramento e auditoria — sempre observável.
+          </p>
+        </div>
+        <div class="ih-arch">
+          <ul id="ih-arch-layers" class="ih-arch__layers"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ECOSYSTEM INTEGRATION ═══════════ -->
+    <section class="ih-section" id="ih-ecosystem" aria-labelledby="ih-ecosystem-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Ecosystem Integration</span>
+          <h2 id="ih-ecosystem-title" class="ih-title" data-reveal data-delay="1">
+            Um barramento, <span class="text-gradient">todo o ecossistema</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            O Integration Hub conecta as plataformas do portfólio: identidade, dados,
+            documentos e operação fluem pelo mesmo barramento de eventos e APIs.
+          </p>
+        </div>
+        <div id="ih-eco-root"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ TECHNICAL HIGHLIGHTS ═══════════ -->
+    <section class="ih-section ih-section--alt" id="ih-tech" aria-labelledby="ih-tech-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Technical Highlights</span>
+          <h2 id="ih-tech-title" class="ih-title" data-reveal data-delay="1">
+            Stack moderna, <span class="text-gradient">governança de integrações</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            React e TypeScript na interface, Supabase e PostgreSQL no núcleo, com REST,
+            webhooks, OAuth2, mensageria, observabilidade e arquitetura orientada a eventos.
+          </p>
+        </div>
+        <div id="ih-tech-grid" class="ih-tech__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ USE CASES ═══════════ -->
+    <section class="ih-section" id="ih-cases" aria-labelledby="ih-cases-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Use Cases</span>
+          <h2 id="ih-cases-title" class="ih-title" data-reveal data-delay="1">
+            Oito cenários de <span class="text-gradient">aplicação real</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            De ERP a CRM até orquestração de APIs: como o barramento resolve problemas
+            concretos de integração entre sistemas.
+          </p>
+        </div>
+        <div id="ih-cases-grid" class="ih-cases__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ROADMAP ═══════════ -->
+    <section class="ih-section ih-section--alt" id="ih-timeline" aria-labelledby="ih-timeline-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Roadmap</span>
+          <h2 id="ih-timeline-title" class="ih-title" data-reveal data-delay="1">
+            Jornada de <span class="text-gradient">evolução contínua</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Cinco fases levam a plataforma do núcleo de integração ao assistente de
+            integração por inteligência artificial.
+          </p>
+        </div>
+        <div class="ih-timeline__wrap">
+          <ol id="ih-timeline-list" class="ih-timeline__list"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SCREENSHOTS ═══════════ -->
+    <section class="ih-section ih-gallery" id="ih-shots" aria-labelledby="ih-shots-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Screenshots</span>
+          <h2 id="ih-shots-title" class="ih-title" data-reveal data-delay="1">
+            Capturas por <span class="text-gradient">contexto</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Espaços reservados para capturas de dashboard, conectores, fluxos, APIs,
+            observabilidade e temas — com SEO e carregamento otimizado.
+          </p>
+        </div>
+        <div id="ih-shots-filters" class="ih-shots__filters" role="group" aria-label="Filtrar capturas"></div>
+        <div id="ih-shots-grid" class="ih-shots__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FUTURE VISION ═══════════ -->
+    <section class="ih-section ih-section--alt" id="ih-future" aria-labelledby="ih-future-title">
+      <div class="container">
+        <div class="ih-section-head ih-section-head--center">
+          <span class="ih-eyebrow" data-reveal>Future Vision</span>
+          <h2 id="ih-future-title" class="ih-title" data-reveal data-delay="1">
+            Para onde a plataforma <span class="text-gradient">caminha</span>
+          </h2>
+          <p class="ih-lead" data-reveal data-delay="2">
+            Próximos passos: marketplace de conectores, geração por IA, mapeamento
+            inteligente de APIs e observabilidade distribuída.
+          </p>
+        </div>
+        <div id="ih-future-grid" class="ih-future__grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT NAVIGATION ═══════════ -->
+    <section class="ih-pagenav" aria-label="Navegação do produto">
+      <div class="container">
+        <div class="ih-pagenav__grid">
+          <a href="../../index.html#projects" class="ih-pagenav__back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Voltar ao Portfólio
+          </a>
+
+          <div class="ih-pagenav__share">
+            <button id="ih-share" class="ih-pagenav__link" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Compartilhar
+            </button>
+            <button id="ih-copy" class="ih-pagenav__link ih-pagenav__link--primary" type="button" style="position:relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copiar Link
+              <span id="ih-copied" class="ih-pagenav__copied" role="status">Link copiado!</span>
+            </button>
+          </div>
+
+          <div class="ih-pagenav__pair">
+            <a id="ih-prev" class="ih-pagenav__link" href="../../projects/metadata-platform/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              <span data-role="title">Metadata Platform</span>
+            </a>
+            <a id="ih-next" class="ih-pagenav__link" href="../../projects/mug-artwork-extractor/">
+              <span data-role="title">Mug Artwork Extractor</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ih-footer" role="contentinfo">
+    <div class="container ih-footer__inner">
+      <span class="ih-footer__brand">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="url(#wr-grad-f)"/>
+          <text x="16" y="21.5" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-weight="700" font-size="14">WR</text>
+          <defs><linearGradient id="wr-grad-f" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+        </svg>
+        Willian Rosa
+      </span>
+      <span class="ih-footer__copy">© <span id="ih-year">2026</span> Integration Hub · Portfólio demonstrativo</span>
+    </div>
+  </footer>
+
+  <!-- ═══════════ LIGHTBOX ═══════════ -->
+  <div id="ih-lightbox" class="ih-lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada" aria-hidden="true">
+    <div class="ih-lightbox__card">
+      <div class="ih-lightbox__chrome" aria-hidden="true">
+        <span class="ih-bus__dot"></span>
+        <span class="ih-bus__dot"></span>
+        <span class="ih-bus__dot"></span>
+      </div>
+      <button class="btn btn--icon btn--ghost ih-lightbox__close" type="button" data-lb-close aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="ih-lightbox__nav ih-lightbox__nav--prev" type="button" data-lb-prev aria-label="Anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="ih-lightbox__screen" data-lb-screen></div>
+      <button class="ih-lightbox__nav ih-lightbox__nav--next" type="button" data-lb-next aria-label="Próximo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="ih-lightbox__caption-wrap">
+        <p class="ih-lightbox__label" data-lb-label></p>
+        <p class="ih-lightbox__caption" data-lb-caption></p>
+      </div>
+      <span class="ih-lightbox__count" data-lb-count></span>
+    </div>
+  </div>
+
+  <script src="../../config/profile.js"></script>
+  <script src="../../config/social.js"></script>
+  <script src="../../config/settings.js"></script>
+  <script src="../../config/projects.js"></script>
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/theme.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="../../js/scroll.js"></script>
+  <script src="../../js/animation.js"></script>
+  <script src="../integration-hub/js/integration-hub.js"></script>
+  <script src="../integration-hub/js/integration-flow.js"></script>
+  <script src="../integration-hub/js/gallery.js"></script>
+
+</body>
+</html>

@@ -451,6 +451,71 @@ const PROJECTS = Object.freeze([
     ]
   },
   {
+    id: 'integration-hub',
+    slug: 'integration-hub',
+    title: 'Integration Hub',
+    subtitle: 'Enterprise Integration Platform',
+    category: 'Enterprise Integration Platform',
+    status: 'Em Desenvolvimento',
+    statusType: 'warning',
+    featured: false,
+    year: 2026,
+    description: 'Integration Hub is the enterprise integration platform of the ecosystem: a single bus that connects REST APIs, webhooks, and events. Reusable connectors, payload transformation, message queues, and event routing are orchestrated by an integration engine, with automatic retry, monitoring, and an immutable audit trail. Authentication via OAuth2, JWT, and API keys plus RBAC keep every flow secure, so systems connect, automate, and scale without custom glue code.',
+    shortDescription: 'Enterprise integration platform that connects APIs, webhooks, and events through a single bus with reusable connectors, transformation, queues, and audit.',
+    technologies: ['React', 'TypeScript', 'REST APIs', 'Webhooks', 'OAuth2', 'JWT', 'Supabase', 'PostgreSQL', 'Mensageria', 'Storage', 'Logs', 'Monitoramento', 'Arquitetura orientada a eventos'],
+    architecture: {
+      Frontend: 'React consoles for flows, connectors, monitoring, and administration of the integration bus.',
+      Backend: 'TypeScript services orchestrating the bus: an API Gateway as single entry, an integration engine executing flows and rules, a transformation engine normalizing payloads, and a queue adapter for asynchronous and resilient processing.',
+      Database: 'PostgreSQL storing contracts, configurations, and the state of every integration.',
+      Cloud: 'Supabase for managed authentication, database, and storage, with event routing and webhook delivery on top of the bus.',
+      Security: 'Authentication via OAuth2, JWT, and API keys on every inbound and outbound call, with RBAC permissions by role and scope enforced across all operations.',
+      Integrations: 'Reusable connectors for cloud services, databases, communication, storage, data formats, and API protocols, plus REST contracts and webhooks exposed to the ecosystem.',
+      Scalability: 'Event-driven architecture with message queues decoupling producers and consumers, automatic retry with exponential backoff, and monitoring for 100+ integrable APIs and 20+ compatible cloud services.'
+    },
+    tags: ['Enterprise', 'Integration', 'API', 'Event-Driven', 'Webhooks', 'Connectors', 'Messaging', 'Audit'],
+    coverImage: 'projects/integration-hub/images/cover.webp',
+    heroImage: 'projects/integration-hub/images/hero.webp',
+    gallery: [
+      { src: 'projects/integration-hub/images/gallery-01.webp', alt: 'Integration Hub dashboard with flows, connectors, and bus traffic', type: 'Desktop' },
+      { src: 'projects/integration-hub/images/gallery-02.webp', alt: 'Visual flow editor composing integrations between systems', type: 'Screenshot' },
+      { src: 'projects/integration-hub/images/gallery-03.webp', alt: 'Integration bus architecture from gateway to external services', type: 'Diagram' }
+    ],
+    github: 'https://github.com/pycriador/integration-hub',
+    demo: '',
+    documentation: '',
+    overview: {
+      objective: 'Become the single integration bus of the ecosystem: every system connects through reusable connectors, contracts, and events, with governance, security, and observability built in.',
+      problem: 'Integrations are scattered across tools and teams without governance. Systems exchange data through custom glue code that is hard to maintain, unobservable, and insecure.',
+      solution: 'Built a central bus with API Gateway, integration engine, transformation engine, message queues, event router, retry manager, monitoring, and immutable audit, all secured by OAuth2, JWT, API keys, and RBAC.',
+      results: '40+ planned connectors, 100+ integrable APIs, and 20+ compatible cloud services, enabling reusable, scalable, and observable integrations across the whole ecosystem.'
+    },
+    timeline: [
+      { date: 'P1 2026', title: 'Core Integration', description: 'API Gateway and REST Client, Webhook Manager with reliable delivery, and Authentication with OAuth2, JWT, and API Keys.' },
+      { date: 'P2 2026', title: 'Connectors', description: 'Integration Engine executing flows, connectors for PostgreSQL and REST APIs, and Transformation Engine for payloads.' },
+      { date: 'P3 2026', title: 'Event Platform', description: 'Message Queue Adapter for asynchronous processing, Event Router with configurable rules, and Retry Manager with exponential backoff.' },
+      { date: 'P4 2027', title: 'Marketplace', description: 'Corporate Connector Marketplace, SDK for custom connectors, and advanced Authorization and administration.' },
+      { date: 'P5 2027', title: 'AI Integration Assistant', description: 'AI generating integrations from natural language, intelligent API mapping, and a corporate integration catalog.' }
+    ],
+    roadmap: [
+      { title: 'API Gateway and REST Client', status: 'completed' },
+      { title: 'Webhook Manager and Authentication', status: 'completed' },
+      { title: 'Integration Engine and Transformation Engine', status: 'in-progress' },
+      { title: 'Message queues, event router, and retry manager', status: 'in-progress' },
+      { title: 'Connector marketplace and SDK', status: 'planned' },
+      { title: 'AI integration assistant', status: 'planned' }
+    ],
+    challenges: [
+      'Designing a single gateway and event bus expressive enough to route, transform, and deliver payloads across heterogeneous systems without custom glue code',
+      'Guaranteeing reliable delivery with retries, queues, and an immutable audit trail while keeping latency and observability under control',
+      'Securing every inbound and outbound call with OAuth2, JWT, API keys, and RBAC without adding friction to connector adoption'
+    ],
+    solutions: [
+      'Centralized the bus in an API Gateway plus Integration Engine that execute flows, rules, and connectors uniformly, with Transformation Engine normalizing payloads at the edge',
+      'Introduced message queues, event routing, and a Retry Manager with exponential backoff, plus append-only auditing and monitoring of every flow',
+      'Enforced authentication and authorization at the gateway layer with OAuth2, JWT, API keys, and RBAC by role and scope, applying the same policy to every connection'
+    ]
+  },
+  {
     id: 'mug-artwork-extractor',
     slug: 'mug-artwork-extractor',
     title: 'Mug Artwork Extractor',

@@ -1,0 +1,24 @@
+{
+  "id": "integration-hub",
+  "slug": "integration-hub",
+  "title": "Integration Hub",
+  "subtitle": "Enterprise Integration Platform",
+  "category": "Enterprise Integration Platform",
+  "status": "Em Desenvolvimento",
+  "year": 2026,
+  "description": "Plataforma enterprise de integração que conecta APIs REST, webhooks e eventos por um barramento único. Conectores reutilizáveis, transformação de payloads, filas e roteamento de eventos, com retry, monitoramento e trilha de auditoria para automação escalável, segura e observável em todo o ecossistema.",
+  "technologies": ["React", "TypeScript", "REST APIs", "Webhooks", "OAuth2", "JWT", "Supabase", "PostgreSQL", "Mensageria", "Storage", "Logs", "Monitoramento", "Arquitetura orientada a eventos"],
+  "tags": ["Enterprise", "Integration", "API", "Event-Driven", "Webhooks", "Connectors", "Messaging", "Audit"],
+  "github": "https://github.com/pycriador/integration-hub",
+  "demo": "",
+  "images": {
+    "cover": "images/cover.webp",
+    "thumb": "images/thumb.webp",
+    "hero": "images/hero.webp",
+    "gallery": [
+      "images/gallery-01.webp",
+      "images/gallery-02.webp",
+      "images/gallery-03.webp"
+    ]
+  }
+}
