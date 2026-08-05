@@ -827,6 +827,7 @@
 }
 
 .kp-rel__card {
+  grid-column: 1;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
@@ -867,6 +868,7 @@
 }
 
 .kp-rel__pin {
+  grid-column: 2;
   width: 44px;
   height: 44px;
   margin-inline: auto;
@@ -883,8 +885,8 @@
   z-index: 1;
 }
 
-.kp-rel__item:nth-child(even) .kp-rel__card {
-  order: 3;
+.kp-rel__item:nth-of-type(even) .kp-rel__card {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -997,6 +999,7 @@
 }
 
 .kp-arch__node-info {
+  grid-column: 1;
   text-align: right;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
@@ -1025,6 +1028,7 @@
 }
 
 .kp-arch__node-badge {
+  grid-column: 2;
   width: 56px;
   height: 56px;
   margin-inline: auto;
@@ -1038,8 +1042,8 @@
   z-index: 1;
 }
 
-.kp-arch__node:nth-child(even) .kp-arch__node-info {
-  order: 3;
+.kp-arch__node:nth-of-type(even) .kp-arch__node-info {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -1125,6 +1129,7 @@
 }
 
 .kp-phase__card {
+  grid-column: 1;
   padding: var(--space-6);
   border-radius: var(--radius-2xl);
   border: 1px solid var(--glass-border);
@@ -1138,8 +1143,8 @@
   border-color: var(--color-primary);
 }
 
-.kp-phase:nth-child(even) .kp-phase__card {
-  order: 3;
+.kp-phase:nth-of-type(even) .kp-phase__card {
+  grid-column: 3;
 }
 
 .kp-phase__meta {
@@ -1200,6 +1205,7 @@
 }
 
 .kp-phase__pin {
+  grid-column: 2;
   width: 56px;
   height: 56px;
   margin-inline: auto;
@@ -1557,14 +1563,16 @@
 
   .kp-arch__node-badge,
   .kp-phase__pin {
+    grid-column: 1;
     order: -1;
     margin-inline: 0;
   }
 
   .kp-arch__node-info,
-  .kp-arch__node:nth-child(even) .kp-arch__node-info,
+  .kp-arch__node:nth-of-type(even) .kp-arch__node-info,
   .kp-phase__card,
-  .kp-phase:nth-child(even) .kp-phase__card {
+  .kp-phase:nth-of-type(even) .kp-phase__card {
+    grid-column: 1;
     order: 0;
     text-align: left;
   }
@@ -1585,12 +1593,14 @@
   }
 
   .kp-rel__pin {
+    grid-column: 1;
     order: -1;
     margin-inline: 0;
   }
 
   .kp-rel__card,
-  .kp-rel__item:nth-child(even) .kp-rel__card {
+  .kp-rel__item:nth-of-type(even) .kp-rel__card {
+    grid-column: 1;
     order: 0;
     text-align: left;
   }

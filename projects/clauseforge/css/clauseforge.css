@@ -927,6 +927,7 @@
 }
 
 .cf-flow__card {
+  grid-column: 1;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
@@ -967,6 +968,7 @@
 }
 
 .cf-flow__pin {
+  grid-column: 2;
   width: 44px;
   height: 44px;
   margin-inline: auto;
@@ -983,8 +985,8 @@
   z-index: 1;
 }
 
-.cf-flow__item:nth-child(even) .cf-flow__card {
-  order: 3;
+.cf-flow__item:nth-of-type(even) .cf-flow__card {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -1057,11 +1059,11 @@
   color: var(--cf-accent);
 }
 
-.cf-arch__node:nth-child(even) .cf-arch__node-info {
+.cf-arch__node:nth-of-type(even) .cf-arch__node-info {
   margin-left: auto;
 }
 
-.cf-arch__node:nth-child(odd) .cf-arch__node-info {
+.cf-arch__node:nth-of-type(odd) .cf-arch__node-info {
   margin-right: auto;
 }
 
@@ -1719,8 +1721,8 @@
     border-bottom: 1px solid var(--glass-border);
   }
 
-  .cf-arch__node:nth-child(even) .cf-arch__node-info,
-  .cf-arch__node:nth-child(odd) .cf-arch__node-info {
+  .cf-arch__node:nth-of-type(even) .cf-arch__node-info,
+  .cf-arch__node:nth-of-type(odd) .cf-arch__node-info {
     margin-inline: auto;
   }
 
@@ -1736,12 +1738,14 @@
   }
 
   .cf-flow__pin {
+    grid-column: 1;
     order: -1;
     margin-inline: 0;
   }
 
   .cf-flow__card,
-  .cf-flow__item:nth-child(even) .cf-flow__card {
+  .cf-flow__item:nth-of-type(even) .cf-flow__card {
+    grid-column: 1;
     order: 0;
     text-align: left;
   }

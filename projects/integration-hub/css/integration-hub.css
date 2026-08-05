@@ -1017,6 +1017,7 @@
 }
 
 .ih-flow__card {
+  grid-column: 1;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
@@ -1057,6 +1058,7 @@
 }
 
 .ih-flow__pin {
+  grid-column: 2;
   width: 44px;
   height: 44px;
   margin-inline: auto;
@@ -1073,8 +1075,8 @@
   z-index: 1;
 }
 
-.ih-flow__item:nth-child(even) .ih-flow__card {
-  order: 3;
+.ih-flow__item:nth-of-type(even) .ih-flow__card {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -1147,11 +1149,11 @@
   color: var(--ih-accent);
 }
 
-.ih-arch__node:nth-child(even) .ih-arch__node-info {
+.ih-arch__node:nth-of-type(even) .ih-arch__node-info {
   margin-left: auto;
 }
 
-.ih-arch__node:nth-child(odd) .ih-arch__node-info {
+.ih-arch__node:nth-of-type(odd) .ih-arch__node-info {
   margin-right: auto;
 }
 
@@ -1814,8 +1816,8 @@
     flex-basis: 100%;
   }
 
-  .ih-arch__node:nth-child(even) .ih-arch__node-info,
-  .ih-arch__node:nth-child(odd) .ih-arch__node-info {
+  .ih-arch__node:nth-of-type(even) .ih-arch__node-info,
+  .ih-arch__node:nth-of-type(odd) .ih-arch__node-info {
     margin-inline: auto;
   }
 
@@ -1831,12 +1833,14 @@
   }
 
   .ih-flow__pin {
+    grid-column: 1;
     order: -1;
     margin-inline: 0;
   }
 
   .ih-flow__card,
-  .ih-flow__item:nth-child(even) .ih-flow__card {
+  .ih-flow__item:nth-of-type(even) .ih-flow__card {
+    grid-column: 1;
     order: 0;
     text-align: left;
   }

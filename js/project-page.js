@@ -37,10 +37,10 @@ const ProjectPage = (() => {
   };
 
   const OVERVIEW_META = [
-    { key: 'objective', icon: SVG.target, title: 'Objective' },
-    { key: 'problem', icon: SVG.alertTriangle, title: 'Problem' },
-    { key: 'solution', icon: SVG.lightbulb, title: 'Solution' },
-    { key: 'results', icon: SVG.trendingUp, title: 'Results' },
+    { key: 'objective', icon: SVG.target, titleKey: 'overviewObjective' },
+    { key: 'problem', icon: SVG.alertTriangle, titleKey: 'overviewProblem' },
+    { key: 'solution', icon: SVG.lightbulb, titleKey: 'overviewSolution' },
+    { key: 'results', icon: SVG.trendingUp, titleKey: 'overviewResults' },
   ];
 
   const STATUS_ICONS = {
@@ -51,6 +51,12 @@ const ProjectPage = (() => {
 
   function getBasePath() {
     return '../../';
+  }
+
+  function t(key, fallback) {
+    if (typeof I18n === 'undefined') return fallback;
+    const value = I18n.get(key);
+    return typeof value === 'string' && value !== key ? value : fallback;
   }
 
   function getSlug() {
@@ -99,11 +105,11 @@ const ProjectPage = (() => {
             <div class="no-results__icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
             </div>
-            <h1 class="no-results__title">Project Not Found</h1>
-            <p class="no-results__description">The project you're looking for doesn't exist or has been moved.</p>
+            <h1 class="no-results__title">${t('project.notFoundTitle', 'Project Not Found')}</h1>
+            <p class="no-results__description">${t('project.notFoundDescription', "The project you're looking for doesn't exist or has been moved.")}</p>
             <a href="${getBasePath()}index.html" class="btn btn--primary" style="margin-top: var(--space-6);">
               ${SVG.arrowLeft}
-              <span>Back to Home</span>
+              <span>${t('project.backToHome', 'Back to Home')}</span>
             </a>
           </div>
         </div>
@@ -120,9 +126,9 @@ const ProjectPage = (() => {
       <div class="project-page">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="${base}index.html" class="breadcrumb__link">Home</a>
+            <a href="${base}index.html" class="breadcrumb__link">${t('project.home', 'Home')}</a>
             <span class="breadcrumb__separator" aria-hidden="true">/</span>
-            <a href="${base}index.html#projects" class="breadcrumb__link">Projects</a>
+            <a href="${base}index.html#projects" class="breadcrumb__link">${t('project.projects', 'Projects')}</a>
             <span class="breadcrumb__separator" aria-hidden="true">/</span>
             <span class="breadcrumb__current" aria-current="page">${project.title}</span>
           </nav>
@@ -138,11 +144,11 @@ const ProjectPage = (() => {
               </div>
               <div class="project-hero__content">
                 <a href="${base}index.html" class="project-hero__back">
-                  ${SVG.arrowLeft} Back to Projects
+                  ${SVG.arrowLeft} ${t('project.backToProjects', 'Back to Projects')}
                 </a>
                 <div class="project-hero__meta">
                   <span class="tag">${project.category || ''}</span>
-                  <span class="status"><span class="status__dot${project.statusType === 'warning' ? ' status__dot--warning' : ''}"></span> ${project.status || ''}</span>
+                  <span class="status"><span class="status__dot${project.statusType === 'warning' ? ' status__dot--warning' : ''}"></span> ${project.status ? t('projects.status.' + project.status, project.status) : ''}</span>
                   <span class="tag tag--secondary">${project.year || ''}</span>
                 </div>
                 <h1 class="project-hero__title">${project.title}</h1>
@@ -153,10 +159,10 @@ const ProjectPage = (() => {
                 </div>
                 <div class="project-hero__actions">
                   <a href="${project.github || '#'}" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
-                    ${SVG.github} GitHub
+                    ${SVG.github} ${t('hero.ctaGitHub', 'GitHub')}
                   </a>
                   <a href="${base}index.html" class="btn btn--secondary btn--lg">
-                    ${SVG.arrowRight} All Projects
+                    ${SVG.arrowRight} ${t('project.allProjects', 'All Projects')}
                   </a>
                 </div>
               </div>
@@ -198,7 +204,7 @@ const ProjectPage = (() => {
       return `
         <div class="overview-card" data-reveal data-delay="${i + 1}">
           <div class="overview-card__icon">${meta.icon}</div>
-          <h3 class="overview-card__title">${meta.title}</h3>
+          <h3 class="overview-card__title">${t('project.' + meta.titleKey, meta.titleKey)}</h3>
           <p class="overview-card__text">${text}</p>
         </div>
       `;
@@ -210,8 +216,8 @@ const ProjectPage = (() => {
       <section class="project-section" data-reveal>
         <div class="container">
           <header class="project-section__header">
-            <p class="project-section__label">Overview</p>
-            <h2 class="project-section__title">Project Overview</h2>
+            <p class="project-section__label">${t('project.overviewLabel', 'Overview')}</p>
+            <h2 class="project-section__title">${t('project.overviewTitle', 'Project Overview')}</h2>
           </header>
           <div class="overview-grid">
             ${cards}
@@ -235,8 +241,8 @@ const ProjectPage = (() => {
       <section class="project-section" data-reveal>
         <div class="container">
           <header class="project-section__header">
-            <p class="project-section__label">Tech Stack</p>
-            <h2 class="project-section__title">Technologies Used</h2>
+            <p class="project-section__label">${t('project.techStackLabel', 'Tech Stack')}</p>
+            <h2 class="project-section__title">${t('project.techStackTitle', 'Technologies Used')}</h2>
           </header>
           <div class="tech-grid">
             ${badges}
@@ -265,8 +271,8 @@ const ProjectPage = (() => {
       <section class="project-section" data-reveal>
         <div class="container">
           <header class="project-section__header">
-            <p class="project-section__label">Architecture</p>
-            <h2 class="project-section__title">System Architecture</h2>
+            <p class="project-section__label">${t('project.architectureLabel', 'Architecture')}</p>
+            <h2 class="project-section__title">${t('project.architectureTitle', 'System Architecture')}</h2>
           </header>
           <div class="arch-detail-grid">
             ${cards}
@@ -283,7 +289,7 @@ const ProjectPage = (() => {
       <div class="gallery-item" data-reveal data-delay="${i + 1}">
         <div class="gallery-item__placeholder">
           ${SVG.image}
-          <span>${typeof item === 'string' ? item : item.alt || 'Screenshot'}</span>
+          <span>${typeof item === 'string' ? item : item.alt || t('project.screenshot', 'Screenshot')}</span>
         </div>
         ${typeof item === 'object' && item.type ? `<span class="gallery-item__type">${item.type}</span>` : ''}
       </div>
@@ -293,8 +299,8 @@ const ProjectPage = (() => {
       <section class="project-section" data-reveal>
         <div class="container">
           <header class="project-section__header">
-            <p class="project-section__label">Gallery</p>
-            <h2 class="project-section__title">Screenshots</h2>
+            <p class="project-section__label">${t('project.galleryLabel', 'Gallery')}</p>
+            <h2 class="project-section__title">${t('project.galleryTitle', 'Screenshots')}</h2>
           </header>
           <div class="gallery-grid">
             ${items}
@@ -322,8 +328,8 @@ const ProjectPage = (() => {
       <section class="project-section" data-reveal>
         <div class="container">
           <header class="project-section__header">
-            <p class="project-section__label">Timeline</p>
-            <h2 class="project-section__title">Development Timeline</h2>
+            <p class="project-section__label">${t('project.timelineLabel', 'Timeline')}</p>
+            <h2 class="project-section__title">${t('project.timelineTitle', 'Development Timeline')}</h2>
           </header>
           <div class="timeline">
             ${items}
@@ -338,7 +344,8 @@ const ProjectPage = (() => {
 
     const items = project.roadmap.map((item, i) => {
       const status = item.status || 'planned';
-      const statusLabel = status.replace('-', ' ').replace(/\b\w/g, c => c.toUpperCase());
+      const statusKeyMap = { completed: 'statusCompleted', 'in-progress': 'statusInProgress', planned: 'statusPlanned' };
+      const statusLabel = t('project.' + (statusKeyMap[status] || 'statusPlanned'), status.replace('-', ' ').replace(/\b\w/g, c => c.toUpperCase()));
       return `
         <div class="roadmap-item roadmap-item--${status}" data-reveal data-delay="${i + 1}">
           <div class="roadmap-item__indicator"></div>
@@ -352,8 +359,8 @@ const ProjectPage = (() => {
       <section class="project-section" data-reveal>
         <div class="container">
           <header class="project-section__header">
-            <p class="project-section__label">Roadmap</p>
-            <h2 class="project-section__title">Development Roadmap</h2>
+            <p class="project-section__label">${t('project.roadmapLabel', 'Roadmap')}</p>
+            <h2 class="project-section__title">${t('project.roadmapTitle', 'Development Roadmap')}</h2>
           </header>
           <div class="roadmap-list">
             ${items}
@@ -367,7 +374,7 @@ const ProjectPage = (() => {
     if (!project.challenges || !project.challenges.length) return '';
 
     const challengeCards = project.challenges.map((item, i) => {
-      const title = typeof item === 'object' ? (item.title || item.challenge || '') : `Challenge ${i + 1}`;
+      const title = typeof item === 'object' ? (item.title || item.challenge || '') : `${t('project.challenge', 'Challenge')} ${i + 1}`;
       const text = typeof item === 'object' ? (item.description || item.challenge || '') : item;
       return `
         <div class="challenge-card" data-reveal data-delay="${i + 1}">
@@ -381,7 +388,7 @@ const ProjectPage = (() => {
     }).join('');
 
     const solutionCards = (project.solutions || []).map((item, i) => {
-      const title = typeof item === 'object' ? (item.title || item.solution || '') : `Solution ${i + 1}`;
+      const title = typeof item === 'object' ? (item.title || item.solution || '') : `${t('project.solution', 'Solution')} ${i + 1}`;
       const text = typeof item === 'object' ? (item.description || item.solution || '') : item;
       return `
         <div class="challenge-card" data-reveal data-delay="${i + 1}">
@@ -398,8 +405,8 @@ const ProjectPage = (() => {
       <section class="project-section" data-reveal>
         <div class="container">
           <header class="project-section__header">
-            <p class="project-section__label">Challenges & Solutions</p>
-            <h2 class="project-section__title">Overcoming Challenges</h2>
+            <p class="project-section__label">${t('project.challengesLabel', 'Challenges & Solutions')}</p>
+            <h2 class="project-section__title">${t('project.challengesTitle', 'Overcoming Challenges')}</h2>
           </header>
           <div class="challenges-grid">
             ${challengeCards}
@@ -445,12 +452,12 @@ const ProjectPage = (() => {
     return `
       <nav class="project-nav" aria-label="Project navigation">
         <a href="${base}projects/${prev.slug}/index.html" class="project-nav__link">
-          <span class="project-nav__label">${SVG.arrowLeft} Previous Project</span>
+          <span class="project-nav__label">${SVG.arrowLeft} ${t('project.previousProject', 'Previous Project')}</span>
           <span class="project-nav__title">${prev.title}</span>
           <span class="project-nav__arrow" aria-hidden="true">&larr;</span>
         </a>
         <a href="${base}projects/${next.slug}/index.html" class="project-nav__link project-nav__link--next">
-          <span class="project-nav__label">Next Project ${SVG.arrowRight}</span>
+          <span class="project-nav__label">${t('project.nextProject', 'Next Project')} ${SVG.arrowRight}</span>
           <span class="project-nav__title">${next.title}</span>
           <span class="project-nav__arrow" aria-hidden="true">&rarr;</span>
         </a>
@@ -463,7 +470,7 @@ const ProjectPage = (() => {
       <footer class="footer" role="contentinfo">
         <div class="container">
           <div class="footer__bottom">
-            <p class="footer__copyright">&copy; <span>${new Date().getFullYear()}</span> Willian Rosa. All rights reserved.</p>
+            <p class="footer__copyright">&copy; <span>${new Date().getFullYear()}</span> Willian Rosa. ${t('project.allRightsReserved', 'All rights reserved.')}</p>
             <div class="footer__socials">
               <a href="https://github.com/pycriador" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 ${SVG.github}

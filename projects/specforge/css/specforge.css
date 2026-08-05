@@ -870,6 +870,7 @@
 }
 
 .spf-flow__card {
+  grid-column: 1;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
@@ -908,6 +909,7 @@
 }
 
 .spf-flow__pin {
+  grid-column: 2;
   width: 44px;
   height: 44px;
   margin-inline: auto;
@@ -924,8 +926,8 @@
   z-index: 1;
 }
 
-.spf-flow__item:nth-child(even) .spf-flow__card {
-  order: 3;
+.spf-flow__item:nth-of-type(even) .spf-flow__card {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -969,6 +971,7 @@
 }
 
 .spf-arch__node-info {
+  grid-column: 1;
   text-align: right;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
@@ -997,6 +1000,7 @@
 }
 
 .spf-arch__node-badge {
+  grid-column: 2;
   width: 56px;
   height: 56px;
   margin-inline: auto;
@@ -1010,8 +1014,8 @@
   z-index: 1;
 }
 
-.spf-arch__node:nth-child(even) .spf-arch__node-info {
-  order: 3;
+.spf-arch__node:nth-of-type(even) .spf-arch__node-info {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -1097,6 +1101,7 @@
 }
 
 .spf-phase__card {
+  grid-column: 1;
   padding: var(--space-6);
   border-radius: var(--radius-2xl);
   border: 1px solid var(--glass-border);
@@ -1110,8 +1115,8 @@
   border-color: var(--color-primary);
 }
 
-.spf-phase:nth-child(even) .spf-phase__card {
-  order: 3;
+.spf-phase:nth-of-type(even) .spf-phase__card {
+  grid-column: 3;
 }
 
 .spf-phase__meta {
@@ -1172,6 +1177,7 @@
 }
 
 .spf-phase__pin {
+  grid-column: 2;
   width: 56px;
   height: 56px;
   margin-inline: auto;
@@ -1464,16 +1470,18 @@
   .spf-flow__pin,
   .spf-arch__node-badge,
   .spf-phase__pin {
+    grid-column: 1;
     order: -1;
     margin-inline: 0;
   }
 
   .spf-flow__card,
-  .spf-flow__item:nth-child(even) .spf-flow__card,
+  .spf-flow__item:nth-of-type(even) .spf-flow__card,
   .spf-arch__node-info,
-  .spf-arch__node:nth-child(even) .spf-arch__node-info,
+  .spf-arch__node:nth-of-type(even) .spf-arch__node-info,
   .spf-phase__card,
-  .spf-phase:nth-child(even) .spf-phase__card {
+  .spf-phase:nth-of-type(even) .spf-phase__card {
+    grid-column: 1;
     order: 0;
     text-align: left;
   }

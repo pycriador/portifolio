@@ -3,50 +3,49 @@
     "projects": "Proyectos",
     "skills": "Habilidades",
     "architecture": "Arquitectura",
-    "about": "Sobre m\u00ed",
-    "contact": "Contacto"
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "mainAria": "Navegación principal",
+    "allProjects": "Todos los proyectos",
+    "languageAria": "Selector de idioma",
+    "selectLanguage": "Seleccionar idioma",
+    "toggleTheme": "Alternar tema",
+    "toggleMenu": "Abrir menú"
   },
   "skipNav": "Saltar al contenido principal",
   "hero": {
     "titleLine1": "Construyendo",
     "titleGradient": "software",
     "titleLine2": "que escala.",
-    "subtitle": "Software Engineer especializado en plataformas corporativas, aplicaciones web modernas, sistemas de automatizaci\u00f3n e ingenier\u00eda de software asistida por Inteligencia Artificial.",
+    "subtitle": "Software Engineer especializado en plataformas corporativas, aplicaciones web modernas, sistemas de automatización e ingeniería de software asistida por Inteligencia Artificial.",
     "ctaGitHub": "GitHub",
     "ctaContact": "Contacto",
-    "ctaResume": "Curr\u00edculo"
+    "ctaResume": "Currículo"
   },
   "projects": {
     "label": "Trabajos Destacados",
     "title": "Proyectos Seleccionados",
-    "description": "Una colecci\u00f3n de proyectos que demuestran arquitectura de software, sistemas escalables e ingenier\u00eda moderna de productos.",
-    "items": [
-      {
-        "title": "CloudSync Platform",
-        "description": "Plataforma corporativa de sincronizaci\u00f3n en la nube procesando m\u00e1s de 10 millones de transacciones diarias con replicaci\u00f3n de datos en tiempo real.",
-        "status": "Producci\u00f3n",
-        "statusType": "active"
-      },
-      {
-        "title": "ArchFlow Engine",
-        "description": "Motor de workflow basado en metadatos para aplicaciones SaaS multi-tenant con RBAC, event sourcing y pistas de auditor\u00eda.",
-        "status": "Producci\u00f3n",
-        "statusType": "active"
-      },
-      {
-        "title": "NeuralAPI",
-        "description": "Gateway de API con IA para rate limiting inteligente, generaci\u00f3n autom\u00e1tica de documentaci\u00f3n y detecci\u00f3n de anomal\u00edas.",
-        "status": "En Desarrollo",
-        "statusType": "warning"
-      }
-    ],
-    "github": "GitHub",
-    "learnMore": "Saber M\u00e1s"
+    "description": "Una colección de proyectos que demuestran arquitectura de software, sistemas escalables e ingeniería moderna de productos.",
+    "searchPlaceholder": "Buscar proyectos...",
+    "searchAriaLabel": "Buscar proyectos",
+    "clearFilters": "Limpiar filtros",
+    "all": "Todos",
+    "details": "Detalles",
+    "showingCount": "Mostrando {count} de {total} proyectos",
+    "noResultsTitle": "Ningún proyecto encontrado",
+    "noResultsDescription": "Ajusta tu búsqueda o filtros.",
+    "filterCategoryAria": "Filtrar por categoría",
+    "filterStatusAria": "Filtrar por estado",
+    "filterYearAria": "Filtrar por año",
+    "status": {
+      "production": "Producción",
+      "in-development": "En Desarrollo"
+    }
   },
   "skills": {
-    "label": "Expertise T\u00e9cnico",
-    "title": "Habilidades & Tecnolog\u00edas",
-    "description": "Un conjunto completo de herramientas construido a lo largo de a\u00f1os diseñando y entregando software en producci\u00f3n.",
+    "label": "Expertise Técnico",
+    "title": "Habilidades & Tecnologías",
+    "description": "Un conjunto completo de herramientas construido a lo largo de años diseñando y entregando software en producción.",
     "categories": [
       {
         "name": "Frontend",
@@ -79,9 +78,9 @@
     ]
   },
   "architecture": {
-    "label": "Filosof\u00eda de Ingenier\u00eda",
+    "label": "Filosofía de Ingeniería",
     "title": "Principios de Arquitectura",
-    "description": "Los principios fundamentales que gu\u00edan cada sistema que diseño y construyo.",
+    "description": "Los principios fundamentales que guían cada sistema que diseño y construyo.",
     "items": [
       {
         "title": "Domain-Driven Design",
@@ -89,23 +88,23 @@
       },
       {
         "title": "Principios SOLID",
-        "description": "Responsabilidad \u00fanica, abierto-cerrado, sustituci\u00f3n de Liskov, segregaci\u00f3n de interfaces e inversi\u00f3n de dependencia."
+        "description": "Responsabilidad única, abierto-cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencia."
       },
       {
         "title": "Clean Architecture",
-        "description": "Separaci\u00f3n de responsabilidades con capas independientes y aplicaci\u00f3n de la regla de dependencia."
+        "description": "Separación de responsabilidades con capas independientes y aplicación de la regla de dependencia."
       },
       {
         "title": "RBAC & Seguridad",
-        "description": "Control de acceso basado en roles con dise\u00f1o orientado a la seguridad y principios zero-trust."
+        "description": "Control de acceso basado en roles con diseño orientado a la seguridad y principios zero-trust."
       },
       {
         "title": "Metadata Driven",
-        "description": "Patrones de configuraci\u00f3n-como-datos permitiendo comportamiento din\u00e1mico sin cambios de c\u00f3digo."
+        "description": "Patrones de configuración-como-datos permitiendo comportamiento dinámico sin cambios de código."
       },
       {
         "title": "Workflow Engine",
-        "description": "Orquestaci\u00f3n de procesos de negocio complejos con m\u00e1quinas de estado y coreograf\u00eda event-driven."
+        "description": "Orquestación de procesos de negocio complejos con máquinas de estado y coreografía event-driven."
       },
       {
         "title": "Multi-Tenant",
@@ -117,38 +116,80 @@
       },
       {
         "title": "Security by Design",
-        "description": "Modelado de amenazas, cifrado en tr\u00e1nsito y en reposo, y registro completo de auditor\u00eda."
+        "description": "Modelado de amenazas, cifrado en tránsito y en reposo, y registro completo de auditoría."
       },
       {
-        "title": "Integraci\u00f3n con IA",
-        "description": "Incorporando inteligencia en productos con orquestaci\u00f3n de LLMs, RAG y flujos de trabajo ag\u00e9nticos."
+        "title": "Integración con IA",
+        "description": "Incorporando inteligencia en productos con orquestación de LLMs, RAG y flujos de trabajo agénticos."
       }
     ]
   },
   "about": {
-    "label": "Sobre M\u00ed",
-    "title": "Excelencia en Ingenier\u00eda",
-    "paragraph1": "Soy un <strong>Software Engineer</strong> con pasi\u00f3n por construir sistemas que no solo son funcionales sino elegantemente arquitectados.",
-    "paragraph2": "Creo que el <strong>software excelente se construye sobre principios s\u00f3lidos</strong>. Cada l\u00ednea de c\u00f3digo debe servir a un prop\u00f3sito, cada decisi\u00f3n de arquitectura debe ser deliberada, y cada producto debe deleitar a sus usuarios.",
-    "paragraph3": "Enfocado en <strong>plataformas SaaS corporativas</strong>, <strong>productos con IA</strong> y <strong>arquitecturas cloud-native</strong>. Siempre aprendiendo, siempre construyendo, siempre entregando."
+    "label": "Sobre Mí",
+    "title": "Excelencia en Ingeniería",
+    "paragraph1": "Soy un <strong>Software Engineer</strong> con pasión por construir sistemas que no solo son funcionales sino elegantemente arquitectados.",
+    "paragraph2": "Creo que el <strong>software excelente se construye sobre principios sólidos</strong>. Cada línea de código debe servir a un propósito, cada decisión de arquitectura debe ser deliberada, y cada producto debe deleitar a sus usuarios.",
+    "paragraph3": "Enfocado en <strong>plataformas SaaS corporativas</strong>, <strong>productos con IA</strong> y <strong>arquitecturas cloud-native</strong>. Siempre aprendiendo, siempre construyendo, siempre entregando.",
+    "philosophy1Title": "Siempre Aprendiendo",
+    "philosophy1Description": "Explorando constantemente nuevas tecnologías, patrones y paradigmas para ofrecer mejores soluciones.",
+    "philosophy2Title": "Siempre Construyendo",
+    "philosophy2Description": "Desde proyectos personales hasta sistemas de producción, entregar software es como crezco.",
+    "philosophy3Title": "Siempre Entregando",
+    "philosophy3Description": "Enfocado en entregar valor mediante software bien elaborado y listo para producción."
   },
   "contact": {
     "label": "Ponte en Contacto",
     "title": "Construyamos Algo",
-    "description": "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de tu visi\u00f3n.",
+    "description": "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de tu visión.",
     "emailLabel": "Enviar email",
     "githubLabel": "Perfil en GitHub",
     "copyEmail": "Copiar Email",
     "copied": "Copiado!"
   },
   "footer": {
-    "description": "Software Engineer construyendo sistemas escalables y productos elegantes. Enfocado en arquitectura corporativa, SaaS y tecnolog\u00edas web modernas.",
-    "nav": "Navegaci\u00f3n",
+    "description": "Software Engineer construyendo sistemas escalables y productos elegantes. Enfocado en arquitectura corporativa, SaaS y tecnologías web modernas.",
+    "nav": "Navegación",
     "social": "Social",
     "copyright": "Todos los derechos reservados."
   },
   "toast": {
     "emailCopied": "Email copiado al portapapeles",
     "emailFailed": "Error al copiar email"
+  },
+  "project": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "backToProjects": "Volver a los Proyectos",
+    "allProjects": "Todos los Proyectos",
+    "overviewLabel": "Resumen",
+    "overviewTitle": "Resumen del Proyecto",
+    "techStackLabel": "Stack",
+    "techStackTitle": "Tecnologías Utilizadas",
+    "architectureLabel": "Arquitectura",
+    "architectureTitle": "Arquitectura del Sistema",
+    "galleryLabel": "Galería",
+    "galleryTitle": "Capturas de Pantalla",
+    "timelineLabel": "Cronología",
+    "timelineTitle": "Cronología de Desarrollo",
+    "roadmapLabel": "Roadmap",
+    "roadmapTitle": "Roadmap de Desarrollo",
+    "challengesLabel": "Desafíos y Soluciones",
+    "challengesTitle": "Superando Desafíos",
+    "previousProject": "Proyecto Anterior",
+    "nextProject": "Siguiente Proyecto",
+    "challenge": "Desafío",
+    "solution": "Solución",
+    "overviewObjective": "Objetivo",
+    "overviewProblem": "Problema",
+    "overviewSolution": "Solución",
+    "overviewResults": "Resultados",
+    "statusCompleted": "Completado",
+    "statusInProgress": "En Progreso",
+    "statusPlanned": "Planificado",
+    "screenshot": "Captura",
+    "notFoundTitle": "Proyecto No Encontrado",
+    "notFoundDescription": "El proyecto que buscas no existe o ha sido movido.",
+    "backToHome": "Volver al Inicio",
+    "allRightsReserved": "Todos los derechos reservados."
   }
 }

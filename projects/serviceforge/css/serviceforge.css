@@ -805,6 +805,7 @@
 }
 
 .sf-arch__node-info {
+  grid-column: 1;
   text-align: right;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
@@ -833,6 +834,7 @@
 }
 
 .sf-arch__node-badge {
+  grid-column: 2;
   width: 56px;
   height: 56px;
   margin-inline: auto;
@@ -846,8 +848,8 @@
   z-index: 1;
 }
 
-.sf-arch__node:nth-child(even) .sf-arch__node-info {
-  order: 3;
+.sf-arch__node:nth-of-type(even) .sf-arch__node-info {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -947,6 +949,7 @@
 }
 
 .sf-phase__card {
+  grid-column: 1;
   padding: var(--space-6);
   border-radius: var(--radius-2xl);
   border: 1px solid var(--glass-border);
@@ -960,8 +963,8 @@
   border-color: var(--color-primary);
 }
 
-.sf-phase:nth-child(even) .sf-phase__card {
-  order: 3;
+.sf-phase:nth-of-type(even) .sf-phase__card {
+  grid-column: 3;
 }
 
 .sf-phase__meta {
@@ -1022,6 +1025,7 @@
 }
 
 .sf-phase__pin {
+  grid-column: 2;
   width: 56px;
   height: 56px;
   margin-inline: auto;
@@ -1262,14 +1266,16 @@
 
   .sf-arch__node-badge,
   .sf-phase__pin {
+    grid-column: 1;
     order: -1;
     margin-inline: 0;
   }
 
   .sf-arch__node-info,
-  .sf-arch__node:nth-child(even) .sf-arch__node-info,
+  .sf-arch__node:nth-of-type(even) .sf-arch__node-info,
   .sf-phase__card,
-  .sf-phase:nth-child(even) .sf-phase__card {
+  .sf-phase:nth-of-type(even) .sf-phase__card {
+    grid-column: 1;
     order: 0;
     text-align: left;
   }

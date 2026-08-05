@@ -891,6 +891,7 @@
 }
 
 .df-pipeline__card {
+  grid-column: 1;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
@@ -929,6 +930,7 @@
 }
 
 .df-pipeline__pin {
+  grid-column: 2;
   width: 44px;
   height: 44px;
   margin-inline: auto;
@@ -945,8 +947,8 @@
   z-index: 1;
 }
 
-.df-pipeline__item:nth-child(even) .df-pipeline__card {
-  order: 3;
+.df-pipeline__item:nth-of-type(even) .df-pipeline__card {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -990,6 +992,7 @@
 }
 
 .df-arch__node-info {
+  grid-column: 1;
   text-align: right;
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
@@ -1018,6 +1021,7 @@
 }
 
 .df-arch__node-badge {
+  grid-column: 2;
   width: 56px;
   height: 56px;
   margin-inline: auto;
@@ -1031,8 +1035,8 @@
   z-index: 1;
 }
 
-.df-arch__node:nth-child(even) .df-arch__node-info {
-  order: 3;
+.df-arch__node:nth-of-type(even) .df-arch__node-info {
+  grid-column: 3;
   text-align: left;
 }
 
@@ -1118,6 +1122,7 @@
 }
 
 .df-phase__card {
+  grid-column: 1;
   padding: var(--space-6);
   border-radius: var(--radius-2xl);
   border: 1px solid var(--glass-border);
@@ -1131,8 +1136,8 @@
   border-color: var(--color-primary);
 }
 
-.df-phase:nth-child(even) .df-phase__card {
-  order: 3;
+.df-phase:nth-of-type(even) .df-phase__card {
+  grid-column: 3;
 }
 
 .df-phase__meta {
@@ -1193,6 +1198,7 @@
 }
 
 .df-phase__pin {
+  grid-column: 2;
   width: 56px;
   height: 56px;
   margin-inline: auto;
@@ -1548,16 +1554,18 @@
   .df-pipeline__pin,
   .df-arch__node-badge,
   .df-phase__pin {
+    grid-column: 1;
     order: -1;
     margin-inline: 0;
   }
 
   .df-pipeline__card,
-  .df-pipeline__item:nth-child(even) .df-pipeline__card,
+  .df-pipeline__item:nth-of-type(even) .df-pipeline__card,
   .df-arch__node-info,
-  .df-arch__node:nth-child(even) .df-arch__node-info,
+  .df-arch__node:nth-of-type(even) .df-arch__node-info,
   .df-phase__card,
-  .df-phase:nth-child(even) .df-phase__card {
+  .df-phase:nth-of-type(even) .df-phase__card {
+    grid-column: 1;
     order: 0;
     text-align: left;
   }

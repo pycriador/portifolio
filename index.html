@@ -93,7 +93,7 @@
   <div class="nav__backdrop" aria-hidden="true"></div>
 
   <header class="nav" role="banner">
-    <nav class="container nav__inner" aria-label="Main navigation">
+    <nav class="container nav__inner" aria-label="Main navigation" data-i18n-attr="aria-label:nav.mainAria">
       <a href="#" class="nav__logo" aria-label="Willian Rosa - Home">
         <span class="nav__logo-mark" aria-hidden="true">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +111,7 @@
             <span data-i18n="nav.projects">Projects</span>
             <svg class="nav__caret" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
-          <ul class="nav__dropdown" data-nav-dropdown aria-label="All projects"></ul>
+          <ul class="nav__dropdown" data-nav-dropdown aria-label="All projects" data-i18n-attr="aria-label:nav.allProjects"></ul>
         </li>
         <li><a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a></li>
         <li><a href="#architecture" class="nav__link" data-i18n="nav.architecture">Architecture</a></li>
@@ -120,11 +120,11 @@
       </ul>
 
       <div class="nav__actions">
-        <div class="lang-selector" role="group" aria-label="Language selector">
+        <div class="lang-selector" role="group" aria-label="Language selector" data-i18n-attr="aria-label:nav.languageAria">
            <button class="lang-current" type="button" aria-haspopup="listbox" aria-expanded="false">
             <span class="lang-flag-current"></span> PT
           </button>
-          <ul class="lang-dropdown" role="listbox" aria-label="Select language">
+          <ul class="lang-dropdown" role="listbox" aria-label="Select language" data-i18n-attr="aria-label:nav.selectLanguage">
             <li role="option" class="lang-option active" data-lang="pt" aria-selected="true">
               <span class="lang-flag">&#x1F1E7;&#x1F1F7;</span><span>Portugues</span>
             </li>
@@ -137,12 +137,12 @@
           </ul>
         </div>
 
-        <button class="btn btn--icon btn--ghost theme-toggle" aria-label="Toggle theme" type="button">
+        <button class="btn btn--icon btn--ghost theme-toggle" aria-label="Toggle theme" data-i18n-attr="aria-label:nav.toggleTheme" type="button">
           <svg class="icon--sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon--moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
 
-        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button">
+        <button class="hamburger" aria-label="Toggle menu" data-i18n-attr="aria-label:nav.toggleMenu" aria-expanded="false" type="button">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -203,14 +203,14 @@
             <span class="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </span>
-            <input type="text" id="project-search" class="search-input" placeholder="Search projects..." aria-label="Search projects">
+            <input type="text" id="project-search" class="search-input" placeholder="Search projects..." aria-label="Search projects" data-i18n-attr="placeholder:projects.searchPlaceholder;aria-label:projects.searchAriaLabel">
           </div>
-          <div class="filter-bar" id="filter-categories" role="group" aria-label="Filter by category"></div>
-          <div class="filter-bar" id="filter-status" role="group" aria-label="Filter by status"></div>
-          <div class="filter-bar" id="filter-years" role="group" aria-label="Filter by year"></div>
+          <div class="filter-bar" id="filter-categories" role="group" aria-label="Filter by category" data-i18n-attr="aria-label:projects.filterCategoryAria"></div>
+          <div class="filter-bar" id="filter-status" role="group" aria-label="Filter by status" data-i18n-attr="aria-label:projects.filterStatusAria"></div>
+          <div class="filter-bar" id="filter-years" role="group" aria-label="Filter by year" data-i18n-attr="aria-label:projects.filterYearAria"></div>
           <div class="projects-meta">
             <span class="projects-count" id="projects-count"></span>
-            <button class="clear-filters" data-filter="clear" type="button">Clear filters</button>
+            <button class="clear-filters" data-filter="clear" type="button" data-i18n="projects.clearFilters">Clear filters</button>
           </div>
         </div>
         <div class="projects-grid" id="projects-grid"></div>
@@ -260,22 +260,22 @@
               <div class="philosophy-card__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
               </div>
-              <h3>Always Learning</h3>
-              <p>Constantly exploring new technologies, patterns, and paradigms to deliver better solutions.</p>
+              <h3 data-i18n="about.philosophy1Title">Always Learning</h3>
+              <p data-i18n="about.philosophy1Description">Constantly exploring new technologies, patterns, and paradigms to deliver better solutions.</p>
             </div>
             <div class="philosophy-card">
               <div class="philosophy-card__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
               </div>
-              <h3>Always Building</h3>
-              <p>From side projects to production systems, shipping software is how I grow.</p>
+              <h3 data-i18n="about.philosophy2Title">Always Building</h3>
+              <p data-i18n="about.philosophy2Description">From side projects to production systems, shipping software is how I grow.</p>
             </div>
             <div class="philosophy-card">
               <div class="philosophy-card__icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
-              <h3>Always Shipping</h3>
-              <p>Focused on delivering value through well-crafted, production-ready software.</p>
+              <h3 data-i18n="about.philosophy3Title">Always Shipping</h3>
+              <p data-i18n="about.philosophy3Description">Focused on delivering value through well-crafted, production-ready software.</p>
             </div>
           </div>
         </div>

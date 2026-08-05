@@ -4,7 +4,13 @@
     "skills": "Skills",
     "architecture": "Architecture",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "mainAria": "Main navigation",
+    "allProjects": "All projects",
+    "languageAria": "Language selector",
+    "selectLanguage": "Select language",
+    "toggleTheme": "Toggle theme",
+    "toggleMenu": "Toggle menu"
   },
   "skipNav": "Skip to main content",
   "hero": {
@@ -20,28 +26,21 @@
     "label": "Featured Work",
     "title": "Selected Projects",
     "description": "A curated collection of projects showcasing enterprise architecture, scalable systems, and modern product engineering.",
-    "items": [
-      {
-        "title": "CloudSync Platform",
-        "description": "Enterprise-grade cloud synchronization platform handling 10M+ daily transactions with real-time data replication across regions.",
-        "status": "Production",
-        "statusType": "active"
-      },
-      {
-        "title": "ArchFlow Engine",
-        "description": "Metadata-driven workflow engine powering multi-tenant SaaS applications with RBAC, event sourcing, and audit trails.",
-        "status": "Production",
-        "statusType": "active"
-      },
-      {
-        "title": "NeuralAPI",
-        "description": "AI-powered API gateway with intelligent rate limiting, automatic documentation generation, and anomaly detection.",
-        "status": "In Development",
-        "statusType": "warning"
-      }
-    ],
-    "github": "GitHub",
-    "learnMore": "Learn More"
+    "searchPlaceholder": "Search projects...",
+    "searchAriaLabel": "Search projects",
+    "clearFilters": "Clear filters",
+    "all": "All",
+    "details": "Details",
+    "showingCount": "Showing {count} of {total} projects",
+    "noResultsTitle": "No projects found",
+    "noResultsDescription": "Try adjusting your search or filters.",
+    "filterCategoryAria": "Filter by category",
+    "filterStatusAria": "Filter by status",
+    "filterYearAria": "Filter by year",
+    "status": {
+      "production": "Production",
+      "in-development": "In Development"
+    }
   },
   "skills": {
     "label": "Technical Expertise",
@@ -130,12 +129,18 @@
     "title": "Engineering Excellence",
     "paragraph1": "I'm a <strong>Software Engineer</strong> with a passion for building systems that are not only functional but elegantly architected.",
     "paragraph2": "I believe that <strong>great software is built on solid principles</strong>. Every line of code should serve a purpose, every architecture decision should be deliberate, and every product should delight its users.",
-    "paragraph3": "Focused on <strong>enterprise SaaS platforms</strong>, <strong>AI-powered products</strong>, and <strong>cloud-native architectures</strong>. Always learning, always building, always shipping."
+    "paragraph3": "Focused on <strong>enterprise SaaS platforms</strong>, <strong>AI-powered products</strong>, and <strong>cloud-native architectures</strong>. Always learning, always building, always shipping.",
+    "philosophy1Title": "Always Learning",
+    "philosophy1Description": "Constantly exploring new technologies, patterns, and paradigms to deliver better solutions.",
+    "philosophy2Title": "Always Building",
+    "philosophy2Description": "From side projects to production systems, shipping software is how I grow.",
+    "philosophy3Title": "Always Shipping",
+    "philosophy3Description": "Focused on delivering value through well-crafted, production-ready software."
   },
   "contact": {
     "label": "Get in Touch",
-    "title": "Let\u2019s Build Something",
-    "description": "I\u2019m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "title": "Let's Build Something",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
     "emailLabel": "Send email",
     "githubLabel": "GitHub profile",
     "copyEmail": "Copy Email",
@@ -150,5 +155,41 @@
   "toast": {
     "emailCopied": "Email copied to clipboard",
     "emailFailed": "Failed to copy email"
+  },
+  "project": {
+    "home": "Home",
+    "projects": "Projects",
+    "backToProjects": "Back to Projects",
+    "allProjects": "All Projects",
+    "overviewLabel": "Overview",
+    "overviewTitle": "Project Overview",
+    "techStackLabel": "Tech Stack",
+    "techStackTitle": "Technologies Used",
+    "architectureLabel": "Architecture",
+    "architectureTitle": "System Architecture",
+    "galleryLabel": "Gallery",
+    "galleryTitle": "Screenshots",
+    "timelineLabel": "Timeline",
+    "timelineTitle": "Development Timeline",
+    "roadmapLabel": "Roadmap",
+    "roadmapTitle": "Development Roadmap",
+    "challengesLabel": "Challenges & Solutions",
+    "challengesTitle": "Overcoming Challenges",
+    "previousProject": "Previous Project",
+    "nextProject": "Next Project",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "overviewObjective": "Objective",
+    "overviewProblem": "Problem",
+    "overviewSolution": "Solution",
+    "overviewResults": "Results",
+    "statusCompleted": "Completed",
+    "statusInProgress": "In Progress",
+    "statusPlanned": "Planned",
+    "screenshot": "Screenshot",
+    "notFoundTitle": "Project Not Found",
+    "notFoundDescription": "The project you're looking for doesn't exist or has been moved.",
+    "backToHome": "Back to Home",
+    "allRightsReserved": "All rights reserved."
   }
 }

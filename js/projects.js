@@ -18,6 +18,12 @@ const Projects = (() => {
     AI: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>',
   };
 
+  function t(key, fallback) {
+    if (typeof I18n === 'undefined') return fallback;
+    const value = I18n.get(key);
+    return typeof value === 'string' && value !== key ? value : fallback;
+  }
+
   function init() {
     bindSearch();
     bindFilters();
@@ -105,21 +111,21 @@ const Projects = (() => {
     if (catContainer) {
       const cats = ['all', ...getCategories()];
       catContainer.innerHTML = cats.map(c =>
-        `<button class="filter-btn${c === activeCategory ? ' active' : ''}" data-filter="category" data-value="${c}">${c === 'all' ? 'All' : c}</button>`
+        `<button class="filter-btn${c === activeCategory ? ' active' : ''}" data-filter="category" data-value="${c}">${c === 'all' ? t('projects.all', 'All') : c}</button>`
       ).join('');
     }
 
     if (statusContainer) {
       const statuses = ['all', ...getStatuses()];
       statusContainer.innerHTML = statuses.map(s =>
-        `<button class="filter-btn${s === activeStatus ? ' active' : ''}" data-filter="status" data-value="${s}">${s === 'all' ? 'All' : s}</button>`
+        `<button class="filter-btn${s === activeStatus ? ' active' : ''}" data-filter="status" data-value="${s}">${s === 'all' ? t('projects.all', 'All') : t('projects.status.' + s, s)}</button>`
       ).join('');
     }
 
     if (yearContainer) {
       const years = ['all', ...getYears()];
       yearContainer.innerHTML = years.map(y =>
-        `<button class="filter-btn${y === activeYear ? ' active' : ''}" data-filter="year" data-value="${y}">${y === 'all' ? 'All' : y}</button>`
+        `<button class="filter-btn${y === activeYear ? ' active' : ''}" data-filter="year" data-value="${y}">${y === 'all' ? t('projects.all', 'All') : y}</button>`
       ).join('');
     }
   }
@@ -132,7 +138,9 @@ const Projects = (() => {
 
     const countEl = document.getElementById('projects-count');
     if (countEl) {
-      countEl.textContent = `Showing ${filtered.length} of ${PROJECTS.length} projects`;
+      countEl.textContent = t('projects.showingCount', `Showing ${filtered.length} of ${PROJECTS.length} projects`)
+        .replace('{count}', filtered.length)
+        .replace('{total}', PROJECTS.length);
     }
 
     if (filtered.length === 0) {
@@ -141,8 +149,8 @@ const Projects = (() => {
           <div class="no-results__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
-          <h3 class="no-results__title">No projects found</h3>
-          <p class="no-results__description">Try adjusting your search or filters.</p>
+          <h3 class="no-results__title">${t('projects.noResultsTitle', 'No projects found')}</h3>
+          <p class="no-results__description">${t('projects.noResultsDescription', 'Try adjusting your search or filters.')}</p>
         </div>`;
       return;
     }
@@ -158,6 +166,7 @@ const Projects = (() => {
     const basePath = getBasePath();
     const href = `${basePath}projects/${project.slug}/`;
     const icon = categoryIcons[project.category] || categoryIcons.Frontend;
+    const statusLabel = t('projects.status.' + project.status, project.status);
 
     return `
       <article class="project-card card--glass" data-reveal data-delay="${Math.min(index + 1, 6)}" onclick="window.location.href='${href}'">
@@ -168,7 +177,7 @@ const Projects = (() => {
         <div class="project-card__body">
           <div class="status">
             <span class="status__dot${statusDotClass}"></span>
-            ${project.status}
+            ${statusLabel}
           </div>
           <h3 class="project-card__title">${project.title}</h3>
           <p class="project-card__description">${project.shortDescription}</p>
@@ -181,7 +190,7 @@ const Projects = (() => {
               ${project.tags.slice(0, 3).map(t => `<span class="tag">${t}</span>`).join('')}
             </div>
             <a href="${href}" class="project-card__link" onclick="event.stopPropagation()">
-              Details
+              ${t('projects.details', 'Details')}
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
