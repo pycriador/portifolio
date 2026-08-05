@@ -516,6 +516,71 @@ const PROJECTS = Object.freeze([
     ]
   },
   {
+    id: 'communication-platform',
+    slug: 'communication-platform',
+    title: 'Communication Platform',
+    subtitle: 'Enterprise Omnichannel Communication Platform',
+    category: 'Enterprise Communication Platform',
+    status: 'Em Desenvolvimento',
+    statusType: 'warning',
+    featured: false,
+    year: 2026,
+    description: 'Communication Platform is the omnichannel messaging platform of the ecosystem: e-mail, SMS, WhatsApp, push, and webhooks managed by a single core. A notification engine orchestrates templates, queues, and channel routing, while a retry engine with exponential backoff, delivery tracking with status webhooks, an immutable audit platform, and delivery analytics guarantee reliable, observable, and auditable communication. An API gateway with authentication and RBAC keeps every send secure.',
+    shortDescription: 'Omnichannel messaging platform that delivers e-mail, SMS, WhatsApp, push, and webhooks through one core with templates, queues, routing, retry, status webhooks, audit, and analytics.',
+    technologies: ['React', 'TypeScript', 'REST APIs', 'Webhooks', 'SMTP', 'Queues', 'Scheduler', 'Supabase', 'PostgreSQL', 'Storage', 'Logs', 'RBAC', 'Auditoria', 'Analytics'],
+    architecture: {
+      Frontend: 'React consoles for dashboard, templates, queue monitoring, and administration of the messaging platform.',
+      Backend: 'TypeScript services orchestrating the pipeline: an API Gateway as single entry, a notification engine validating and rendering messages, a queue manager for asynchronous processing, a channel router selecting providers, and a retry engine with exponential backoff and dead-letter handling.',
+      Database: 'PostgreSQL storing templates, configuration, and the delivery state of every notification.',
+      Cloud: 'Supabase for managed authentication, database, and storage, with SMTP, push, and provider adapters on top of the core.',
+      Security: 'Authentication on every inbound API call with RBAC permissions by role and scope, plus an immutable audit trail for all sends and status transitions.',
+      Integrations: 'Channel groups for messaging, e-mail, push, web, SMS, and WhatsApp, plus status webhooks consumed by external systems to track delivery.',
+      Scalability: 'Queue-based asynchronous processing decoupling senders from providers, automatic retry with exponential backoff, and monitoring for 1M+ daily messages across 30+ channels.'
+    },
+    tags: ['Enterprise', 'Omnichannel', 'Notifications', 'Messaging', 'Email', 'SMS', 'Push', 'Webhooks', 'Audit', 'Analytics'],
+    coverImage: 'projects/communication-platform/images/cover.webp',
+    heroImage: 'projects/communication-platform/images/hero.webp',
+    gallery: [
+      { src: 'projects/communication-platform/images/gallery-01.webp', alt: 'Communication Platform dashboard with deliveries, channels, and success rates', type: 'Desktop' },
+      { src: 'projects/communication-platform/images/gallery-02.webp', alt: 'Template editor with variables and per-channel preview', type: 'Screenshot' },
+      { src: 'projects/communication-platform/images/gallery-03.webp', alt: 'Notification pipeline from application to channels with audit and analytics', type: 'Diagram' }
+    ],
+    github: 'https://github.com/pycriador/communication-platform',
+    demo: '',
+    documentation: '',
+    overview: {
+      objective: 'Become the single messaging core of the ecosystem: every product sends e-mail, SMS, WhatsApp, push, and webhooks through one platform, with templates, queues, routing, audit, and analytics built in.',
+      problem: 'Communication is scattered across email tools, SMS providers, and push services without governance. Teams build custom senders that are hard to maintain, unobservable, and impossible to audit.',
+      solution: 'Built a central platform with a notification engine, template manager, queue manager, channel router, retry engine, delivery tracking with status webhooks, audit platform, and analytics, all secured by API authentication and RBAC.',
+      results: '30+ planned channels, 1M+ messages per day, and a 99.9% delivery target, enabling reusable, scalable, and auditable communication across the whole ecosystem.'
+    },
+    timeline: [
+      { date: 'P1 2026', title: 'Core Messaging', description: 'API Gateway and Notification Engine, Email Service with SMTP, and Template Manager with variables and preview.' },
+      { date: 'P2 2026', title: 'Channels & Delivery', description: 'Push Notification Service, SMS integration, Channel Router with precedence rules, and Retry Engine with exponential backoff.' },
+      { date: 'P3 2026', title: 'Observability', description: 'Delivery Tracking with status webhooks, Webhook Dispatcher, Audit Platform, and Monitoring dashboards.' },
+      { date: 'P4 2027', title: 'Omnichannel', description: 'WhatsApp integration, Configuration Center, Administration with RBAC, and Analytics Dashboard.' },
+      { date: 'P5 2027', title: 'AI Assistant', description: 'AI template generation, predictive channel routing, and a corporate message catalog.' }
+    ],
+    roadmap: [
+      { title: 'API Gateway and Notification Engine', status: 'completed' },
+      { title: 'Email Service and Template Manager', status: 'completed' },
+      { title: 'Queue Manager and Channel Router', status: 'in-progress' },
+      { title: 'Retry Engine and Delivery Tracking', status: 'in-progress' },
+      { title: 'WhatsApp and advanced administration', status: 'planned' },
+      { title: 'AI template generation and predictive routing', status: 'planned' }
+    ],
+    challenges: [
+      'Designing a single messaging core expressive enough to render templates, route channels, and deliver notifications across heterogeneous providers without custom senders',
+      'Guaranteeing reliable delivery with queues, retries with exponential backoff, dead-letter handling, and an immutable audit trail while keeping latency and observability under control',
+      'Securing every inbound API call with authentication and RBAC and every status webhook without adding friction to channel adoption'
+    ],
+    solutions: [
+      'Centralized the pipeline in an API Gateway plus Notification Engine that validate, render, and enqueue messages uniformly, with a Channel Router selecting providers by precedence rules',
+      'Introduced queue-based asynchronous processing, a Retry Engine with exponential backoff and dead-letter handling, plus delivery tracking with status webhooks and append-only auditing of every send',
+      'Enforced authentication and authorization at the gateway layer with RBAC by role and scope, applying the same policy to every channel and status webhook'
+    ]
+  },
+  {
     id: 'mug-artwork-extractor',
     slug: 'mug-artwork-extractor',
     title: 'Mug Artwork Extractor',
