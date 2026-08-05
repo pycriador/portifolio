@@ -14,22 +14,21 @@ const MetadataFlow = (() => {
     { step: '08', name: 'Evolução', desc: 'Novos metadados entram em produção sem downtime e sem deploy.', icon: 'refresh' }
   ];
 
-  const arrowSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>';
-
   function render() {
     const wrap = document.getElementById('mp-flow-list');
     if (!wrap) return;
 
-    wrap.innerHTML = steps.map((n, i) => `
-      <li class="mp-flow__item">
-        <div class="mp-flow__card" data-reveal>
-          <span class="mp-flow__icon" aria-hidden="true">${MetadataPlatform.icon(n.icon)}</span>
-          <span class="mp-flow__num">${n.step}</span>
-          <span class="mp-flow__name">${n.name}</span>
-          <span class="mp-flow__desc">${n.desc}</span>
-        </div>
-        ${i < steps.length - 1 ? `<span class="mp-flow__arrow" aria-hidden="true">${arrowSvg}</span>` : ''}
-      </li>`).join('');
+    wrap.innerHTML = `
+      <div class="mp-flow__line" aria-hidden="true"></div>
+      ${steps.map((n) => `
+        <li class="mp-flow__item">
+          <div class="mp-flow__card" data-reveal>
+            <span class="mp-flow__step">Etapa ${n.step}</span>
+            <span class="mp-flow__name">${n.name}</span>
+            <span class="mp-flow__desc">${n.desc}</span>
+          </div>
+          <span class="mp-flow__pin" aria-hidden="true">${n.step}</span>
+        </li>`).join('')}`;
   }
 
   function init() {

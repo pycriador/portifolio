@@ -896,89 +896,96 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: var(--space-4);
+  flex-direction: column;
+}
+
+.cf-flow__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    180deg,
+    var(--cf-accent) 0 10px,
+    transparent 10px 14px
+  );
+  opacity: 0.35;
+  animation: cf-flow 1.6s linear infinite;
 }
 
 .cf-flow__item {
-  flex: 1 1 118px;
-  min-width: 118px;
-  display: flex;
-  flex-direction: column;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
 }
 
 .cf-flow__card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-5) var(--space-4);
+  padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
-  box-shadow: var(--shadow-lg);
-  text-align: center;
-  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  text-align: right;
+  transition: transform var(--transition-base), border-color var(--transition-base);
 }
 
 .cf-flow__card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--cf-accent);
-  box-shadow: var(--shadow-xl), var(--cf-glow);
 }
 
-.cf-flow__icon {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-lg);
-  background: var(--cf-gradient-soft);
-  border: 1px solid var(--glass-border);
-  color: var(--cf-accent);
-}
-
-.cf-flow__num {
-  font-family: var(--cf-mono);
+.cf-flow__step {
+  display: block;
   font-size: 0.66rem;
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
   color: var(--cf-accent);
+  margin-bottom: var(--space-1);
 }
 
 .cf-flow__name {
+  display: block;
   font-size: var(--text-body-sm);
   font-weight: var(--weight-bold);
   color: var(--color-text);
+  margin-bottom: var(--space-1);
 }
 
 .cf-flow__desc {
+  display: block;
   font-size: var(--text-caption);
   line-height: var(--leading-normal);
   color: var(--color-text-muted);
 }
 
-.cf-flow__arrow {
-  position: absolute;
-  top: 50%;
-  right: -18px;
-  transform: translateY(-50%);
-  z-index: 2;
+.cf-flow__pin {
+  width: 44px;
+  height: 44px;
+  margin-inline: auto;
   display: grid;
   place-items: center;
-  color: var(--cf-accent);
+  border-radius: var(--radius-full);
   background: var(--color-surface-elevated);
   border: 1px solid var(--cf-accent);
-  border-radius: var(--radius-full);
-  width: 24px;
-  height: 24px;
-  animation: cf-arrow-pulse 2s ease-in-out infinite;
+  color: var(--cf-accent);
+  font-family: var(--cf-mono);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-bold);
+  box-shadow: 0 0 0 6px rgba(45, 212, 191, 0.12);
+  z-index: 1;
+}
+
+.cf-flow__item:nth-child(even) .cf-flow__card {
+  order: 3;
+  text-align: left;
 }
 
 /* ═══════════ ARCHITECTURE ═══════════ */
@@ -1628,6 +1635,11 @@
   50% { transform: translateY(-50%) translateX(3px); opacity: 1; }
 }
 
+@keyframes cf-flow {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 28px; }
+}
+
 @keyframes cf-scroll {
   0%, 100% { transform: translateX(-50%) scaleY(0.6); opacity: 0.4; }
   50% { transform: translateX(-50%) scaleY(1); opacity: 1; }
@@ -1712,11 +1724,26 @@
     margin-inline: auto;
   }
 
-  .cf-flow__arrow {
-    position: static;
-    transform: none;
-    margin-inline: auto;
-    animation: none;
+  .cf-flow__item {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding: var(--space-5) 0;
+    padding-left: var(--space-8);
+  }
+
+  .cf-flow__line {
+    left: 24px;
+  }
+
+  .cf-flow__pin {
+    order: -1;
+    margin-inline: 0;
+  }
+
+  .cf-flow__card,
+  .cf-flow__item:nth-child(even) .cf-flow__card {
+    order: 0;
+    text-align: left;
   }
 }
 
@@ -1766,7 +1793,7 @@
   .cf-mockup__dataflow::after,
   .cf-eco__hub::before,
   .cf-eco__hub-core,
-  .cf-flow__arrow {
+  .cf-flow__line {
     animation: none;
   }
 

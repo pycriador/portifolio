@@ -8,7 +8,6 @@
   },
   "skipNav": "Skip to main content",
   "hero": {
-    "badge": "Available for new opportunities",
     "titleLine1": "Building",
     "titleGradient": "software",
     "titleLine2": "that scales.",
@@ -129,7 +128,7 @@
   "about": {
     "label": "About Me",
     "title": "Engineering Excellence",
-    "paragraph1": "I'm a <strong>Software Engineer</strong> with a passion for building systems that are not only functional but elegantly architected. My work spans the full spectrum \u2014 from crafting pixel-perfect interfaces to designing distributed systems that handle millions of requests.",
+    "paragraph1": "I'm a <strong>Software Engineer</strong> with a passion for building systems that are not only functional but elegantly architected.",
     "paragraph2": "I believe that <strong>great software is built on solid principles</strong>. Every line of code should serve a purpose, every architecture decision should be deliberate, and every product should delight its users.",
     "paragraph3": "Focused on <strong>enterprise SaaS platforms</strong>, <strong>AI-powered products</strong>, and <strong>cloud-native architectures</strong>. Always learning, always building, always shipping."
   },

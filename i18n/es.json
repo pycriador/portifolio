@@ -8,7 +8,6 @@
   },
   "skipNav": "Saltar al contenido principal",
   "hero": {
-    "badge": "Disponible para nuevas oportunidades",
     "titleLine1": "Construyendo",
     "titleGradient": "software",
     "titleLine2": "que escala.",
@@ -129,7 +128,7 @@
   "about": {
     "label": "Sobre M\u00ed",
     "title": "Excelencia en Ingenier\u00eda",
-    "paragraph1": "Soy un <strong>Software Engineer</strong> con pasi\u00f3n por construir sistemas que no solo son funcionales sino elegantemente arquitectados. Mi trabajo cubre todo el espectro \u2014 desde interfaces pixel-perfect hasta sistemas distribuidos que procesan millones de peticiones.",
+    "paragraph1": "Soy un <strong>Software Engineer</strong> con pasi\u00f3n por construir sistemas que no solo son funcionales sino elegantemente arquitectados.",
     "paragraph2": "Creo que el <strong>software excelente se construye sobre principios s\u00f3lidos</strong>. Cada l\u00ednea de c\u00f3digo debe servir a un prop\u00f3sito, cada decisi\u00f3n de arquitectura debe ser deliberada, y cada producto debe deleitar a sus usuarios.",
     "paragraph3": "Enfocado en <strong>plataformas SaaS corporativas</strong>, <strong>productos con IA</strong> y <strong>arquitecturas cloud-native</strong>. Siempre aprendiendo, siempre construyendo, siempre entregando."
   },

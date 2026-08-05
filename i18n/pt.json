@@ -8,7 +8,6 @@
   },
   "skipNav": "Pular para o conte\u00fado principal",
   "hero": {
-    "badge": "Dispon\u00edvel para novas oportunidades",
     "titleLine1": "Construindo",
     "titleGradient": "software",
     "titleLine2": "que escala.",
@@ -129,7 +128,7 @@
   "about": {
     "label": "Sobre Mim",
     "title": "Excel\u00eancia em Engenharia",
-    "paragraph1": "Sou um <strong>Software Engineer</strong> com paix\u00e3o por construir sistemas que n\u00e3o s\u00f3 s\u00e3o funcionais, mas elegantemente arquitetados. Meu trabalho abrange todo o espectro \u2014 desde interfaces pixel-perfect at\u00e9 sistemas distribu\u00eddos que processam milh\u00f5es de requisi\u00e7\u00f5es.",
+    "paragraph1": "Sou um <strong>Software Engineer</strong> com paix\u00e3o por construir sistemas que n\u00e3o s\u00f3 s\u00e3o funcionais, mas elegantemente arquitetados.",
     "paragraph2": "Acredito que <strong>software excelente \u00e9 constru\u00eddo sobre princ\u00edpios s\u00f3lidos</strong>. Cada linha de c\u00f3digo deve servir a um prop\u00f3sito, cada decis\u00e3o de arquitetura deve ser deliberada, e cada produto deve encantar seus usu\u00e1rios.",
     "paragraph3": "Focado em <strong>plataformas SaaS corporativas</strong>, <strong>produtos com IA</strong> e <strong>arquiteturas cloud-native</strong>. Sempre aprendendo, sempre construindo, sempre entregando."
   },

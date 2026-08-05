@@ -15,22 +15,21 @@ const IntegrationFlow = (() => {
     { step: '09', name: 'Monitoramento', desc: 'Métricas e alertas acompanham a saúde da integração.', icon: 'monitor' }
   ];
 
-  const arrowSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>';
-
   function render() {
     const wrap = document.getElementById('ih-flow-list');
     if (!wrap) return;
 
-    wrap.innerHTML = steps.map((n, i) => `
-      <li class="ih-flow__item">
-        <div class="ih-flow__card" data-reveal>
-          <span class="ih-flow__icon" aria-hidden="true">${IntegrationHub.icon(n.icon)}</span>
-          <span class="ih-flow__num">${n.step}</span>
-          <span class="ih-flow__name">${n.name}</span>
-          <span class="ih-flow__desc">${n.desc}</span>
-        </div>
-        ${i < steps.length - 1 ? `<span class="ih-flow__arrow" aria-hidden="true">${arrowSvg}</span>` : ''}
-      </li>`).join('');
+    wrap.innerHTML = `
+      <div class="ih-flow__line" aria-hidden="true"></div>
+      ${steps.map((n) => `
+        <li class="ih-flow__item">
+          <div class="ih-flow__card" data-reveal>
+            <span class="ih-flow__step">Etapa ${n.step}</span>
+            <span class="ih-flow__name">${n.name}</span>
+            <span class="ih-flow__desc">${n.desc}</span>
+          </div>
+          <span class="ih-flow__pin" aria-hidden="true">${n.step}</span>
+        </li>`).join('')}`;
   }
 
   function init() {

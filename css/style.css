@@ -121,35 +121,6 @@
   gap: var(--space-6);
 }
 
-.hero__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-1) var(--space-4) var(--space-1) var(--space-1);
-  background: var(--color-surface-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  font-size: var(--text-body-sm);
-  color: var(--color-text-secondary);
-  width: fit-content;
-}
-
-.hero__badge-dot {
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-full);
-  background: var(--color-success-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero__badge-dot svg {
-  width: 14px;
-  height: 14px;
-  color: var(--color-success);
-}
-
 .hero__title {
   font-size: var(--text-display);
   font-weight: var(--weight-extrabold);

@@ -796,89 +796,96 @@
 .kp-rel__list {
   list-style: none;
   padding: 0;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: var(--space-4);
+  flex-direction: column;
+}
+
+.kp-rel__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    180deg,
+    var(--color-primary) 0 10px,
+    transparent 10px 14px
+  );
+  opacity: 0.35;
+  animation: kp-flow 1.6s linear infinite;
 }
 
 .kp-rel__item {
-  flex: 1 1 150px;
-  min-width: 150px;
-  display: flex;
-  flex-direction: column;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
 }
 
 .kp-rel__card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-5) var(--space-4);
+  padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
-  box-shadow: var(--shadow-lg);
-  text-align: center;
-  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  text-align: right;
+  transition: transform var(--transition-base), border-color var(--transition-base);
 }
 
 .kp-rel__card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-xl), var(--kp-glow);
 }
 
-.kp-rel__icon {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-lg);
-  background: var(--kp-gradient-soft);
-  border: 1px solid var(--glass-border);
-  color: var(--color-primary);
-}
-
-.kp-rel__num {
-  font-family: var(--kp-mono);
+.kp-rel__step {
+  display: block;
   font-size: 0.66rem;
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
   color: var(--color-primary);
+  margin-bottom: var(--space-1);
 }
 
 .kp-rel__name {
+  display: block;
   font-size: var(--text-body-sm);
   font-weight: var(--weight-bold);
   color: var(--color-text);
+  margin-bottom: var(--space-1);
 }
 
 .kp-rel__desc {
+  display: block;
   font-size: var(--text-caption);
   line-height: var(--leading-normal);
   color: var(--color-text-muted);
 }
 
-.kp-rel__arrow {
-  position: absolute;
-  top: 50%;
-  right: -18px;
-  transform: translateY(-50%);
-  z-index: 2;
+.kp-rel__pin {
+  width: 44px;
+  height: 44px;
+  margin-inline: auto;
   display: grid;
   place-items: center;
-  color: var(--color-primary);
+  border-radius: var(--radius-full);
   background: var(--color-surface-elevated);
   border: 1px solid var(--color-primary);
-  border-radius: var(--radius-full);
-  width: 24px;
-  height: 24px;
-  animation: kp-arrow-pulse 2s ease-in-out infinite;
+  color: var(--color-primary);
+  font-family: var(--kp-mono);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-bold);
+  box-shadow: 0 0 0 6px var(--color-primary-subtle);
+  z-index: 1;
+}
+
+.kp-rel__item:nth-child(even) .kp-rel__card {
+  order: 3;
+  text-align: left;
 }
 
 /* ── AI Knowledge Assistant ── */
@@ -1566,11 +1573,26 @@
     padding-left: var(--space-8);
   }
 
-  .kp-rel__arrow {
-    position: static;
-    transform: none;
-    margin-inline: auto;
-    animation: none;
+  .kp-rel__item {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding: var(--space-5) 0;
+    padding-left: var(--space-8);
+  }
+
+  .kp-rel__line {
+    left: 24px;
+  }
+
+  .kp-rel__pin {
+    order: -1;
+    margin-inline: 0;
+  }
+
+  .kp-rel__card,
+  .kp-rel__item:nth-child(even) .kp-rel__card {
+    order: 0;
+    text-align: left;
   }
 
   .kp-cases__grid {
@@ -1616,7 +1638,7 @@
   .kp-hero__badge-dot,
   .kp-hero__scroll-cue::after,
   .kp-arch__line,
-  .kp-rel__arrow {
+  .kp-rel__line {
     animation: none;
   }
 }

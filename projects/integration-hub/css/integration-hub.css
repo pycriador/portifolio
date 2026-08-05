@@ -986,89 +986,96 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: var(--space-4);
+  flex-direction: column;
+}
+
+.ih-flow__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    180deg,
+    var(--ih-accent) 0 10px,
+    transparent 10px 14px
+  );
+  opacity: 0.35;
+  animation: ih-flow 1.6s linear infinite;
 }
 
 .ih-flow__item {
-  flex: 1 1 118px;
-  min-width: 118px;
-  display: flex;
-  flex-direction: column;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
 }
 
 .ih-flow__card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-5) var(--space-4);
+  padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
-  box-shadow: var(--shadow-lg);
-  text-align: center;
-  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  text-align: right;
+  transition: transform var(--transition-base), border-color var(--transition-base);
 }
 
 .ih-flow__card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--ih-accent);
-  box-shadow: var(--shadow-xl), var(--ih-glow);
 }
 
-.ih-flow__icon {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-lg);
-  background: var(--ih-gradient-soft);
-  border: 1px solid var(--glass-border);
-  color: var(--ih-accent);
-}
-
-.ih-flow__num {
-  font-family: var(--ih-mono);
+.ih-flow__step {
+  display: block;
   font-size: 0.66rem;
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
   color: var(--ih-accent);
+  margin-bottom: var(--space-1);
 }
 
 .ih-flow__name {
+  display: block;
   font-size: var(--text-body-sm);
   font-weight: var(--weight-bold);
   color: var(--color-text);
+  margin-bottom: var(--space-1);
 }
 
 .ih-flow__desc {
+  display: block;
   font-size: var(--text-caption);
   line-height: var(--leading-normal);
   color: var(--color-text-muted);
 }
 
-.ih-flow__arrow {
-  position: absolute;
-  top: 50%;
-  right: -18px;
-  transform: translateY(-50%);
-  z-index: 2;
+.ih-flow__pin {
+  width: 44px;
+  height: 44px;
+  margin-inline: auto;
   display: grid;
   place-items: center;
-  color: var(--ih-accent);
+  border-radius: var(--radius-full);
   background: var(--color-surface-elevated);
   border: 1px solid var(--ih-accent);
-  border-radius: var(--radius-full);
-  width: 24px;
-  height: 24px;
-  animation: ih-arrow-pulse 2s ease-in-out infinite;
+  color: var(--ih-accent);
+  font-family: var(--ih-mono);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-bold);
+  box-shadow: 0 0 0 6px rgba(232, 121, 249, 0.12);
+  z-index: 1;
+}
+
+.ih-flow__item:nth-child(even) .ih-flow__card {
+  order: 3;
+  text-align: left;
 }
 
 /* ═══════════ ARCHITECTURE ═══════════ */
@@ -1717,6 +1724,11 @@
   50% { transform: translateY(-50%) translateX(3px); opacity: 1; }
 }
 
+@keyframes ih-flow {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 28px; }
+}
+
 @keyframes ih-scroll {
   0%, 100% { transform: translateX(-50%) scaleY(0.6); opacity: 0.4; }
   50% { transform: translateX(-50%) scaleY(1); opacity: 1; }
@@ -1807,11 +1819,26 @@
     margin-inline: auto;
   }
 
-  .ih-flow__arrow {
-    position: static;
-    transform: none;
-    margin-inline: auto;
-    animation: none;
+  .ih-flow__item {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding: var(--space-5) 0;
+    padding-left: var(--space-8);
+  }
+
+  .ih-flow__line {
+    left: 24px;
+  }
+
+  .ih-flow__pin {
+    order: -1;
+    margin-inline: 0;
+  }
+
+  .ih-flow__card,
+  .ih-flow__item:nth-child(even) .ih-flow__card {
+    order: 0;
+    text-align: left;
   }
 }
 
@@ -1849,7 +1876,7 @@
   .ih-bus__dataflow::after,
   .ih-eco__hub::before,
   .ih-eco__hub-core,
-  .ih-flow__arrow {
+  .ih-flow__line {
     animation: none;
   }
 
