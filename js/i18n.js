@@ -173,6 +173,8 @@ const I18n = (() => {
       App.renderDynamicContent();
     }
 
+    document.dispatchEvent(new CustomEvent('i18n:changed', { detail: { lang } }));
+
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         document.documentElement.classList.remove('i18n-fading');

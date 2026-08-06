@@ -2,6 +2,8 @@
 
 A modern, performant, and multilingual portfolio website built with semantic HTML5, CSS3, and vanilla JavaScript ES2023. No frameworks, no libraries.
 
+Live at **https://pycriador.github.io/portfolio/**
+
 ## Technologies
 
 - **HTML5** - Semantic markup with WCAG 2.2 AA accessibility
@@ -20,12 +22,19 @@ A modern, performant, and multilingual portfolio website built with semantic HTM
 - Glassmorphism and modern visual effects
 - WR branding (SVG logo, avatar, favicon)
 - Microinteractions (ripple, animated underlines, fade on lang switch)
+- Dynamic project showcase with search and filters (category, status, year)
+
+## Languages & Content Model
+
+- **Home (`index.html`)**: fully translated via `js/i18n.js` loading `i18n/{pt,en,es}.json`.
+- **Generic project pages** (rendered by `js/project-page.js`): section labels, breadcrumb, navigation, statuses, and buttons translate via the `project.*` keys. Project content (title, descriptions) comes from `config/projects.js` and stays as authored (English).
+- **Showcase project pages** (9): standalone static pages with content hardcoded in **Portuguese** and their own `css/`, `js/`, and `assets/`. Not part of the i18n content model.
 
 ## Structure
 
 ```
 portfolio/
-├── index.html
+├── index.html                (home, fully i18n)
 ├── resume.html
 ├── css/
 │   ├── reset.css
@@ -38,39 +47,67 @@ portfolio/
 │   ├── projects.css
 │   └── style.css
 ├── js/
-│   ├── app.js
-│   ├── i18n.js
-│   ├── navigation.js
-│   ├── project-page.js
-│   ├── projects.js
+│   ├── app.js                (global init + dynamic sections render)
+│   ├── i18n.js               (i18n engine: detect, load, apply, switch)
+│   ├── navigation.js         (header, mobile menu, lang selector, project dropdown)
+│   ├── project-page.js       (dynamic project detail renderer)
+│   ├── projects.js           (search/filter grid renderer)
 │   ├── scroll.js
 │   ├── animation.js
 │   └── theme.js
 ├── i18n/
+│   ├── pt.json               (default language)
 │   ├── en.json
-│   ├── pt.json
 │   └── es.json
 ├── config/
-│   ├── profile.js
-│   ├── projects.js
+│   ├── profile.js            (personal data + SEO meta per language)
+│   ├── projects.js           (PROJECTS array - single source of truth)
 │   ├── social.js
-│   └── settings.js
+│   └── settings.js           (defaultLanguage, supportedLanguages, siteUrl)
 ├── assets/
 │   ├── images/
 │   ├── icons/
 │   └── logos/
 ├── projects/
-│   ├── serviceforge/     (showcase page: own css/, js/, assets/, project.json)
-│   ├── specforge/        (showcase page)
-│   ├── dataforge/        (showcase page)
-│   ├── clauseforge/      (generic page via js/project-page.js)
-│   └── ...               (all other projects)
+│   ├── serviceforge/             (showcase - PT)
+│   ├── specforge/                (showcase - PT)
+│   ├── dataforge/                (showcase - PT)
+│   ├── knowledge-platform/       (showcase - PT)
+│   ├── people-identity-hub/      (showcase - PT)
+│   ├── clauseforge/              (showcase - PT)
+│   ├── metadata-platform/        (showcase - PT)
+│   ├── integration-hub/          (showcase - PT)
+│   ├── communication-platform/   (showcase - PT)
+│   ├── mug-gallery/              (generic - via project-page.js)
+│   ├── mug-artwork-extractor/    (generic - via project-page.js)
+│   ├── gemini-pdf-studio/        (generic - via project-page.js)
+│   └── slack-conversation-bridge (generic - via project-page.js)
 ├── favicon.svg
 ├── robots.txt
 ├── sitemap.xml
 ├── manifest.json
 └── README.md
 ```
+
+## Projects
+
+13 projects defined in `config/projects.js`. Statuses are normalized to `production` or `in-development` and translated in the UI.
+
+| Project | Category | Status | Page type |
+| --- | --- | --- | --- |
+| ServiceForge | Enterprise Platform | production | Showcase (PT) |
+| SpecForge | Developer Tool | production | Showcase (PT) |
+| DataForge | Enterprise Data Platform | in-development | Showcase (PT) |
+| Knowledge Platform | Enterprise Knowledge Management | in-development | Showcase (PT) |
+| People Identity Hub | Enterprise Identity Platform | in-development | Showcase (PT) |
+| ClauseForge | Enterprise Document Automation Platform | in-development | Showcase (PT) |
+| Metadata Platform | Enterprise Low-Code Platform | in-development | Showcase (PT) |
+| Integration Hub | Enterprise Integration Platform | in-development | Showcase (PT) |
+| Communication Platform | Enterprise Communication Platform | in-development | Showcase (PT) |
+| Mug Artwork Extractor | AI | production | Generic (i18n labels) |
+| Mug Gallery | Desktop | production | Generic (i18n labels) |
+| Gemini PDF Studio | AI | production | Generic (i18n labels) |
+| Slack Conversation Bridge | Integration | production | Generic (i18n labels) |
 
 ## Publishing to GitHub Pages
 
@@ -91,19 +128,19 @@ Edit `config/settings.js` to change default theme, language, and supported langu
 
 ### Add a New Project
 
-1. Add a new entry to the `PROJECTS` array in `config/projects.js` (title, slug, category, status, year, description, technologies, tags, github link).
+1. Add a new entry to the `PROJECTS` array in `config/projects.js` (title, slug, category, status, year, description, technologies, tags, github link). Use a normalized status key: `production` or `in-development`.
 2. Create a project page at `projects/<slug>/`. Two patterns are supported:
-   - **Generic page**: an `index.html` that renders the project detail dynamically via `js/project-page.js` (see `projects/clauseforge/`).
-   - **Showcase page**: a standalone page with its own `css/`, `js/`, and `assets/` (see `projects/serviceforge/`, `projects/specforge/`, `projects/dataforge/`).
+   - **Generic page**: an `index.html` with a `#project-root` container that renders the detail dynamically via `js/project-page.js` (see `projects/mug-gallery/`). It includes `js/i18n.js`, which initializes automatically inside `project-page.js` and re-renders on language change.
+   - **Showcase page**: a standalone static page (in Portuguese) with its own `css/`, `js/`, and `assets/` (see `projects/serviceforge/`).
 3. Add the page URL to `sitemap.xml`.
 4. Optionally add an OG image at `projects/<slug>/images/og-image.png`.
 
 ### Add a New Language
 
 1. Create a new JSON file in `i18n/` (e.g., `fr.json`)
-2. Copy `i18n/en.json` as a template and translate all values
+2. Copy `i18n/en.json` as a template and translate all values. Keep the JSON structure identical across all language files.
 3. Add the language code to `Settings.supportedLanguages` in `config/settings.js`
-4. Add the language option to the selector in `index.html`
+4. Add the language option to the selector in the `<head>` nav of `index.html` and the generic project pages
 
 ### Change Theme
 
@@ -115,7 +152,7 @@ Place images in the appropriate `assets/` subdirectory. Replace the SVG placehol
 
 ### Update SEO
 
-Edit `config/profile.js` to update the `meta` object with per-language titles, descriptions, and keywords. Edit the `<head>` section in `index.html` for static SEO tags.
+Edit `config/profile.js` to update the `meta` object with per-language titles, descriptions, and keywords. Edit the `<head>` section in `index.html` for static SEO tags. `js/i18n.js` applies per-language meta at runtime.
 
 ## License
 

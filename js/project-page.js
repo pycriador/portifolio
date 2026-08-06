@@ -485,7 +485,11 @@ const ProjectPage = (() => {
     `;
   }
 
-  function init() {
+  async function init() {
+    if (typeof I18n !== 'undefined') {
+      await I18n.init();
+    }
+
     const slug = getSlug();
 
     if (typeof PROJECTS === 'undefined' || !PROJECTS.length) {
@@ -510,6 +514,14 @@ const ProjectPage = (() => {
     if (typeof Navigation !== 'undefined') {
       Navigation.init();
     }
+
+    document.addEventListener('i18n:changed', () => {
+      updateSEO(project);
+      renderPage(project);
+      if (typeof AnimationManager !== 'undefined') {
+        AnimationManager.init();
+      }
+    });
   }
 
   return { init };
