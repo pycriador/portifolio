@@ -1,0 +1,33 @@
+# Documentation manifest — EN
+
+> Language: EN | [Português (pt-BR)](../pt-BR/manifest.yaml)
+>
+> Status: ACCEPTED
+>
+> Documentation Standard v1.0
+
+```yaml
+standard: "Documentation Standard v1.0"
+root: "."
+updated: "2026-08-17"
+owner: "willian-rosa"
+```
+
+## Documents
+
+| ID | Path | Title | Type | Status | Authority |
+| --- | --- | --- | --- | --- | --- |
+| PRJ-001 | project-overview.md | Project overview | Context | ACCEPTED | Verified |
+| AIC-001 | ai-context.md | AI Context | Context | ACCEPTED | Authoritative |
+| GLO-001 | glossary.md | Glossary | Reference | ACCEPTED | Verified |
+| ARC-001 | architecture/overview.md | Architecture overview | Reference | ACCEPTED | Verified |
+| ARC-002 | architecture/components.md | Component registry | Reference | ACCEPTED | Verified |
+| APP-001 | application/pages.md | Page inventory | Reference | ACCEPTED | Verified |
+| APP-002 | application/i18n.md | i18n engine | Reference | ACCEPTED | Verified |
+| APP-003 | application/theme.md | Theme system | Reference | ACCEPTED | Verified |
+| CON-001 | contracts/data-contracts.md | Data contracts | Reference | ACCEPTED | Verified |
+| OPS-001 | operations/publishing.md | Publishing runbook | Runbook | ACCEPTED | Verified |
+| ADR-0001 | decisions/ADR-0001-vanilla-javascript.md | ADR-0001 — Vanilla JavaScript | Decision | ACCEPTED | Verified |
+| ADR-0002 | decisions/ADR-0002-dual-project-page-patterns.md | ADR-0002 — Dual project page patterns | Decision | ACCEPTED | Verified |
+| ADR-0003 | decisions/ADR-0003-i18n-json-dom-attributes.md | ADR-0003 — i18n via JSON + DOM attributes | Decision | ACCEPTED | Verified |
+| ADR-0004 | decisions/ADR-0004-showcase-pages-portuguese-only.md | ADR-0004 — Showcase pages Portuguese only | Decision | ACCEPTED | Verified |
